@@ -19,14 +19,17 @@ header {
             width: 10px;
             margin: 29px 0 17.2px 22px;
         }
-        .header-icono{
+
+        .header-icono {
             margin-right: 26px;
             transition: all 1s ease;
             transform-origin: center;
         }
-        .icono-active:active{
+
+        .icono-active:active {
             transform: rotate(360deg);
         }
+
         ul {
             background: rgba(87, 46, 229, 0.90);
             opacity: 90%;
@@ -45,7 +48,8 @@ header {
                 padding: 22px;
                 width: 100%;
             }
-            li::after{
+
+            li::after {
                 content: "";
                 opacity: 0.5;
                 width: 41px;
@@ -57,12 +61,13 @@ header {
             }
 
         }
-        .active{
+
+        .active {
             transform: translate(0, -1500px);
 
         }
 
-       
+
     }
 
 }
@@ -232,4 +237,20 @@ footer {
         width: 100%;
         height: 5px;
     }
+}
+
+.busqueda {
+
+    margin-top: 49px;
+
+    .busqueda-title {
+        font-family: $Mon;
+        font-size: 25px;
+        color: $color-p;
+        text-align: center;
+        line-height: 40px;
+    }
+
+    .galery-gifs {}
+
 }
