@@ -90,7 +90,11 @@ header {
         font-weight: 700;
         max-width: 400px;
         align-self: center;
+        margin-bottom: 31px;
+    }
 
+    .title-change-color {
+        color: $color-s
     }
 
     img {
@@ -135,7 +139,7 @@ header {
             color: $color-p;
             align-self: center;
             line-height: 25px;
-
+            margin-top: 31px;
         }
 
         p {
@@ -240,8 +244,19 @@ footer {
 }
 
 .busqueda {
+    margin-top: 35px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 
-    margin-top: 49px;
+    .separator {
+        opacity: 0.5;
+        height: 1px;
+        background: #9CAFC3;
+        width: 41.9%;
+        align-self: center;
+        margin-bottom: 43px;
+    }
 
     .busqueda-title {
         font-family: $Mon;
@@ -249,8 +264,50 @@ footer {
         color: $color-p;
         text-align: center;
         line-height: 40px;
+        margin-bottom: 38px;
+
     }
 
-    .galery-gifs {}
+    .galery-gifs {
+        display: grid;
+        grid-auto-rows: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+        gap: 21px;
+        padding-right: 21px;
+        padding-left: 21px;
+        padding-bottom: 78px;
 
+        img {
+            width: 100%;
+            height: 100%;
+        }
+
+    }
+
+    .ver-mas {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        text-decoration: none;
+
+        span {
+            border: 1px solid $color-p;
+            border-radius: 25px;
+            border-radius: 25px;
+            /*Corregir padding en uno solo*/
+            padding-top: 17px;
+            padding-bottom: 17px;
+            padding-left: 32px;
+            padding-right: 32px;
+
+            font-family: $Mon;
+            font-weight: 700;
+            font-size: 13px;
+            color: $color-p;
+            letter-spacing: 0;
+            text-align: center;
+         
+        }
+
+    }
 }
