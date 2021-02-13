@@ -30,11 +30,11 @@ header {
         ul {
             background: rgba(87, 46, 229, 0.90);
             opacity: 90%;
+            color: #FFFFFF;
             width: 100%;
-            height: 100%;
+            height: 100vh;
             position: absolute;
-            z-index: 100;
-            top: 100px;
+            top: 95px;
             text-align: center;
             transition: all .6s ease;
 
