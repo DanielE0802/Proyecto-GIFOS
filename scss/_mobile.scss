@@ -1,7 +1,9 @@
 header {
     z-index: 1;
-    color: #FFFFFF;
-    position: static;
+    background: #FFFFFF;
+    position: fixed;
+    width: 100%;
+    height: 95px;
 
     .line {
         background: $color-p;
@@ -55,6 +57,7 @@ header {
         }
         .active{
             transform: translate(0, -1500px);
+
         }
 
        
@@ -66,6 +69,8 @@ header {
 .main-title {
     display: flex;
     flex-direction: column;
+    padding-top: 102px;
+
 
 
     h1 {
