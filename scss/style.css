@@ -47,16 +47,17 @@ header {
         text-decoration: none;
         font-family: "Montserrat", sans-serif;
         font-size: 15px;
-        padding: 22px; }
+        padding: 22px;
+        width: 100%; }
       header nav ul li::after {
         content: "";
         opacity: 0.5;
         width: 41px;
         height: 1px;
-        position: absolute;
         background: #FFFFFF;
-        left: 43%;
-        transform: translate(5px, 25px); }
+        position: absolute;
+        transform-origin: 20px;
+        transform: translate(-7vw, 25px); }
     header nav .active {
       transform: translate(0, -1500px); }
 
