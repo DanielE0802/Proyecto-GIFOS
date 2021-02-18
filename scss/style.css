@@ -307,5 +307,17 @@ footer .line-footer {
     font-size: 16px;
     color: #000000;
     font-family: "Montserrat", sans-serif; }
+  .gifos-max .icono-descarga {
+    opacity: 0.5;
+    border: 1px solid #9CAFC3;
+    border-radius: 6px;
+    width: 36px;
+    height: 36px; }
+  .gifos-max .iconos {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 70vw;
+    margin-top: -40px;
+    width: 85px; }
 
 /*# sourceMappingURL=style.css.map */
