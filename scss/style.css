@@ -294,5 +294,18 @@ footer .line-footer {
     margin-left: 29px;
     width: 84.8%;
     height: 42%; }
+  .gifos-max .user-gifos-max {
+    font-family: "Roboto", sans-serif;
+    font-size: 15px;
+    color: #000000;
+    margin-left: 35px;
+    margin-top: 14px;
+    font-weight: 400; }
+  .gifos-max .titulo-gifos-max {
+    margin-left: 29.5px;
+    margin-top: 5px;
+    font-size: 16px;
+    color: #000000;
+    font-family: "Montserrat", sans-serif; }
 
 /*# sourceMappingURL=style.css.map */
