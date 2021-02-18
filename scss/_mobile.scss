@@ -1,3 +1,4 @@
+
 header {
     z-index: 1;
     background: #FFFFFF;
@@ -48,7 +49,10 @@ header {
                 padding: 22px;
                 width: 100%;
             }
-
+            a{
+                text-decoration: none;
+                color: #FFFFFF;
+            }
             li::after {
                 content: "";
                 opacity: 0.5;
@@ -57,7 +61,11 @@ header {
                 background: #FFFFFF;
                 position: absolute;
                 transform-origin: 20px;
-                transform: translate(-7vw, 25px);
+                transform: translate(-150%, 25px);
+            }
+            .firsLi::after{
+                
+                transform: translate(-220%, 25px);
             }
 
         }
@@ -283,31 +291,58 @@ footer {
         }
 
     }
+}
+.ver-mas {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    text-decoration: none;
 
-    .ver-mas {
-        display: flex;
-        width: 100%;
-        justify-content: center;
-        text-decoration: none;
-
-        span {
-            border: 1px solid $color-p;
-            border-radius: 25px;
-            border-radius: 25px;
-            /*Corregir padding en uno solo*/
-            padding-top: 17px;
-            padding-bottom: 17px;
-            padding-left: 32px;
-            padding-right: 32px;
-
-            font-family: $Mon;
-            font-weight: 700;
-            font-size: 13px;
-            color: $color-p;
-            letter-spacing: 0;
-            text-align: center;
-         
-        }
-
+    span {
+        border: 1px solid $color-p;
+        border-radius: 25px;
+        border-radius: 25px;
+        /*Corregir padding en uno solo*/
+        padding-top: 17px;
+        padding-bottom: 17px;
+        padding-left: 32px;
+        padding-right: 32px;
+        font-family: $Mon;
+        font-weight: 700;
+        font-size: 13px;
+        color: $color-p;
+        letter-spacing: 0;
+        text-align: center;
     }
+
+}
+.favoritos{
+    .fav-icon{
+        display: block  ;
+        margin: auto;
+        margin-top: 20px;
+    }
+    .fav-title{
+        text-align: center;
+        font-family: $Mon;
+        color: $color-p;
+        font-size: 20px;
+        line-height: 30px;
+        margin-bottom: 46px;
+    }
+    .galery-gifs {
+        display: grid;
+        grid-auto-rows: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+        gap: 21px;
+        padding-right: 21px;
+        padding-left: 21px;
+        padding-bottom: 78px;
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
 }
