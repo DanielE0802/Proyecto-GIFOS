@@ -320,4 +320,98 @@ footer .line-footer {
     margin-top: -40px;
     width: 85px; }
 
+@media screen and (min-width: 1024px) {
+  header {
+    height: 90px; }
+    header nav {
+      display: flex;
+      justify-content: space-between;
+      height: 90px;
+      align-items: center; }
+      header nav .header-logo {
+        width: 10px;
+        margin-left: 156px; }
+      header nav .header-icono {
+        display: none; }
+      header nav ul {
+        background: #fff;
+        opacity: 1;
+        color: #572EE5;
+        width: 487px;
+        height: 80px;
+        position: static;
+        margin-right: 156px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center; }
+        header nav ul a {
+          display: inline-block;
+          color: #572EE5; }
+        header nav ul li {
+          text-decoration: none;
+          font-family: "Montserrat", sans-serif;
+          font-size: 13px;
+          padding: 0px;
+          width: 800px;
+          display: inline;
+          letter-spacing: 0;
+          font-weight: 700; }
+        header nav ul li::after {
+          width: 0px;
+          height: 0px; }
+        header nav ul .firsLi::after {
+          width: 0px;
+          height: 0px; }
+      header nav .active {
+        transform: translate(0, 0px); }
+
+  .main-title {
+    padding-top: 171px; }
+    .main-title h1 {
+      font-size: 35px;
+      line-height: 50px;
+      font-family: "Montserrat", sans-serif;
+      color: #572EE5;
+      text-align: center;
+      width: 64%;
+      font-weight: 700;
+      max-width: 600px;
+      margin-bottom: 24px; }
+    .main-title img {
+      width: 40%;
+      align-self: center;
+      max-width: 400px; }
+    .main-title input {
+      width: 89.1%;
+      max-width: 551px;
+      height: 50px;
+      border-radius: 27px;
+      transform: translateY(-5px);
+      background: #FFFFFF;
+      border: 1px solid #572EE5;
+      outline: none;
+      align-self: center; }
+    .main-title input:focus-visible {
+      padding-left: 60px; }
+    .main-title input::placeholder {
+      font-family: "Roboto", sans-serif;
+      font-size: 16px;
+      text-align: left;
+      padding-left: 55px; }
+    .main-title .main-treanding {
+      display: flex;
+      flex-direction: column; }
+      .main-title .main-treanding h4 {
+        font-size: 18px;
+        color: #572EE5;
+        margin-top: 73px; }
+      .main-title .main-treanding p {
+        width: 60%;
+        font-size: 16px;
+        align-self: center;
+        text-align: center;
+        color: #572EE5;
+        font-weight: 500;
+        font-family: "Montserrat", sans-serif; } }
+
 /*# sourceMappingURL=style.css.map */
