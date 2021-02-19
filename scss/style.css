@@ -156,7 +156,8 @@ header {
     text-align: center;
     line-height: 23px; }
   .container-trending .trending-gif {
-    display: flex; }
+    display: flex;
+    overflow: hidden; }
     .container-trending .trending-gif img {
       width: 64.8%;
       margin-left: 22px;

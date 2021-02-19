@@ -22,10 +22,10 @@
             max-width: 400px;
         }
 
-        .inputSearch{
+        .inputSearch {
             width: 89.1%;
             max-width: 460px;
-    
+
             border-radius: 27px;
             transform: translateY(-5px);
             background: #FFFFFF;
@@ -35,6 +35,7 @@
             align-items: center;
             align-self: center;
             height: 50px;
+
             input {
                 border: none;
                 outline: none;
@@ -78,13 +79,38 @@
     }
 
 
-    //Sección trending
 
+    // Trending gifos
+    .container-trending {
+        margin-top: 45px;
+        display: flex;
+        flex-direction: column;
 
+        .trending-text {
+            h2 {
+                text-align: center;
+                margin-top: 46px;
+            }
 
-    // Sección mascotas
+            p {
+                text-align: center;
+            }
 
-    
+        }
 
+        .trending-gif {
+            display: flex;
+            overflow: hidden;
+
+            img {
+
+                width: 64.8%;
+                margin-left: 22px;
+                margin-top: 32px;
+                margin-bottom: 82px;
+            }
+
+        }
+    }
 
 }
