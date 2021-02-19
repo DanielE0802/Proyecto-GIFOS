@@ -404,7 +404,8 @@ footer {
         margin-bottom: 78px;
     }
     .gifo{
-        margin-left: 29px;
+        margin-left: 7.9vw;
+        margin-right: 7.7vw;
         width: 84.8%;
         height: 42%;
     }
@@ -412,16 +413,16 @@ footer {
         font-family: $Rob;
         font-size: 15px;
         color: #000000;
-        margin-left: 35px;
+
         margin-top: 14px;
         font-weight: 400;
     }
     .titulo-gifos-max{
-        margin-left: 29.5px;
         margin-top: 5px;
         font-size: 16px;
         color: #000000;
         font-family: $Mon;
+        width: 100px;
     }
     .icono-descarga{
         opacity: 0.5;
@@ -433,8 +434,15 @@ footer {
     .iconos{
         display: flex;
         justify-content: space-between;
-        margin-left: 70vw;
-        margin-top: -40px;
+        align-items: center;
         width: 85px;
+
+    }
+    .container-max{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        padding-left: 7.9vw;
+        padding-right: 7.7vw;
     }
 }

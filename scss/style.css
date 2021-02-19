@@ -303,22 +303,22 @@ footer .line-footer {
     margin-left: 85.8%;
     margin-bottom: 78px; }
   .gifos-max .gifo {
-    margin-left: 29px;
+    margin-left: 7.9vw;
+    margin-right: 7.7vw;
     width: 84.8%;
     height: 42%; }
   .gifos-max .user-gifos-max {
     font-family: "Roboto", sans-serif;
     font-size: 15px;
     color: #000000;
-    margin-left: 35px;
     margin-top: 14px;
     font-weight: 400; }
   .gifos-max .titulo-gifos-max {
-    margin-left: 29.5px;
     margin-top: 5px;
     font-size: 16px;
     color: #000000;
-    font-family: "Montserrat", sans-serif; }
+    font-family: "Montserrat", sans-serif;
+    width: 100px; }
   .gifos-max .icono-descarga {
     opacity: 0.5;
     border: 1px solid #9CAFC3;
@@ -328,9 +328,14 @@ footer .line-footer {
   .gifos-max .iconos {
     display: flex;
     justify-content: space-between;
-    margin-left: 70vw;
-    margin-top: -40px;
+    align-items: center;
     width: 85px; }
+  .gifos-max .container-max {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 7.9vw;
+    padding-right: 7.7vw; }
 
 @media screen and (min-width: 1024px) {
   header {
