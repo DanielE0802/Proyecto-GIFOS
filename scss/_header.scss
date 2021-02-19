@@ -58,11 +58,16 @@
                     height: 0px;
                 }
 
+                .fourLi{
+                    display: inline;
+                }
+
             }
 
             .active {
                 transform: translate(0, 0px);
             }
+
 
         }
 

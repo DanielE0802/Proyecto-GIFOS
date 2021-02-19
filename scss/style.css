@@ -63,6 +63,8 @@ header {
         transform: translate(-150%, 25px); }
       header nav ul .firsLi::after {
         transform: translate(-220%, 25px); }
+      header nav ul .fourLi {
+        display: none; }
     header nav .active {
       transform: translate(0, -1500px); }
 
@@ -362,6 +364,8 @@ footer .line-footer {
         header nav ul .firsLi::after {
           width: 0px;
           height: 0px; }
+        header nav ul .fourLi {
+          display: inline; }
       header nav .active {
         transform: translate(0, 0px); }
 
