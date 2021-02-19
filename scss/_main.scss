@@ -22,20 +22,27 @@
             max-width: 400px;
         }
 
-        input {
+        .inputSearch{
             width: 89.1%;
-            max-width: 551px;
-            height: 50px;
+            max-width: 460px;
+    
             border-radius: 27px;
             transform: translateY(-5px);
             background: #FFFFFF;
             border: 1px solid $color-p;
-            outline: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
             align-self: center;
-        }
-
-        input:focus-visible {
-            padding-left: 60px;
+            height: 50px;
+            input {
+                border: none;
+                outline: none;
+                align-self: center;
+                width: 57.3vw;
+                max-width: 400px;
+                height: 40px;
+            }
         }
 
         input::placeholder {
