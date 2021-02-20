@@ -442,6 +442,35 @@ footer .line-footer {
         font-weight: 500;
         font-family: "Montserrat", sans-serif; }
 
+  .busqueda {
+    margin-top: 55px; }
+    .busqueda .separator {
+      opacity: 0.5;
+      width: 23.5%;
+      margin-bottom: 81.9px; }
+    .busqueda .busqueda-title {
+      font-size: 35px;
+      line-height: 30px;
+      margin-bottom: 60px; }
+    .busqueda .galery-gifs {
+      grid-auto-rows: 1fr 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      gap: 29px;
+      padding-right: 156px;
+      padding-left: 156px;
+      padding-bottom: 78px; }
+      .busqueda .galery-gifs img {
+        width: 100%;
+        height: 100%; }
+
+  .img-hover {
+    opacity: 0.7;
+    background: #572EE5;
+    z-index: 100;
+    width: 100px;
+    height: 100px;
+    position: absolute; }
+
   .container-trending {
     margin-top: 45px;
     display: flex;
@@ -451,26 +480,6 @@ footer .line-footer {
       margin-top: 46px; }
     .container-trending .trending-text p {
       text-align: center; }
-    .container-trending .trending-text .busqueda {
-      margin-top: 55px; }
-      .container-trending .trending-text .busqueda .separator {
-        opacity: 0.5;
-        width: 23.5%;
-        margin-bottom: 81.9px; }
-      .container-trending .trending-text .busqueda .busqueda-title {
-        font-size: 35px;
-        line-height: 30px;
-        margin-bottom: 60px; }
-      .container-trending .trending-text .busqueda .galery-gifs {
-        grid-auto-rows: 1fr 1fr 1fr 1fr;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-        gap: 29px;
-        padding-right: 156px;
-        padding-left: 156px;
-        padding-bottom: 78px; }
-        .container-trending .trending-text .busqueda .galery-gifs img {
-          width: 100%;
-          height: 100%; }
     .container-trending .trending-gif {
       display: flex;
       overflow: hidden; }

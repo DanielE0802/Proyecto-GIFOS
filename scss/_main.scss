@@ -78,6 +78,37 @@
 
     }
 
+    .busqueda {
+        margin-top: 55px;
+
+        .separator {
+            opacity: 0.5;
+            width: 23.5%;
+            margin-bottom: 81.9px;
+        }
+
+        .busqueda-title {
+            font-size: 35px;
+            line-height: 30px;
+            margin-bottom: 60px;
+
+        }
+
+        .galery-gifs {
+            grid-auto-rows: 1fr 1fr 1fr 1fr;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            gap: 29px;
+            padding-right: 156px;
+            padding-left: 156px;
+            padding-bottom: 78px;
+
+            img {
+                width: 100%;
+                height: 100%;
+            }
+
+        }
+    }
 
 
     // Trending gifos
@@ -94,38 +125,6 @@
 
             p {
                 text-align: center;
-            }
-
-            .busqueda {
-                margin-top: 55px;
-
-                .separator {
-                    opacity: 0.5;
-                    width: 23.5%;
-                    margin-bottom: 81.9px;
-                }
-
-                .busqueda-title {
-                    font-size: 35px;
-                    line-height: 30px;
-                    margin-bottom: 60px;
-
-                }
-
-                .galery-gifs {
-                    grid-auto-rows: 1fr 1fr 1fr 1fr;
-                    grid-template-columns: 1fr 1fr 1fr 1fr;
-                    gap: 29px;
-                    padding-right: 156px;
-                    padding-left: 156px;
-                    padding-bottom: 78px;
-
-                    img {
-                        width: 100%;
-                        height: 100%;
-                    }
-
-                }
             }
 
         }
