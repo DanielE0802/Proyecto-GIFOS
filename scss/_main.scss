@@ -109,13 +109,45 @@
 
         }
     }
+    .favoritos{
+        .galery-gifs {
+            grid-auto-rows: 1fr 1fr 1fr 1fr;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            gap: 29px;
+            padding-right: 156px;
+            padding-left: 156px;
+            padding-bottom: 78px;
 
+            img {
+                width: 100%;
+                height: 100%;
+            }
+
+        }
+    }
+    .mis-gifos{
+        .galery-gifs {
+            grid-auto-rows: 1fr 1fr 1fr 1fr;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            gap: 29px;
+            padding-right: 156px;
+            padding-left: 156px;
+            padding-bottom: 78px;
+
+            img {
+                width: 100%;
+                height: 100%;
+            }
+
+        }
+    }
 
     // Trending gifos
     .container-trending {
         margin-top: 45px;
         display: flex;
         flex-direction: column;
+        overflow: hidden;
 
         .trending-text {
             h2 {
@@ -136,7 +168,7 @@
 
             img {
 
-                width: 64.8%;
+                width: 64.5%;
                 margin-left: 22px;
                 margin-top: 32px;
                 margin-bottom: 82px;
