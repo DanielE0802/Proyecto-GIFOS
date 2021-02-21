@@ -488,7 +488,8 @@ footer .line-footer {
   .container-trending {
     margin-top: 45px;
     display: flex;
-    flex-direction: column; }
+    flex-direction: column;
+    overflow: hidden; }
     .container-trending .trending-text h2 {
       text-align: center;
       margin-top: 46px; }
@@ -498,7 +499,7 @@ footer .line-footer {
       display: flex;
       overflow: hidden; }
       .container-trending .trending-gif img {
-        width: 64.8%;
+        width: 64.5%;
         margin-left: 22px;
         margin-top: 32px;
         margin-bottom: 82px; } }

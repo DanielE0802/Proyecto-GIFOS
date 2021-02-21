@@ -147,6 +147,7 @@
         margin-top: 45px;
         display: flex;
         flex-direction: column;
+        overflow: hidden;
 
         .trending-text {
             h2 {
@@ -167,7 +168,7 @@
 
             img {
 
-                width: 64.8%;
+                width: 64.5%;
                 margin-left: 22px;
                 margin-top: 32px;
                 margin-bottom: 82px;
