@@ -546,6 +546,21 @@ footer .line-footer {
       display: flex;
       justify-content: space-between;
       padding-left: 7.9vw;
-      padding-right: 7.7vw; } }
+      padding-right: 7.7vw; }
+
+  .camara {
+    display: flex; }
+    .camara .base-camara {
+      margin-top: 270px;
+      margin-left: 165px; }
+    .camara .luz-camara {
+      margin-top: 188px;
+      margin-left: 2px; }
+    .camara .cinta1 {
+      margin-left: -260px;
+      margin-top: 55px; }
+    .camara .cinta2 {
+      margin-top: 30px;
+      margin-left: 3px; } }
 
 /*# sourceMappingURL=style.css.map */

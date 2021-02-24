@@ -230,5 +230,23 @@
             padding-right: 7.7vw;
         }
     }
-
+    .camara{
+        display: flex;
+        .base-camara{
+            margin-top: 270px;
+            margin-left: 165px;
+        }
+        .luz-camara{
+            margin-top: 188px;
+            margin-left: 2px;
+        }
+        .cinta1{
+            margin-left: -260px;
+            margin-top: 55px;
+        }
+        .cinta2{
+            margin-top: 30px;
+            margin-left: 3px;
+        }
+    }
 }
