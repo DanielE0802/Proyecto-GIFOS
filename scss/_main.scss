@@ -232,6 +232,7 @@
     }
     .camara{
         display: flex;
+        transform: translate(-150px, 0);
         .base-camara{
             margin-top: 270px;
             margin-left: 165px;
@@ -248,5 +249,12 @@
             margin-top: 30px;
             margin-left: 3px;
         }
+    }
+    .gifo-container{
+        border: 1px solid #572EE5;
+        width: 47.8%;
+        height: 390px;
+        display: flex;
+        margin: auto;
     }
 }
