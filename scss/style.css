@@ -548,27 +548,67 @@ footer .line-footer {
       padding-left: 7.9vw;
       padding-right: 7.7vw; }
 
-  .camara {
+  .container-crea-tu-gif .container-camara {
     display: flex;
-    transform: translate(-150px, 0); }
-    .camara .base-camara {
-      margin-top: 270px;
-      margin-left: 165px; }
-    .camara .luz-camara {
-      margin-top: 188px;
-      margin-left: 2px; }
-    .camara .cinta1 {
-      margin-left: -260px;
-      margin-top: 55px; }
-    .camara .cinta2 {
-      margin-top: 30px;
-      margin-left: 3px; }
+    padding-top: 100px; }
+    .container-crea-tu-gif .container-camara .camara {
+      display: flex;
+      margin-left: 178px;
+      margin-top: 100px;
+      width: 205px; }
+      .container-crea-tu-gif .container-camara .camara .base-camara {
+        transform: translate(0px, 22px);
+        width: 123px;
+        height: 162px; }
+      .container-crea-tu-gif .container-camara .camara .luz-camara {
+        transform: translate(2px, 0px);
+        width: 91px;
+        height: 151px; }
+      .container-crea-tu-gif .container-camara .camara .cinta1 {
+        transform: translate(-160px, 0px);
+        width: 63.6px;
+        height: 63.6px; }
+      .container-crea-tu-gif .container-camara .camara .cinta2 {
+        transform: translate(-270px, 15px);
+        width: 45.9px;
+        height: 45.9px; }
+  .container-crea-tu-gif .containerCenterCrearGifo {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-content: center; }
+    .container-crea-tu-gif .containerCenterCrearGifo .pasosCrearGifo {
+      display: flex;
+      width: 147px;
+      justify-content: space-between;
+      align-self: center;
+      margin-top: 24px;
+      margin-bottom: 19px; }
+      .container-crea-tu-gif .containerCenterCrearGifo .pasosCrearGifo .numeroDePasos {
+        border: 1px solid #572EE5;
+        border-radius: 50%;
+        align-items: center; }
+        .container-crea-tu-gif .containerCenterCrearGifo .pasosCrearGifo .numeroDePasos .paso {
+          font-family: "Roboto", sans-serif;
+          font-size: 18px;
+          color: #572EE5;
+          text-align: center;
+          align-self: center;
+          padding-top: 6px;
+          padding-bottom: 6px;
+          padding-left: 11px;
+          padding-right: 11px; }
+    .container-crea-tu-gif .containerCenterCrearGifo .carga {
+      width: 795.9px;
+      height: 6.9px;
+      background: #572EE5;
+      display: inline-block; }
 
   .gifo-container {
     border: 1px solid #572EE5;
     width: 47.8%;
     height: 390px;
-    display: flex;
-    margin: auto; } }
+    display: flex; } }
 
 /*# sourceMappingURL=style.css.map */
