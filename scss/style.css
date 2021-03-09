@@ -163,6 +163,10 @@ header {
       margin-left: 22px;
       margin-top: 32px;
       margin-bottom: 82px; }
+    .container-trending .trending-gif .izquierda-container .flecha-izquierda {
+      display: none; }
+    .container-trending .trending-gif .derecha-container .flecha-derecha {
+      display: none; }
 
 footer .footer-social {
   display: flex;
@@ -499,10 +503,20 @@ footer .line-footer {
       display: flex;
       overflow: hidden; }
       .container-trending .trending-gif img {
-        width: 64.5%;
+        width: 25%;
         margin-left: 22px;
         margin-top: 32px;
         margin-bottom: 82px; }
+      .container-trending .trending-gif .izquierda-container .flecha-izquierda {
+        display: block;
+        transform: translate(0, 110px);
+        width: 40px;
+        height: 40px; }
+      .container-trending .trending-gif .derecha-container .flecha-derecha {
+        display: block;
+        transform: translate(0, 110px);
+        width: 40px;
+        height: 40px; }
 
   .gifos-max {
     width: 99%;

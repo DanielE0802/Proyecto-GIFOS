@@ -214,13 +214,22 @@ header {
         overflow: hidden;
 
         img {
-
             width: 64.8%;
             margin-left: 22px;
             margin-top: 32px;
             margin-bottom: 82px;
         }
 
+        .izquierda-container{
+                .flecha-izquierda{
+                    display: none;
+                }
+            }
+            .derecha-container{
+                .flecha-derecha{
+                    display: none;
+                }
+            }
     }
 }
 
