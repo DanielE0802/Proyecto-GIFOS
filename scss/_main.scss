@@ -109,7 +109,8 @@
 
         }
     }
-    .favoritos{
+
+    .favoritos {
         .galery-gifs {
             grid-auto-rows: 1fr 1fr 1fr 1fr;
             grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -125,7 +126,8 @@
 
         }
     }
-    .mis-gifos{
+
+    .mis-gifos {
         .galery-gifs {
             grid-auto-rows: 1fr 1fr 1fr 1fr;
             grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -167,7 +169,8 @@
             overflow: hidden;
 
             img {
-                width: 25%  ;
+
+                width: 64.5%;
                 margin-left: 22px;
                 margin-top: 32px;
                 margin-bottom: 82px;
@@ -191,52 +194,59 @@
         }
     }
 
-    .gifos-max{
+    .gifos-max {
         width: 99%;
         background: #FFFFFF;
         opacity: 90%;
-        .close{
+
+        .close {
             display: block;
             margin-top: 64px;
             margin-left: 85.8%;
             margin-bottom: 78px;
         }
-        .gifo{
+
+        .gifo {
             margin-left: 7.9vw;
             margin-right: 7.7vw;
             width: 84.8%;
             height: 42%;
         }
-        .user-gifos-max{
+
+        .user-gifos-max {
             font-family: $Rob;
             font-size: 15px;
             color: #000000;
-    
+
             margin-top: 14px;
             font-weight: 400;
         }
-        .titulo-gifos-max{
+
+        .titulo-gifos-max {
             margin-top: 5px;
             font-size: 16px;
             color: #000000;
             font-family: $Mon;
             width: 100px;
         }
-        .icono-descarga{
+
+        .icono-descarga {
             opacity: 0.5;
             border: 1px solid #9CAFC3;
             border-radius: 6px;
             width: 36px;
             height: 36px;
         }
-        .iconos{
+
+        .iconos {
             display: flex;
             justify-content: space-between;
             align-items: center;
             width: 85px;
-    
+
         }
-        .container-max{
+
+        .container-max {
             width: 100%;
             display: flex;
             justify-content: space-between;
@@ -244,31 +254,107 @@
             padding-right: 7.7vw;
         }
     }
-    .camara{
-        display: flex;
-        transform: translate(-150px, 0);
-        .base-camara{
-            margin-top: 270px;
-            margin-left: 165px;
+
+    //Sección camara
+
+    .container-crea-tu-gif {
+        
+        .container-camara {
+            display: flex;
+            padding-top: 100px;
+            
+
+            .camara {
+                display: flex;
+                margin-left: 178px;
+                margin-top: 100px;
+                width: 205px;
+
+                .base-camara {
+                    transform: translate(0px, 22px);
+                    width: 123px;
+                    height: 162px;
+                }
+
+                .luz-camara {
+                    transform: translate(2px, 0px);
+                    width: 91px;
+                    height: 151px;
+                }
+
+                .cinta1 {
+                    transform: translate(-160px, 0px);
+                    width: 63.6px;
+                    height: 63.6px;
+                }
+
+                .cinta2 {
+                    transform: translate(-270px, 15px);
+                    width: 45.9px;
+                    height: 45.9px;
+                }
+            }
+
+
         }
-        .luz-camara{
-            margin-top: 188px;
-            margin-left: 2px;
+
+        .containerCenterCrearGifo{
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            flex-direction: column;
+            align-content: center;
+            
+        .pasosCrearGifo {
+            display: flex;
+            width: 147px;
+            justify-content: space-between;
+            align-self: center;
+            margin-top: 24px;
+            margin-bottom: 19px;
+
+
+            .numeroDePasos {
+                border: 1px solid #572EE5;
+                border-radius: 50%;
+                align-items: center;
+
+
+                .paso {
+                    font-family: $Rob;
+                    font-size: 18px;
+                    color: $color-p;
+                    text-align: center;
+                    align-self: center;
+                    padding-top: 6px;
+                    padding-bottom: 6px;
+                    padding-left: 11px;
+                    padding-right: 11px;
+
+                }
+            }
+
+            
         }
-        .cinta1{
-            margin-left: -260px;
-            margin-top: 55px;
+
+
+        .carga {
+            width: 795.9px;
+            height: 6.9px;
+            background: $color-p;
+            display: inline-block;
         }
-        .cinta2{
-            margin-top: 30px;
-            margin-left: 3px;
+
+
         }
+
     }
-    .gifo-container{
+
+
+    .gifo-container {
         border: 1px solid #572EE5;
         width: 47.8%;
         height: 390px;
         display: flex;
-        margin: auto;
     }
 }
