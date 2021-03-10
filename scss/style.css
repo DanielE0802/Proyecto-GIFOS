@@ -348,6 +348,9 @@ footer .line-footer {
     padding-left: 7.9vw;
     padding-right: 7.7vw; }
 
+.display-none {
+  display: none; }
+
 @media screen and (min-width: 1024px) {
   header {
     height: 90px; }
