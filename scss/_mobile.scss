@@ -1,4 +1,5 @@
 
+
 header {
     z-index: 1;
     background: #FFFFFF;
@@ -309,6 +310,8 @@ footer {
         grid-auto-rows: 1fr 1fr;
         grid-template-columns: 1fr 1fr;
         gap: 21px;
+        height: 100vh;
+        width: 100vw;
         padding-right: 21px;
         padding-left: 21px;
         padding-bottom: 78px;
@@ -362,6 +365,8 @@ footer {
         display: grid;
         grid-auto-rows: 1fr 1fr;
         grid-template-columns: 1fr 1fr;
+        height: 100vh;
+        width: 100vw;
         gap: 21px;
         padding-right: 21px;
         padding-left: 21px;
@@ -392,6 +397,8 @@ footer {
         display: grid;
         grid-auto-rows: 1fr 1fr;
         grid-template-columns: 1fr 1fr;
+        height: 100vh;
+        width: 100vw;
         gap: 21px;
         padding-right: 21px;
         padding-left: 21px;
