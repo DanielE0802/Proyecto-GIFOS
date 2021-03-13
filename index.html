@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gifos</title>
+    <link rel="icon" href="assets/logo-desktop.svg">
     <link rel="stylesheet" href="scss/style.min.css">
 
 </head>
 
-<body>
+<body class="modo_nocturno">
     <header>
         <div class="line"></div>
 
@@ -22,155 +24,208 @@
                 <li id="btn_fav" class="twoLi">FAVORITOS</li>
                 <li id="btn_mis_gifos" class="threeLi">MIS GIFOS</li>
                 <li class="fourLi">
-                    <img src="assets/button-crear-gifo.svg" alt="">
-                </li>
+                    <img src="assets/button-crear-gifo.svg" alt="" id="btn_crear_gifos">
 
 
             </ul>
         </nav>
     </header>
     <main>
-        <!-- Busqueda y titulo-->
-        <section class="home" id="home">
-            <div class="main-title">
+        <section id="body_inicio" class="">
+            <!-- Busqueda y titulo-->
+            <section class="home" id="home">
+                <div class="main-title">
 
-                <h1>Inspírate, busca, guarda, y crea los mejores <span class="title-change-color"> GIFOS </span></h1>
+                    <h1>Inspírate, busca, guarda, y crea los mejores <span class="title-change-color"> GIFOS </span>
+                    </h1>
 
-                <img src="assets/ilustra_header.svg" alt="">
-                <div class="inputSearch">
-                    <input type="search" placeholder="Busca GIFOS y más">
-                    <img src="assets/icon-search.svg" alt="">
+                    <img src="assets/ilustra_header.svg" alt="">
+                    <div class="inputSearch">
+                        <input type="search" placeholder="Busca GIFOS y más">
+                        <img src="assets/icon-search.svg" alt="">
+                    </div>
+
+
+                    <div class="main-treanding">
+                        <h4>Trending</h4>
+                        <p>Reactions, Entertainment, Sports, Stickers, Artists</p>
+                    </div>
+
                 </div>
 
 
-                <div class="main-treanding">
-                    <h4>Trending</h4>
-                    <p>Reactions, Entertainment, Sports, Stickers, Artists</p>
-                </div>
 
-            </div>
+                <section class="busqueda display-none" id="busqueda">
+                    <div class="separator"></div>
 
+                    <h4 class="busqueda-title">Mascotas</h4>
 
 
-            <section class="busqueda display-none" id="busqueda">
-                <div class="separator"></div>
-
-                <h4 class="busqueda-title">Mascotas</h4>
-
-
-                <div class="galery-gifs">
-                    <img src="https://picsum.photos/id/200/200/200" alt="gif" class="">
-                    <img src="https://picsum.photos/id/200/200/200" alt="gif">
-                    <img src="https://picsum.photos/id/200/200/200" alt="gif">
-                    <img src="https://picsum.photos/id/200/200/200" alt="gif">
-                    <img src="https://picsum.photos/id/200/200/200" alt="gif">
-                    <img src="https://picsum.photos/id/200/200/200" alt="gif">
-                    <img src="https://picsum.photos/id/200/200/200" alt="gif">
-                    <img src="https://picsum.photos/id/200/200/200" alt="gif">
-                    <img src="https://picsum.photos/id/200/200/200" alt="gif">
-                    <img src="https://picsum.photos/id/200/200/200" alt="gif">
-                    <img src="https://picsum.photos/id/200/200/200" alt="gif">
-                    <img src="https://picsum.photos/id/200/200/200" alt="gif">
-                </div>
+                    <div class="galery-gifs">
+                        <img src="https://picsum.photos/id/200/200/200" alt="gif" class="">
+                        <img src="https://picsum.photos/id/200/200/200" alt="gif">
+                        <img src="https://picsum.photos/id/200/200/200" alt="gif">
+                        <img src="https://picsum.photos/id/200/200/200" alt="gif">
+                        <img src="https://picsum.photos/id/200/200/200" alt="gif">
+                        <img src="https://picsum.photos/id/200/200/200" alt="gif">
+                        <img src="https://picsum.photos/id/200/200/200" alt="gif">
+                        <img src="https://picsum.photos/id/200/200/200" alt="gif">
+                        <img src="https://picsum.photos/id/200/200/200" alt="gif">
+                        <img src="https://picsum.photos/id/200/200/200" alt="gif">
+                        <img src="https://picsum.photos/id/200/200/200" alt="gif">
+                        <img src="https://picsum.photos/id/200/200/200" alt="gif">
+                    </div>
 
 
-                <a href="#" class="ver-mas" id="section-busqueda-btn">
+                    <a href="#" class="ver-mas" id="section-busqueda-btn">
+                        <span>VER MÁS</span>
+                    </a>
+
+
+                </section>
+                <!-- favoritos -->
+                <section class="favoritos display-none" id="favoritos">
+                    <img src="assets/icon-favoritos.svg" alt="" class="fav-icon">
+
+                    <h4 class="fav-title">Favoritos</h4>
+                    <div class="galery-gifs">
+
+                        <img src="https://picsum.photos/id/210/210/200" alt="">
+                        <img src="https://picsum.photos/id/210/210/200" alt="">
+                        <img src="https://picsum.photos/id/210/210/200" alt="">
+                        <img src="https://picsum.photos/id/210/210/200" alt="">
+                        <img src="https://picsum.photos/id/210/210/200" alt="">
+                        <img src="https://picsum.photos/id/210/210/200" alt="">
+                        <img src="https://picsum.photos/id/210/210/200" alt="">
+                        <img src="https://picsum.photos/id/210/210/200" alt="">
+                        <img src="https://picsum.photos/id/210/210/200" alt="">
+                        <img src="https://picsum.photos/id/210/210/200" alt="">
+                        <img src="https://picsum.photos/id/210/210/200" alt="">
+                        <img src="https://picsum.photos/id/210/210/200" alt="">
+
+                    </div>
+                </section>
+                <a href="#" class="ver-mas display-none" id="section_fav_btn">
                     <span>VER MÁS</span>
                 </a>
-
-
             </section>
-            <!-- favoritos -->
-            <section class="favoritos display-none" id="favoritos">
-                <img src="assets/icon-favoritos.svg" alt="" class="fav-icon">
+            <!-- mis gifos -->
+            <section class="mis-gifos display-none" id="mis-gifos">
+                <img src="assets/icon-mis-gifos.svg" alt="" class="mis-gifos-icon">
 
-                <h4 class="fav-title">Favoritos</h4>
+                <h4 class="mis-gifos-title">Mis GIFOS</h4>
                 <div class="galery-gifs">
 
-                    <img src="https://picsum.photos/id/210/210/200" alt="">
-                    <img src="https://picsum.photos/id/210/210/200" alt="">
-                    <img src="https://picsum.photos/id/210/210/200" alt="">
-                    <img src="https://picsum.photos/id/210/210/200" alt="">
-                    <img src="https://picsum.photos/id/210/210/200" alt="">
-                    <img src="https://picsum.photos/id/210/210/200" alt="">
-                    <img src="https://picsum.photos/id/210/210/200" alt="">
-                    <img src="https://picsum.photos/id/210/210/200" alt="">
-                    <img src="https://picsum.photos/id/210/210/200" alt="">
-                    <img src="https://picsum.photos/id/210/210/200" alt="">
-                    <img src="https://picsum.photos/id/210/210/200" alt="">
-                    <img src="https://picsum.photos/id/210/210/200" alt="">
+                    <img src="https://picsum.photos/id/220/220/200" alt="">
+                    <img src="https://picsum.photos/id/220/220/200" alt="">
+                    <img src="https://picsum.photos/id/220/220/200" alt="">
+                    <img src="https://picsum.photos/id/220/220/200" alt="">
+                    <img src="https://picsum.photos/id/220/220/200" alt="">
+                    <img src="https://picsum.photos/id/220/220/200" alt="">
+                    <img src="https://picsum.photos/id/220/220/200" alt="">
+                    <img src="https://picsum.photos/id/220/220/200" alt="">
+                    <img src="https://picsum.photos/id/220/220/200" alt="">
+                    <img src="https://picsum.photos/id/220/220/200" alt="">
+                    <img src="https://picsum.photos/id/220/220/200" alt="">
+                    <img src="https://picsum.photos/id/220/220/200" alt="">
 
                 </div>
             </section>
-            <a href="#" class="ver-mas display-none" id="section_fav_btn">
+            <a href="#" class="ver-mas display-none" id="section_mis_gifos_btn">
                 <span>VER MÁS</span>
             </a>
-        </section>
-        <!-- mis gifos -->
-        <section class="mis-gifos display-none" id="mis-gifos">
-            <img src="assets/icon-mis-gifos.svg" alt="" class="mis-gifos-icon">
-
-            <h4 class="mis-gifos-title">Mis GIFOS</h4>
-            <div class="galery-gifs">
-
-                <img src="https://picsum.photos/id/220/220/200" alt="">
-                <img src="https://picsum.photos/id/220/220/200" alt="">
-                <img src="https://picsum.photos/id/220/220/200" alt="">
-                <img src="https://picsum.photos/id/220/220/200" alt="">
-                <img src="https://picsum.photos/id/220/220/200" alt="">
-                <img src="https://picsum.photos/id/220/220/200" alt="">
-                <img src="https://picsum.photos/id/220/220/200" alt="">
-                <img src="https://picsum.photos/id/220/220/200" alt="">
-                <img src="https://picsum.photos/id/220/220/200" alt="">
-                <img src="https://picsum.photos/id/220/220/200" alt="">
-                <img src="https://picsum.photos/id/220/220/200" alt="">
-                <img src="https://picsum.photos/id/220/220/200" alt="">
-
-            </div>
-        </section>
-        <a href="#" class="ver-mas display-none" id="section_mis_gifos_btn">
-            <span>VER MÁS</span>
-        </a>
-        <!-- Gifos-max -->
-        <section class="gifos-max display-none">
-            <img src="assets/close.svg" alt="" class="close">
-            <img src="https://placeimg.com/300/200/any" alt="" class="gifo">
-            <div class="container-max">
-                <div class="container-texto">
-                    <h5 class="user-gifos-max">User</h5>
-                    <h4 class="titulo-gifos-max">Título GIFO</h4>
+            <!-- Gifos-max -->
+            <section class="gifos-max display-none">
+                <img src="assets/close.svg" alt="" class="close">
+                <img src="https://placeimg.com/300/200/any" alt="" class="gifo">
+                <div class="container-max">
+                    <div class="container-texto">
+                        <h5 class="user-gifos-max">User</h5>
+                        <h4 class="titulo-gifos-max">Título GIFO</h4>
+                    </div>
+                    <div class="iconos">
+                        <img src="assets/icon-fav.svg" alt="" class="icon-fav">
+                        <div class="icono-descarga">
+                            <img src="assets/icon-download-hover.svg" alt="">
+                        </div>
+                    </div>
                 </div>
-                <div class="iconos">
-                    <img src="assets/icon-fav.svg" alt="" class="icon-fav">
-                    <div class="icono-descarga">
-                        <img src="assets/icon-download-hover.svg" alt="">
+            </section>
+            <!-- Trending GIFOS -->
+            <div class="container-trending">
+
+                <div class="trending-text">
+                    <h2>Trending GIFOS</h2>
+                    <p>Mira los últimos </p>
+                    <p>GIFOS de nuestra comunidad.</p>
+                </div>
+
+                <!-- IMAGENES DE MUESTRA ---- INSERTAR LA API DE GIFS -->
+                <div class="trending-gif">
+                    <div class="izquierda-container">
+                        <img src="assets/button-slider-left.svg" alt="" class="flecha-izquierda">
+                    </div>
+                    <img src="https://placeimg.com/318/245/any" alt="">
+                    <img src="https://placeimg.com/318/245/any" alt="">
+                    <img src="https://placeimg.com/318/245/any" alt="">
+                    <div class="derecha-container">
+                        <img src="assets/Button-Slider-right.svg" alt="" class="flecha-derecha">
                     </div>
                 </div>
             </div>
         </section>
-        <!-- Trending GIFOS -->
-        <div class="container-trending">
 
-            <div class="trending-text">
-                <h2>Trending GIFOS</h2>
-                <p>Mira los últimos </p>
-                <p>GIFOS de nuestra comunidad.</p>
+        <!--Seccion crear GIFO-->
+        <div class="container-crea-tu-gif display-none" id="crearGifos">
+
+            <div class="container-camara">
+
+
+                <div class="camara">
+                    <img src="assets/element-camara.svg" class="base-camara" alt="">
+                    <img src="assets/element-luz-camara.svg" class="luz-camara" alt="">
+                    <img src="assets/element_cinta1.svg" class="cinta1" alt="">
+                    <img src="assets/element_cinta2.svg" class="cinta2" alt="">
+                </div>
+                <div class="gifo-container">
+                </div>
+
             </div>
 
-            <!-- IMAGENES DE MUESTRA ---- INSERTAR LA API DE GIFS -->
-            <div class="trending-gif">
-                <div class="izquierda-container">
-                    <img src="assets/button-slider-left.svg" alt="" class="flecha-izquierda">
+            <div class="containerCenterCrearGifo">
+
+
+                <div class="pasosCrearGifo">
+
+                    <div class="numeroDePasos">
+                        <h1 class="paso">
+                            1
+                        </h1>
+
+                    </div>
+
+                    <div class="numeroDePasos">
+                        <h1 class="paso">
+                            2
+                        </h1>
+                    </div>
+
+                    <div class="numeroDePasos">
+                        <h1 class="paso">
+                            3
+                        </h1>
+                    </div>
+
                 </div>
-                <img src="https://placeimg.com/318/245/any" alt="">
-                <img src="https://placeimg.com/318/245/any" alt="">
-                <img src="https://placeimg.com/318/245/any" alt="">
-                <div class="derecha-container">
-                    <img src="assets/Button-Slider-right.svg" alt="" class="flecha-derecha">
+
+                <div class="carga">
+
                 </div>
+
             </div>
         </div>
-        </section>
+
+
     </main>
 
     <footer>
