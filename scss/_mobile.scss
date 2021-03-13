@@ -212,7 +212,7 @@ header {
 
     .trending-gif {
         display: flex;
-        overflow: hidden;
+        overflow: scroll;
 
         img {
             width: 64.8%;
