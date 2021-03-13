@@ -385,7 +385,8 @@ footer .line-footer {
           letter-spacing: 0;
           font-weight: 700;
           display: inline-block;
-          color: #572EE5; }
+          color: #572EE5;
+          cursor: pointer; }
           header nav ul li::after {
             width: 0px;
             height: 0px; }

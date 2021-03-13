@@ -29,7 +29,7 @@
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
-
+                
                 li {
                     text-decoration: none;
                     font-family: $Mon;
@@ -41,7 +41,7 @@
                     font-weight: 700;
                     display: inline-block;
                     color: $color-p;
-
+                    cursor: pointer;
                     &::after{
                         width: 0px;
                         height: 0px;

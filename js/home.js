@@ -11,7 +11,7 @@ let section_mis_gifos_btn = call("section_mis_gifos_btn")
 let btn_crear_gifos= call("btn_crear_gifos")
 let seccion_crear_gifos=call("crearGifos")
 let body_inicio=call("body_inicio")
-
+let logoNav = call(logo)
 
 //Sección crear GIFO
 
@@ -49,7 +49,6 @@ bt_mis_gifos.addEventListener('click', function(e){
         seccion_crear_gifos.classList.add("display-none")
         body_inicio.classList.remove("display-none")
     }
-    
-},false)
 
+},false)
 
