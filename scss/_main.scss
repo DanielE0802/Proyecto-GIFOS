@@ -315,15 +315,17 @@
     //Sección camara
 
     .container-crea-tu-gif {
-        
+        height: 77vh;
         .container-camara {
             display: flex;
             padding-top: 100px;
+       
             
 
             .camara {
                 display: flex;
-                margin-left: 178px;
+                justify-content: center;
+                margin-left: 13.5vw;
                 margin-top: 100px;
                 width: 205px;
 
@@ -396,7 +398,7 @@
 
 
         .carga {
-            width: 795.9px;
+            width: 55.3%;
             height: 6.9px;
             background: $color-p;
             display: inline-block;
@@ -411,6 +413,10 @@
         width: 47.8%;
         height: 390px;
         display: flex;
+
+        #video{
+            z-index: 10000;
+        }
     }
 }
 

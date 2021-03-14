@@ -7,7 +7,7 @@ let bt_fav = call("btn_fav")
 let btn_crear_gifos= call("btn_crear_gifos")
 let btn_mis_gifos = call("btn_mis_gifos")
 let btn_home = call("logo")
-
+let btn_comenzar= call("comenzar")
 
 //Secciones
 let section_fav= call("favoritos")
@@ -83,3 +83,16 @@ btn_home.addEventListener('click', function(){
     
     }
 })
+
+btn_comenzar.addEventListener('click', function(){
+    navigator.mediaDevices.getUserMedia({
+        video:true
+    }).then((stream)=>{
+        console.log(stream)
+        let video= document.getElementById("video")
+        video.srcObject = stream
+    }).catch((err)=>console.log(err))
+})
+
+
+
