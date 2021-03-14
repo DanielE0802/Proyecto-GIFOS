@@ -20,6 +20,9 @@ header {
         .header-logo {
             width: 10px;
             margin: 29px 0 17.2px 22px;
+            img{
+                cursor: pointer;
+            }
         }
 
         .header-icono {
@@ -464,4 +467,8 @@ footer {
 }
 .display-none{
     display: none;
+}
+
+.padding{
+    padding-top: 106px;
 }

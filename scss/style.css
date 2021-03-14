@@ -27,6 +27,8 @@ header {
     header nav .header-logo {
       width: 10px;
       margin: 29px 0 17.2px 22px; }
+      header nav .header-logo img {
+        cursor: pointer; }
     header nav .header-icono {
       margin-right: 26px;
       transition: all 1s ease;
@@ -350,6 +352,9 @@ footer .line-footer {
 
 .display-none {
   display: none; }
+
+.padding {
+  padding-top: 106px; }
 
 @media screen and (min-width: 1024px) {
   header {
