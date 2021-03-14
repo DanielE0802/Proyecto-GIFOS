@@ -15,7 +15,7 @@ let logoNav = call(logo)
 
 //Sección crear GIFO
 
-btn_crear_gifos.addEventListener('click' ,function(){
+btn_crear_gifos.addEventListener('click', function(){
     body_inicio.classList.toggle("display-none")
     seccion_crear_gifos.classList.toggle("display-none")
 },false)
