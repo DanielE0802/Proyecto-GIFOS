@@ -11,6 +11,11 @@
 /* Letras */
 /* Colores */
 /*Fuentes*/
+* {
+  transition-property: color;
+  transition-duration: 0.6s;
+  transition-timing-function: ease; }
+
 header {
   z-index: 1;
   background: #FFFFFF;
@@ -44,7 +49,7 @@ header {
       position: absolute;
       top: 95px;
       text-align: center;
-      transition: all .6s ease; }
+      transition: transform .6s ease; }
       header nav ul li {
         text-decoration: none;
         font-family: "Montserrat", sans-serif;
@@ -356,6 +361,36 @@ footer .line-footer {
 .padding {
   padding-top: 106px; }
 
+.modo_nocturno {
+  background: #37383C; }
+  .modo_nocturno header {
+    background: #37383C; }
+    .modo_nocturno header .line {
+      background: #000000; }
+    .modo_nocturno header nav ul {
+      background: #000000;
+      opacity: 100%; }
+  .modo_nocturno main section .home .main-title h1 {
+    color: #FFFFFF; }
+  .modo_nocturno main section .home .main-title div {
+    background: #37383C; }
+    .modo_nocturno main section .home .main-title div input {
+      background: #37383C; }
+    .modo_nocturno main section .home .main-title div h4 {
+      color: #FFFFFF; }
+    .modo_nocturno main section .home .main-title div p {
+      color: #FFFFFF; }
+  .modo_nocturno main section .container-trending {
+    background: #222326; }
+    .modo_nocturno main section .container-trending div h2 {
+      color: #FFFFFF; }
+    .modo_nocturno main section .container-trending div p {
+      color: #FFFFFF; }
+  .modo_nocturno footer .content-footer div p {
+    color: #FFFFFF; }
+  .modo_nocturno footer .line-footer {
+    background: #000000; }
+
 @media screen and (min-width: 1024px) {
   header {
     height: 90px; }
@@ -507,7 +542,7 @@ footer .line-footer {
     padding-left: 156px;
     padding-bottom: 78px; }
     .mis-gifos .galery-gifs img {
-      width: 100%  !important;
+      width: 100% !important;
       height: 100% !important; }
 
   .container-trending {
@@ -583,41 +618,8 @@ footer .line-footer {
       padding-left: 7.9vw;
       padding-right: 7.7vw; }
 
-  footer .footer-social {
-    flex-direction: row;
-    justify-content: start; }
-    footer .footer-social p {
-      text-align: center;
-      margin-top: 49.5px;
-      margin-bottom: 0px;
-      margin-left: 156px;
-      letter-spacing: 0; }
-    footer .footer-social .social {
-      display: flex;
-      justify-content: space-between;
-      width: 100px;
-      align-self: center;
-      margin-top: 49.5px;
-      margin-bottom: 47.8px;
-      margin-left: 17px; }
-  footer .content-footer {
-    display: flex;
-    justify-content: space-between; }
-  footer .footer-copy {
-    width: 250px;
-    height: 1px;
-    text-align: initial;
-    margin-bottom: 0;
-    transform: translate(0, 50px); }
-    footer .footer-copy p {
-      width: 250px; }
-  footer .line-footer {
-    background: #572EE5;
-    width: 100%;
-    height: 5px; }
-
   .container-crea-tu-gif {
-    height: 77vh; }
+    height: 85vh; }
     .container-crea-tu-gif .container-camara {
       display: flex;
       padding-top: 100px; }
@@ -679,38 +681,47 @@ footer .line-footer {
   .gifo-container {
     border: 1px solid #572EE5;
     width: 47.8%;
-    height: 390px;
+    height: 50vh;
     display: flex; }
     .gifo-container #video {
-      z-index: 10000; } }
-.modo_nocturno {
-  background: #37383C; }
-  .modo_nocturno header {
-    background: #37383C; }
-    .modo_nocturno header .line {
-      background: #000000; }
-    .modo_nocturno header nav ul {
-      background: #000000;
-      opacity: 100%; }
-  .modo_nocturno main section .home .main-title h1 {
-    color: #FFFFFF; }
-  .modo_nocturno main section .home .main-title div {
-    background: #37383C; }
-    .modo_nocturno main section .home .main-title div input {
-      background: #37383C; }
-    .modo_nocturno main section .home .main-title div h4 {
-      color: #FFFFFF; }
-    .modo_nocturno main section .home .main-title div p {
-      color: #FFFFFF; }
-  .modo_nocturno main section .container-trending {
-    background: #222326; }
-    .modo_nocturno main section .container-trending div h2 {
-      color: #FFFFFF; }
-    .modo_nocturno main section .container-trending div p {
-      color: #FFFFFF; }
-  .modo_nocturno footer .content-footer div p {
-    color: #FFFFFF; }
-  .modo_nocturno footer .line-footer {
-    background: #000000; }
+      z-index: 10000;
+      width: 47.8vw;
+      height: 100%;
+      max-height: 550px; }
+
+  .modo_nocturno header nav ul {
+    background: #37383C; } }
+footer .footer-social {
+  flex-direction: row;
+  justify-content: start; }
+  footer .footer-social p {
+    text-align: center;
+    margin-top: 49.5px;
+    margin-bottom: 0px;
+    margin-left: 156px;
+    letter-spacing: 0; }
+  footer .footer-social .social {
+    display: flex;
+    justify-content: space-between;
+    width: 100px;
+    align-self: center;
+    margin-top: 49.5px;
+    margin-bottom: 47.8px;
+    margin-left: 17px; }
+footer .content-footer {
+  display: flex;
+  justify-content: space-between; }
+footer .footer-copy {
+  width: 250px;
+  height: 1px;
+  text-align: initial;
+  margin-bottom: 0;
+  transform: translate(0, 50px); }
+  footer .footer-copy p {
+    width: 250px; }
+footer .line-footer {
+  background: #572EE5;
+  width: 100%;
+  height: 5px; }
 
 /*# sourceMappingURL=style.css.map */

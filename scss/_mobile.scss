@@ -1,4 +1,8 @@
-
+* {
+    transition-property: color;
+    transition-duration: 0.6s;
+    transition-timing-function: ease;
+}
 
 header {
     z-index: 1;
@@ -20,7 +24,8 @@ header {
         .header-logo {
             width: 10px;
             margin: 29px 0 17.2px 22px;
-            img{
+
+            img {
                 cursor: pointer;
             }
         }
@@ -44,7 +49,7 @@ header {
             position: absolute;
             top: 95px;
             text-align: center;
-            transition: all .6s ease;
+            transition: transform .6s ease;
 
             li {
                 text-decoration: none;
@@ -53,10 +58,12 @@ header {
                 padding: 22px;
                 width: 100%;
             }
-            a{
+
+            a {
                 text-decoration: none;
                 color: #FFFFFF;
             }
+
             li::after {
                 content: "";
                 opacity: 0.5;
@@ -67,12 +74,13 @@ header {
                 transform-origin: 20px;
                 transform: translate(-150%, 25px);
             }
-            .firsLi::after{
-                
+
+            .firsLi::after {
+
                 transform: translate(-220%, 25px);
             }
 
-            .fourLi{
+            .fourLi {
                 display: none;
             }
         }
@@ -119,7 +127,7 @@ header {
 
     }
 
-    .inputSearch{
+    .inputSearch {
         width: 89.1%;
         max-width: 460px;
 
@@ -132,6 +140,7 @@ header {
         align-items: center;
         align-self: center;
         height: 50px;
+
         input {
             border: none;
             outline: none;
@@ -140,15 +149,15 @@ header {
             max-width: 400px;
             height: 40px;
         }
-    
+
         input::placeholder {
             font-family: $Rob;
             font-size: 16px;
             text-align: left;
-    
+
         }
 
-        img{
+        img {
             position: absolute;
             width: 20px;
             margin-left: 80%;
@@ -224,16 +233,17 @@ header {
             margin-bottom: 82px;
         }
 
-        .izquierda-container{
-                .flecha-izquierda{
-                    display: none;
-                }
+        .izquierda-container {
+            .flecha-izquierda {
+                display: none;
             }
-            .derecha-container{
-                .flecha-derecha{
-                    display: none;
-                }
+        }
+
+        .derecha-container {
+            .flecha-derecha {
+                display: none;
             }
+        }
     }
 }
 
@@ -326,6 +336,7 @@ footer {
 
     }
 }
+
 .ver-mas {
     display: flex;
     width: 100%;
@@ -350,13 +361,15 @@ footer {
     }
 
 }
-.favoritos{
-    .fav-icon{
-        display: block  ;
+
+.favoritos {
+    .fav-icon {
+        display: block;
         margin: auto;
         margin-top: 20px;
     }
-    .fav-title{
+
+    .fav-title {
         text-align: center;
         font-family: $Mon;
         color: $color-p;
@@ -364,6 +377,7 @@ footer {
         line-height: 30px;
         margin-bottom: 46px;
     }
+
     .galery-gifs {
         display: grid;
         grid-auto-rows: 1fr 1fr;
@@ -382,13 +396,15 @@ footer {
     }
 
 }
-.mis-gifos{
-    .mis-gifos-icon{
-        display: block  ;
+
+.mis-gifos {
+    .mis-gifos-icon {
+        display: block;
         margin: auto;
         margin-top: 20px;
     }
-    .mis-gifos-title{
+
+    .mis-gifos-title {
         text-align: center;
         font-family: $Mon;
         color: $color-p;
@@ -396,6 +412,7 @@ footer {
         line-height: 30px;
         margin-bottom: 46px;
     }
+
     .galery-gifs {
         display: grid;
         grid-auto-rows: 1fr 1fr;
@@ -413,23 +430,27 @@ footer {
         }
     }
 }
-.gifos-max{
+
+.gifos-max {
     width: 99%;
     background: #FFFFFF;
     opacity: 90%;
-    .close{
+
+    .close {
         display: block;
         margin-top: 64px;
         margin-left: 85.8%;
         margin-bottom: 78px;
     }
-    .gifo{
+
+    .gifo {
         margin-left: 7.9vw;
         margin-right: 7.7vw;
         width: 84.8%;
         height: 42%;
     }
-    .user-gifos-max{
+
+    .user-gifos-max {
         font-family: $Rob;
         font-size: 15px;
         color: #000000;
@@ -437,27 +458,31 @@ footer {
         margin-top: 14px;
         font-weight: 400;
     }
-    .titulo-gifos-max{
+
+    .titulo-gifos-max {
         margin-top: 5px;
         font-size: 16px;
         color: #000000;
         font-family: $Mon;
         width: 100px;
     }
-    .icono-descarga{
+
+    .icono-descarga {
         opacity: 0.5;
         border: 1px solid #9CAFC3;
         border-radius: 6px;
         width: 36px;
         height: 36px;
     }
-    .iconos{
+
+    .iconos {
         display: flex;
         justify-content: space-between;
         align-items: center;
         width: 85px;
     }
-    .container-max{
+
+    .container-max {
         width: 100%;
         display: flex;
         justify-content: space-between;
@@ -465,10 +490,11 @@ footer {
         padding-right: 7.7vw;
     }
 }
-.display-none{
+
+.display-none {
     display: none;
 }
 
-.padding{
+.padding {
     padding-top: 106px;
 }

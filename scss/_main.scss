@@ -143,7 +143,7 @@
             padding-bottom: 78px;
 
             img {
-                width: 100%  !important;
+                width: 100% !important;
                 height: 100% !important;
             }
 
@@ -180,20 +180,22 @@
                 margin-left: 22px;
                 margin-top: 32px;
                 margin-bottom: 82px;
-            } 
-            .izquierda-container{
-                .flecha-izquierda{
+            }
+
+            .izquierda-container {
+                .flecha-izquierda {
                     display: block;
                     transform: translate(0, 110px);
-                    width: 40px;    
+                    width: 40px;
                     height: 40px;
                 }
             }
-            .derecha-container{
-                .flecha-derecha{
+
+            .derecha-container {
+                .flecha-derecha {
                     display: block;
                     transform: translate(0, 110px);
-                    width: 40px;    
+                    width: 40px;
                     height: 40px;
                 }
             }
@@ -261,66 +263,18 @@
         }
     }
 
-    //Footer
-    footer {
-        
-        .footer-social {
-            flex-direction: row;
-            justify-content: start;
-    
-            p {
-                text-align: center;
-                margin-top: 49.5px;
-                margin-bottom: 0px;
-                margin-left: 156px;
-                letter-spacing: 0;
-            }
-    
-            .social {
-                display: flex;
-                justify-content: space-between;
-                width: 100px;
-                align-self: center;
-                margin-top: 49.5px;
-                margin-bottom: 47.8px;
-                margin-left: 17px;
-            }
-    
-    
-        }
-        .content-footer{
-            display: flex;
-            justify-content: space-between;
-        }
-        .footer-copy {
-            width: 250px;
-            height: 1px;
-            text-align: initial;
-            margin-bottom: 0;
-            transform: translate(0, 50px);
-            p{
-                width: 250px;
-            }
-        }
-    
-        .line-footer {
-            background: $color-p;
-            width: 100%;
-            height: 5px;
-        }
-    }
-
-    
 
     //Sección camara
 
     .container-crea-tu-gif {
-        height: 77vh;
+        height: 85vh;
+
         .container-camara {
             display: flex;
+
             padding-top: 100px;
-       
-            
+
+
 
             .camara {
                 display: flex;
@@ -357,52 +311,52 @@
 
         }
 
-        .containerCenterCrearGifo{
+        .containerCenterCrearGifo {
             display: flex;
             justify-content: center;
             flex-wrap: wrap;
             flex-direction: column;
             align-content: center;
-            
-        .pasosCrearGifo {
-            display: flex;
-            width: 147px;
-            justify-content: space-between;
-            align-self: center;
-            margin-top: 24px;
-            margin-bottom: 19px;
+
+            .pasosCrearGifo {
+                display: flex;
+                width: 147px;
+                justify-content: space-between;
+                align-self: center;
+                margin-top: 24px;
+                margin-bottom: 19px;
 
 
-            .numeroDePasos {
-                border: 1px solid #572EE5;
-                border-radius: 50%;
-                align-items: center;
+                .numeroDePasos {
+                    border: 1px solid #572EE5;
+                    border-radius: 50%;
+                    align-items: center;
 
 
-                .paso {
-                    font-family: $Rob;
-                    font-size: 18px;
-                    color: $color-p;
-                    text-align: center;
-                    align-self: center;
-                    padding-top: 6px;
-                    padding-bottom: 6px;
-                    padding-left: 11px;
-                    padding-right: 11px;
+                    .paso {
+                        font-family: $Rob;
+                        font-size: 18px;
+                        color: $color-p;
+                        text-align: center;
+                        align-self: center;
+                        padding-top: 6px;
+                        padding-bottom: 6px;
+                        padding-left: 11px;
+                        padding-right: 11px;
 
+                    }
                 }
+
+
             }
 
-            
-        }
 
-
-        .carga {
-            width: 55.3%;
-            height: 6.9px;
-            background: $color-p;
-            display: inline-block;
-        }
+            .carga {
+                width: 55.3%;
+                height: 6.9px;
+                background: $color-p;
+                display: inline-block;
+            }
         }
 
     }
@@ -411,12 +365,24 @@
     .gifo-container {
         border: 1px solid #572EE5;
         width: 47.8%;
-        height: 390px;
+        height: 50vh;
         display: flex;
 
-        #video{
+        #video {
             z-index: 10000;
+            width: 47.8vw;
+            height: 100%;
+            max-height: 550px;
+        }
+    }
+
+    .modo_nocturno {
+        header {
+            nav {
+                ul {
+                    background: $color-p-noc;
+                }
+            }
         }
     }
 }
-
