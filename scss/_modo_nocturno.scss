@@ -1,0 +1,75 @@
+.modo_nocturno {
+    background: $color-p-noc;
+
+    header {
+        background: $color-p-noc;
+
+        .line {
+            background: #000000;
+        }
+
+        nav {
+            ul {
+                background: #000000;
+                opacity: 100%;
+            }
+        }
+    }
+
+    main {
+        section {
+            .home {
+                .main-title {
+                    h1 {
+                        color: $color-s-noc;
+                    }
+
+                    div {
+                        background: $color-p-noc;
+
+                        input {
+                            background: $color-p-noc;
+                        }
+
+                        h4 {
+                            color: $color-s-noc;
+                        }
+
+                        p {
+                            color: $color-s-noc;
+                        }
+                    }
+                }
+            }
+
+            .container-trending {
+                background: #222326;
+
+                div {
+                    h2 {
+                        color: $color-s-noc;
+                    }
+
+                    p {
+                        color: $color-s-noc;
+                    }
+                }
+            }
+        }
+    }
+
+    footer {
+        .content-footer {
+            div {
+                p {
+                    color: $color-s-noc;
+                }
+            }
+        }
+
+        .line-footer {
+            background: #000000;
+        }
+    }
+}
+

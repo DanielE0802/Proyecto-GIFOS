@@ -24,7 +24,7 @@ let section_main=call("section_main")
 
 //Sección crear GIFO
 
-btn_crear_gifos.addEventListener('click' ,function(){
+btn_crear_gifos.addEventListener('click', function(){
     body_inicio.classList.toggle("display-none")
     section_crear_gifos.classList.toggle("display-none")
 },false)

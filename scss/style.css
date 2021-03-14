@@ -678,5 +678,34 @@ footer .line-footer {
     width: 47.8%;
     height: 390px;
     display: flex; } }
+.modo_nocturno {
+  background: #37383C; }
+  .modo_nocturno header {
+    background: #37383C; }
+    .modo_nocturno header .line {
+      background: #000000; }
+    .modo_nocturno header nav ul {
+      background: #000000;
+      opacity: 100%; }
+  .modo_nocturno main section .home .main-title h1 {
+    color: #FFFFFF; }
+  .modo_nocturno main section .home .main-title div {
+    background: #37383C; }
+    .modo_nocturno main section .home .main-title div input {
+      background: #37383C; }
+    .modo_nocturno main section .home .main-title div h4 {
+      color: #FFFFFF; }
+    .modo_nocturno main section .home .main-title div p {
+      color: #FFFFFF; }
+  .modo_nocturno main section .container-trending {
+    background: #222326; }
+    .modo_nocturno main section .container-trending div h2 {
+      color: #FFFFFF; }
+    .modo_nocturno main section .container-trending div p {
+      color: #FFFFFF; }
+  .modo_nocturno footer .content-footer div p {
+    color: #FFFFFF; }
+  .modo_nocturno footer .line-footer {
+    background: #000000; }
 
 /*# sourceMappingURL=style.css.map */
