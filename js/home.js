@@ -86,10 +86,16 @@ btn_home.addEventListener('click', function(){
 
 btn_comenzar.addEventListener('click', function(){
     navigator.mediaDevices.getUserMedia({
-        video:true
+
+        video: {
+            width: { min: 1024, ideal: 1280, max: 1920 },
+            height: { min: 576, ideal: 720, max: 1080 }
+          }
     }).then((stream)=>{
         console.log(stream)
         let video= document.getElementById("video")
+
+        
         video.srcObject = stream
     }).catch((err)=>console.log(err))
 })
