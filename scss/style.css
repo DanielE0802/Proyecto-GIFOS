@@ -370,6 +370,12 @@ footer .line-footer {
     .modo_nocturno header nav ul {
       background: #000000;
       opacity: 100%; }
+  .modo_nocturno main section .favoritos h4 {
+    color: #FFFFFF; }
+  .modo_nocturno main section .busqueda h4 {
+    color: #FFFFFF; }
+  .modo_nocturno main section .mis-gifos h4 {
+    color: #FFFFFF; }
   .modo_nocturno main section .home .main-title h1 {
     color: #FFFFFF; }
   .modo_nocturno main section .home .main-title div {
@@ -390,6 +396,9 @@ footer .line-footer {
     color: #FFFFFF; }
   .modo_nocturno footer .line-footer {
     background: #000000; }
+  .modo_nocturno .ver-mas span {
+    border: 1px solid #FFFFFF;
+    color: #FFFFFF; }
 
 @media screen and (min-width: 1024px) {
   header {

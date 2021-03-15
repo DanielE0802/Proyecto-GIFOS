@@ -18,6 +18,22 @@
 
     main {
         section {
+            .favoritos{
+                h4{
+                    color: $color-s-noc;
+                }
+            }
+            .busqueda{
+                h4{
+                    color: $color-s-noc;
+                }
+            }
+            .mis-gifos{
+                h4{
+                    color: $color-s-noc;
+                }
+            }
+
             .home {
                 .main-title {
                     h1 {
@@ -71,5 +87,12 @@
             background: #000000;
         }
     }
-}
 
+    .ver-mas {
+        span {
+            border: 1px solid $color-s-noc;
+            color: $color-s-noc;
+        }
+
+    }
+}
