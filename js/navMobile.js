@@ -12,4 +12,5 @@ const iconoMenu = document.querySelector('#icono-menu'),
         }else{
             e.target.setAttribute('src', 'assets/burger.svg')
         }
+        
         });
