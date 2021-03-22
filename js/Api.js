@@ -89,7 +89,7 @@ artists.addEventListener('click', function () {
 for (let i = 0; i < containerImg.length; i++) {
 
     containerImg[i].addEventListener('mouseenter', function () {
-        let div= document.createElement('span')
+        let div = document.createElement('span')
         div.classList.add("mouseEncima")
         containerImg[i].after(div)
     })
