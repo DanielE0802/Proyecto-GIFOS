@@ -124,6 +124,7 @@ header nav .active{transform:translate(0,0)}
 .container-trending .trending-gif img{width:64.5%;margin-left:22px;margin-top:32px;margin-bottom:82px}
 .container-trending .trending-gif .izquierda-container .flecha-izquierda{display:block;transform:translate(0,110px);width:40px;height:40px}
 .container-trending .trending-gif .derecha-container .flecha-derecha{display:block;transform:translate(0,110px);width:40px;height:40px}
+::-webkit-scrollbar{display:none}
 .gifos-max{width:99%;background:#fff;opacity:90%}
 .gifos-max .close{display:block;margin-top:64px;margin-left:85.8%;margin-bottom:78px}
 .gifos-max .gifo{margin-left:7.9vw;margin-right:7.7vw;width:84.8%;height:42%}

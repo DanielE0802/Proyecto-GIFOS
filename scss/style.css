@@ -594,6 +594,9 @@ footer .line-footer {
         width: 40px;
         height: 40px; }
 
+  ::-webkit-scrollbar {
+    display: none; }
+
   .gifos-max {
     width: 99%;
     background: #FFFFFF;
