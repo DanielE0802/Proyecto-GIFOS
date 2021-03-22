@@ -766,12 +766,15 @@ footer .line-footer {
     width: 100%;
     height: 5px; }
 
-  div div .iconos_layout {
-    transform: translate(150px, 10px);
-    display: none; }
-  div div .texto_layout {
-    transform: translate(10px, 150px);
-    display: none; }
+  div div {
+    color: #FFFFFF;
+    font-family: "Roboto", sans-serif; }
+    div div .iconos_layout {
+      transform: translate(150px, 10px);
+      display: none; }
+    div div .texto_layout {
+      transform: translate(10px, 150px);
+      display: none; }
   div div:hover .iconos_layout {
     transform: translate(150px, 10px);
     display: block; }

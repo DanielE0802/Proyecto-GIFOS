@@ -160,6 +160,7 @@ footer .content-footer{display:flex;justify-content:space-between}
 footer .footer-copy{width:250px;height:1px;text-align:initial;margin-bottom:0;transform:translate(0,50px)}
 footer .footer-copy p{width:250px}
 footer .line-footer{background:#572ee5;width:100%;height:5px}
+div div{color:#fff;font-family:Roboto,sans-serif}
 div div .iconos_layout{transform:translate(150px,10px);display:none}
 div div .texto_layout{transform:translate(10px,150px);display:none}
 div div:hover .iconos_layout{transform:translate(150px,10px);display:block}
