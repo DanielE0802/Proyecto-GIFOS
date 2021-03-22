@@ -700,38 +700,72 @@ footer .line-footer {
       transform: scaleX(-1); }
 
   .modo_nocturno header nav ul {
-    background: #37383C; } }
-footer .footer-social {
-  flex-direction: row;
-  justify-content: start; }
-  footer .footer-social p {
-    text-align: center;
-    margin-top: 49.5px;
-    margin-bottom: 0px;
-    margin-left: 156px;
-    letter-spacing: 0; }
-  footer .footer-social .social {
+    background: #37383C; }
+
+  footer .footer-social {
+    flex-direction: row;
+    justify-content: start; }
+    footer .footer-social p {
+      text-align: center;
+      margin-top: 49.5px;
+      margin-bottom: 0px;
+      margin-left: 156px;
+      letter-spacing: 0; }
+    footer .footer-social .social {
+      display: flex;
+      justify-content: space-between;
+      width: 100px;
+      align-self: center;
+      margin-top: 49.5px;
+      margin-bottom: 47.8px;
+      margin-left: 17px; }
+  footer .content-footer {
     display: flex;
-    justify-content: space-between;
-    width: 100px;
-    align-self: center;
-    margin-top: 49.5px;
-    margin-bottom: 47.8px;
-    margin-left: 17px; }
-footer .content-footer {
-  display: flex;
-  justify-content: space-between; }
-footer .footer-copy {
-  width: 250px;
-  height: 1px;
-  text-align: initial;
-  margin-bottom: 0;
-  transform: translate(0, 50px); }
-  footer .footer-copy p {
-    width: 250px; }
-footer .line-footer {
-  background: #572EE5;
-  width: 100%;
-  height: 5px; }
+    justify-content: space-between; }
+  footer .footer-copy {
+    width: 250px;
+    height: 1px;
+    text-align: initial;
+    margin-bottom: 0;
+    transform: translate(0, 50px); }
+    footer .footer-copy p {
+      width: 250px; }
+  footer .line-footer {
+    background: #572EE5;
+    width: 100%;
+    height: 5px; } }
+@media screen and (min-width: 1024px) {
+  footer .footer-social {
+    flex-direction: row;
+    justify-content: start; }
+    footer .footer-social p {
+      text-align: center;
+      margin-top: 49.5px;
+      margin-bottom: 0px;
+      margin-left: 156px;
+      letter-spacing: 0; }
+    footer .footer-social .social {
+      display: flex;
+      justify-content: space-between;
+      width: 100px;
+      align-self: center;
+      margin-top: 49.5px;
+      margin-bottom: 47.8px;
+      margin-left: 17px; }
+  footer .content-footer {
+    display: flex;
+    justify-content: space-between; }
+  footer .footer-copy {
+    width: 250px;
+    height: 1px;
+    text-align: initial;
+    margin-bottom: 0;
+    transform: translate(0, 50px); }
+    footer .footer-copy p {
+      width: 250px; }
+  footer .line-footer {
+    background: #572EE5;
+    width: 100%;
+    height: 5px; } }
 
 /*# sourceMappingURL=style.css.map */
