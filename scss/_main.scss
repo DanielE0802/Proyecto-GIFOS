@@ -468,4 +468,26 @@
             height: 5px;
         }
     }
+    div{
+        div{
+            .iconos_layout{
+                transform: translate(150px,10px);
+                display: none;
+            }
+            .texto_layout{
+                transform: translate(10px, 150px);
+                display: none;
+            }
+        }
+        div:hover{
+            .iconos_layout{
+                transform: translate(150px,10px);
+                display: block;
+            }
+            .texto_layout{
+                transform: translate(10px, 150px);
+                display: block;
+            }
+        }
+    }
 }
