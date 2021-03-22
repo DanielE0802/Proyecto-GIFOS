@@ -24,7 +24,7 @@ btn_modo_nocturno.addEventListener('click', function (e) {
     }
     
     let ruta_crear_gifos= btn_crear_gifos.getAttribute('src')
-    let logoo=logo.getAttribute('src')
+    let srclogo=logo.getAttribute('src')
     let base = base_camara.getAttribute('src')
     // cambiar imagenes
     function cambio(elemento, ruta1, imagen, ruta2){
@@ -36,7 +36,7 @@ btn_modo_nocturno.addEventListener('click', function (e) {
         }
     }
     cambio(ruta_crear_gifos, 'assets/button-crear-gifo.svg', btn_crear_gifos, 'assets/CTA-crar-gifo-modo-noc.svg');
-    cambio(logoo, 'assets/logo-mobile.svg', logo, 'assets/logo-mobile-modo-noct.svg');
+    cambio(srclogo, 'assets/logo-mobile.svg', logo, 'assets/logo-mobile-modo-noct.svg');
     cambio(base, 'assets/element-camara.svg', base_camara, 'assets/camara-modo-noc.svg');
 
    
@@ -54,4 +54,3 @@ if(modo_local == "TRUE"){
     }
     
 }
-
