@@ -37,6 +37,9 @@ bt_fav.addEventListener('click', function(e){
     section_fav.classList.add('padding'); 
     section_fav_btn.classList.remove('display-none');
 
+    
+    sectionBusqueda.classList.add('display-none')
+
     section_mis_gifos.classList.add("display-none")
     section_mis_gifos_btn.classList.add('display-none');
     section_main.classList.add("display-none")
@@ -59,6 +62,8 @@ btn_mis_gifos.addEventListener('click', function(e){
     section_fav.classList.add("display-none")
     section_fav_btn.classList.add('display-none');
     section_main.classList.add("display-none")
+
+    sectionBusqueda.classList.add('display-none')
 
     if(body_inicio.classList.value == "display-none"){
         section_crear_gifos.classList.add("display-none")

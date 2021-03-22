@@ -55,6 +55,3 @@ if(modo_local == "TRUE"){
     
 }
 
-
-
-console.log(ultimo_modo)
