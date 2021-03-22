@@ -95,38 +95,44 @@
         }
 
         .galery-gifs {
-            grid-auto-rows: 1fr 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr;
             grid-template-columns: 1fr 1fr 1fr 1fr;
             gap: 29px;
             width: 100vw;
-            height: 100vh;
             padding-right: 156px;
             padding-left: 156px;
             padding-bottom: 78px;
 
             div {
-            
+                img{
+                    width: 100%;
+                    height: 100%;
+                    max-width: 350px;
+                    max-height: 290px;
+                }
+
                 max-width: 300px;
                 max-height: 280px;
 
-                .layout{
+                .layout {
                     background: $color-p;
                     opacity: 0.5;
                     height: 0px;
                     transform: translateY(calc(-100% - (5px)));
                     transition: height .5s ease;
 
-                    img{
+                    img {
                         width: 30px;
                     }
-                    
-                }
-                &:hover{
 
-                    .layout{
+                }
+
+                &:hover {
+
+                    .layout {
                         height: 100%;
                     }
-                    
+
                 }
             }
 
@@ -222,6 +228,7 @@
             }
         }
     }
+
     ::-webkit-scrollbar {
         display: none;
     }
@@ -410,12 +417,13 @@
             }
         }
     }
+
     footer {
 
         .footer-social {
             flex-direction: row;
             justify-content: start;
-    
+
             p {
                 text-align: center;
                 margin-top: 49.5px;
@@ -423,7 +431,7 @@
                 margin-left: 156px;
                 letter-spacing: 0;
             }
-    
+
             .social {
                 display: flex;
                 justify-content: space-between;
@@ -433,31 +441,31 @@
                 margin-bottom: 47.8px;
                 margin-left: 17px;
             }
-    
-    
+
+
         }
-    
+
         .content-footer {
             display: flex;
             justify-content: space-between;
         }
-    
+
         .footer-copy {
             width: 250px;
             height: 1px;
             text-align: initial;
             margin-bottom: 0;
             transform: translate(0, 50px);
-    
+
             p {
                 width: 250px;
             }
         }
-    
+
         .line-footer {
             background: $color-p;
             width: 100%;
             height: 5px;
         }
-    }   
+    }
 }

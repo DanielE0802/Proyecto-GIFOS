@@ -42,9 +42,9 @@ footer .line-footer{background:#572ee5;width:100%;height:5px}
 .busqueda{margin-top:35px;display:flex;flex-direction:column;justify-content:center}
 .busqueda .separator{opacity:.5;height:1px;background:#9cafc3;width:41.9%;align-self:center;margin-bottom:43px}
 .busqueda .busqueda-title{font-family:Montserrat,sans-serif;font-size:25px;color:#572ee5;text-align:center;line-height:40px;margin-bottom:38px}
-.busqueda .galery-gifs{display:grid;grid-auto-rows:1fr 1fr;grid-template-columns:1fr 1fr;gap:21px;height:100vh;width:100vw;padding-right:21px;padding-left:21px;margin-bottom:78px}
+.busqueda .galery-gifs{display:grid;grid-template-rows:1fr 1fr 1fr 1fr 1fr 1fr;grid-template-columns:1fr 1fr;gap:21px;width:100vw;padding-right:21px;padding-left:21px}
 .busqueda .galery-gifs div{max-width:300px;max-height:280px}
-.busqueda .galery-gifs div img{width:100%;height:100%;max-width:200px;max-height:180px}
+.busqueda .galery-gifs div img{width:100%;height:100%;max-width:250px;max-height:190px}
 .busqueda .galery-gifs div .layout{background:#572ee5;opacity:.5;height:0;transform:translateY(calc(-100% - (5px)));transition:height .5s ease}
 .busqueda .galery-gifs div .layout img{width:30px}
 .busqueda .galery-gifs div:hover .layout{height:100%}
@@ -112,8 +112,9 @@ header nav .active{transform:translate(0,0)}
 .busqueda{margin-top:55px}
 .busqueda .separator{opacity:.5;width:23.5%;margin-bottom:81.9px}
 .busqueda .busqueda-title{font-size:35px;line-height:30px;margin-bottom:60px}
-.busqueda .galery-gifs{grid-auto-rows:1fr 1fr 1fr 1fr;grid-template-columns:1fr 1fr 1fr 1fr;gap:29px;width:100vw;height:100vh;padding-right:156px;padding-left:156px;padding-bottom:78px}
+.busqueda .galery-gifs{grid-template-rows:1fr 1fr 1fr;grid-template-columns:1fr 1fr 1fr 1fr;gap:29px;width:100vw;padding-right:156px;padding-left:156px;padding-bottom:78px}
 .busqueda .galery-gifs div{max-width:300px;max-height:280px}
+.busqueda .galery-gifs div img{width:100%;height:100%;max-width:350px;max-height:290px}
 .busqueda .galery-gifs div .layout{background:#572ee5;opacity:.5;height:0;transform:translateY(calc(-100% - (5px)));transition:height .5s ease}
 .busqueda .galery-gifs div .layout img{width:30px}
 .busqueda .galery-gifs div:hover .layout{height:100%}
