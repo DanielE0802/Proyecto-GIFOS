@@ -235,10 +235,25 @@ footer .line-footer {
     width: 100vw;
     padding-right: 21px;
     padding-left: 21px;
-    padding-bottom: 78px; }
-    .busqueda .galery-gifs img {
-      width: 100%;
-      height: 100%; }
+    margin-bottom: 78px; }
+    .busqueda .galery-gifs div {
+      max-width: 300px;
+      max-height: 280px; }
+      .busqueda .galery-gifs div img {
+        width: 100%;
+        height: 100%;
+        max-width: 200px;
+        max-height: 180px; }
+      .busqueda .galery-gifs div .layout {
+        background: #572EE5;
+        opacity: 0.5;
+        height: 0px;
+        transform: translateY(calc(-100% - (5px)));
+        transition: height .5s ease; }
+        .busqueda .galery-gifs div .layout img {
+          width: 30px; }
+      .busqueda .galery-gifs div:hover .layout {
+        height: 100%; }
 
 .ver-mas {
   display: flex;
