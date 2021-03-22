@@ -44,7 +44,7 @@ footer .line-footer{background:#572ee5;width:100%;height:5px}
 .busqueda .busqueda-title{font-family:Montserrat,sans-serif;font-size:25px;color:#572ee5;text-align:center;line-height:40px;margin-bottom:38px}
 .busqueda .galery-gifs{display:grid;grid-auto-rows:1fr 1fr;grid-template-columns:1fr 1fr;gap:21px;height:100vh;width:100vw;padding-right:21px;padding-left:21px;padding-bottom:78px}
 .busqueda .galery-gifs img{width:100%;height:100%}
-.ver-mas{display:flex;width:100%;justify-content:center;text-decoration:none}
+.ver-mas{display:flex;width:100%;justify-content:center;text-decoration:none;padding-top:27px}
 .ver-mas span{border:1px solid #572ee5;border-radius:25px;border-radius:25px;padding-top:17px;padding-bottom:17px;padding-left:32px;padding-right:32px;font-family:Montserrat,sans-serif;font-weight:700;font-size:13px;color:#572ee5;letter-spacing:0;text-align:center}
 .favoritos .fav-icon{display:block;margin:auto;margin-top:20px}
 .favoritos .fav-title{text-align:center;font-family:Montserrat,sans-serif;color:#572ee5;font-size:20px;line-height:30px;margin-bottom:46px}
@@ -109,7 +109,10 @@ header nav .active{transform:translate(0,0)}
 .busqueda .separator{opacity:.5;width:23.5%;margin-bottom:81.9px}
 .busqueda .busqueda-title{font-size:35px;line-height:30px;margin-bottom:60px}
 .busqueda .galery-gifs{grid-auto-rows:1fr 1fr 1fr 1fr;grid-template-columns:1fr 1fr 1fr 1fr;gap:29px;width:100vw;height:100vh;padding-right:156px;padding-left:156px;padding-bottom:78px}
-.busqueda .galery-gifs img{width:100%;height:100%}
+.busqueda .galery-gifs div{max-width:300px;max-height:280px}
+.busqueda .galery-gifs div .layout{background:#572ee5;opacity:.5;height:0;transform:translateY(calc(-100% - (5px)));transition:height .5s ease}
+.busqueda .galery-gifs div .layout img{width:30px}
+.busqueda .galery-gifs div:hover .layout{height:100%}
 .favoritos .galery-gifs{grid-auto-rows:1fr 1fr 1fr 1fr;grid-template-columns:1fr 1fr 1fr 1fr;gap:29px;width:100vw;height:100vh;padding-right:156px;padding-left:156px;padding-bottom:78px}
 .favoritos .galery-gifs img{width:100%;height:100%}
 .mis-gifos .galery-gifs{grid-auto-rows:1fr 1fr 1fr 1fr;grid-template-columns:1fr 1fr 1fr 1fr;gap:29px;width:100vw;height:100vh;padding-right:156px;padding-left:156px;padding-bottom:78px}

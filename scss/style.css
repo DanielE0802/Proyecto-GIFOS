@@ -244,7 +244,8 @@ footer .line-footer {
   display: flex;
   width: 100%;
   justify-content: center;
-  text-decoration: none; }
+  text-decoration: none;
+  padding-top: 27px; }
   .ver-mas span {
     border: 1px solid #572EE5;
     border-radius: 25px;
@@ -524,9 +525,19 @@ footer .line-footer {
       padding-right: 156px;
       padding-left: 156px;
       padding-bottom: 78px; }
-      .busqueda .galery-gifs img {
-        width: 100%;
-        height: 100%; }
+      .busqueda .galery-gifs div {
+        max-width: 300px;
+        max-height: 280px; }
+        .busqueda .galery-gifs div .layout {
+          background: #572EE5;
+          opacity: 0.5;
+          height: 0px;
+          transform: translateY(calc(-100% - (5px)));
+          transition: height .5s ease; }
+          .busqueda .galery-gifs div .layout img {
+            width: 30px; }
+        .busqueda .galery-gifs div:hover .layout {
+          height: 100%; }
 
   .favoritos .galery-gifs {
     grid-auto-rows: 1fr 1fr 1fr 1fr;
