@@ -1,6 +1,6 @@
 "use strict";
 
-var containerImg = document.querySelectorAll("#busqueda > div.galery-gifs > img");
+var containerImg = document.querySelectorAll("#busqueda > div.galery-gifs >div > img");
 var titleBusqueda = document.getElementById('title-busqueda');
 var sectionBusqueda = document.getElementById('busqueda');
 var reaction = document.getElementById('reactions');
@@ -47,7 +47,7 @@ function api(busqueda) {
   var info = callApiSearch();
   info.then(function (response) {
     for (var i = 0; i <= 25; i++) {
-      containerImg[i].setAttribute("src", response.data[i].images.downsized.url);
+      containerImg[i].setAttribute("src", response.data[i].images.fixed_height.url);
     }
   })["catch"](function (error) {
     console.error(error);
@@ -87,7 +87,7 @@ function trending() {
   var info = callApiTrending();
   info.then(function (response) {
     for (var i = 0; i <= 6; i++) {
-      sectionTrendingImg[i].setAttribute("src", response.data[i].images.downsized.url);
+      sectionTrendingImg[i].setAttribute("src", response.data[i].images.fixed_height.url);
     }
   })["catch"](function (error) {
     console.error(error);
@@ -112,3 +112,15 @@ stickers.addEventListener('click', function () {
 artists.addEventListener('click', function () {
   api("Artists");
 });
+
+var _loop = function _loop(i) {
+  containerImg[i].addEventListener('mouseenter', function () {
+    var div = document.createElement('span');
+    div.classList.add("mouseEncima");
+    containerImg[i].after(div);
+  });
+};
+
+for (var i = 0; i < containerImg.length; i++) {
+  _loop(i);
+}

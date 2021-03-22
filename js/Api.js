@@ -1,7 +1,7 @@
-const containerImg = document.querySelectorAll("#busqueda > div.galery-gifs > img")
+const containerImg = document.querySelectorAll("#busqueda > div.galery-gifs >div > img")
 const titleBusqueda = document.getElementById('title-busqueda')
 const sectionBusqueda = document.getElementById('busqueda')
-const reaction = document.getElementById ('reactions')
+const reaction = document.getElementById('reactions')
 const entertainment = document.getElementById('entretainment')
 const sports = document.getElementById('sports')
 const stickers = document.getElementById('stickers')
@@ -14,7 +14,7 @@ search.addEventListener('keyup', function () {
     api(whatSearch)
 })
 
-function api(busqueda){
+function api(busqueda) {
     callApiSearch = async () => {
         const url = `https://api.giphy.com/v1/gifs/search?api_key=LPXFgfOHCkhOAuWn1yNLkvG2UjUVbx3r&q=${busqueda}&limit=25&offset=0&rating=g&lang=es`
         let response = await fetch(url)
@@ -28,7 +28,7 @@ function api(busqueda){
     let info = callApiSearch();
     info.then(response => {
         for (let i = 0; i <= 25; i++) {
-            containerImg[i].setAttribute("src", response.data[i].images.downsized.url)
+            containerImg[i].setAttribute("src", response.data[i].images.fixed_height.url)
         }
 
     }).catch(error => {
@@ -51,7 +51,7 @@ function trending() {
     let info = callApiTrending();
     info.then(response => {
         for (let i = 0; i <= 6; i++) {
-            sectionTrendingImg[i].setAttribute("src", response.data[i].images.downsized.url)
+            sectionTrendingImg[i].setAttribute("src", response.data[i].images.fixed_height.url)
         }
 
     }).catch(error => {
@@ -64,23 +64,33 @@ trending()
 
 //Busquedas predeterminadas
 
-    //Reactions
-    reaction.addEventListener('click', function(){
-        api("Reactions")
-    })
+//Reactions
+reaction.addEventListener('click', function () {
+    api("Reactions")
+})
 
-    entertainment.addEventListener('click', function(){
-        api("Entertainment")
-    },false)
+entertainment.addEventListener('click', function () {
+    api("Entertainment")
+}, false)
 
-    sports.addEventListener('click', function(){
-        api("Sports")
-    })
+sports.addEventListener('click', function () {
+    api("Sports")
+})
 
-    stickers.addEventListener('click', function(){
-        api("Stickers")
-    })
+stickers.addEventListener('click', function () {
+    api("Stickers")
+})
 
-    artists.addEventListener('click', function(){
-        api("Artists")
+artists.addEventListener('click', function () {
+    api("Artists")
+})
+
+
+for (let i = 0; i < containerImg.length; i++) {
+
+    containerImg[i].addEventListener('mouseenter', function () {
+        let div= document.createElement('span')
+        div.classList.add("mouseEncima")
+        containerImg[i].after(div)
     })
+}
