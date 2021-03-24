@@ -758,6 +758,26 @@ footer .line-footer {
         height: 6.9px;
         background: #572EE5;
         display: inline-block; }
+    .container-crea-tu-gif .comenzar {
+      display: flex;
+      width: 100%;
+      justify-content: center;
+      text-decoration: none;
+      cursor: pointer;
+      padding-top: 27px; }
+      .container-crea-tu-gif .comenzar h1 {
+        border: 1px solid #572EE5;
+        border-radius: 25px;
+        padding-top: 17px;
+        padding-bottom: 17px;
+        padding-left: 32px;
+        padding-right: 32px;
+        font-family: "Montserrat", sans-serif;
+        font-weight: 700;
+        font-size: 13px;
+        color: #572EE5;
+        letter-spacing: 0;
+        text-align: center; }
 
   .gifo-container {
     border: 1px solid #572EE5;
