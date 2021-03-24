@@ -533,7 +533,8 @@ footer .line-footer {
         text-align: center;
         color: #572EE5;
         font-weight: 500;
-        font-family: "Montserrat", sans-serif; }
+        font-family: "Montserrat", sans-serif;
+        cursor: pointer; }
 
   .busqueda {
     margin-top: 55px; }

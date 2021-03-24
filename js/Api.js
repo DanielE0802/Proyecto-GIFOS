@@ -11,6 +11,9 @@ const stickers = document.getElementById('stickers')
 const artists = document.getElementById('artists')
 const btn_img_fav = document.querySelectorAll("#busqueda > div.galery-gifs > div > div > div.iconos_layout > img:nth-child(1)")
 
+let btn_prueba= document.getElementById('facebook')
+
+
 search.addEventListener('keyup', function () {
     let search = document.getElementById("search")
     let whatSearch = search.value
@@ -36,6 +39,7 @@ function api(busqueda) {
             console.log(response.data[i])
             containerh1[i].innerHTML = response.data[i].username
             containerh2[i].innerHTML = response.data[i].title
+
         }
 
     }).catch(error => {
@@ -46,7 +50,8 @@ function api(busqueda) {
 }
 
 
-let sectionTrendingImg = document.querySelectorAll("#body_inicio > div > div.trending-gif > img")
+
+let sectionTrendingImg = document.querySelectorAll("#body_inicio > div > div.trending-gif > div > img")
 
 function trending() {
 
@@ -109,6 +114,9 @@ let divContenido = `alt="gif">
 </div>` 
 
 let section_favoritos = document.getElementById('galery-fav')
+
+
+// hay un error!!
 
 for (let i = 0; i <= 25; i++) {
   
