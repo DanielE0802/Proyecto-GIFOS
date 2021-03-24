@@ -429,10 +429,12 @@
                     border: 1px solid $color-p;
                     border-radius: 50%;
                     align-items: center;
-                    :hover{
+
+                    :hover {
                         background: #572EE5;
                         border-radius: 50%;
                     }
+
                     .paso {
                         font-family: $Rob;
                         font-size: 18px;
@@ -443,7 +445,7 @@
                         padding-bottom: 6px;
                         padding-left: 11px;
                         padding-right: 11px;
-                        
+
                     }
                 }
 
@@ -457,6 +459,33 @@
                 background: $color-p;
                 display: inline-block;
             }
+        }
+
+        .comenzar {
+            display: flex;
+            width: 100%;
+            justify-content: center;
+            text-decoration: none;
+            cursor: pointer;
+            padding-top: 27px;
+            
+
+
+            h1 {
+                border: 1px solid $color-p;
+                border-radius: 25px;
+                padding-top: 17px;
+                padding-bottom: 17px;
+                padding-left: 32px;
+                padding-right: 32px;
+                font-family: $Mon;
+                font-weight: 700;
+                font-size: 13px;
+                color: $color-p;
+                letter-spacing: 0;
+                text-align: center;
+            }
+
         }
 
     }
@@ -566,6 +595,6 @@
             }
         }
     }
-    
+
 
 }
