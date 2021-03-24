@@ -553,7 +553,9 @@ footer .line-footer {
       width: 100vw;
       padding-right: 156px;
       padding-left: 156px;
-      padding-bottom: 78px; }
+      padding-bottom: 78px;
+      max-width: 1500px;
+      align-self: center; }
       .busqueda .galery-gifs div {
         max-width: 300px;
         max-height: 280px; }
