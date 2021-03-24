@@ -118,7 +118,7 @@ html .contenedor::-webkit-scrollbar-button,html::-webkit-scrollbar-button:increm
 .busqueda{margin-top:55px}
 .busqueda .separator{opacity:.5;width:23.5%;margin-bottom:81.9px}
 .busqueda .busqueda-title{font-size:35px;line-height:30px;margin-bottom:60px}
-.busqueda .galery-gifs{grid-template-rows:1fr 1fr 1fr;grid-template-columns:1fr 1fr 1fr 1fr;gap:29px;width:100vw;padding-right:156px;padding-left:156px;padding-bottom:78px}
+.busqueda .galery-gifs{grid-template-rows:1fr 1fr 1fr;grid-template-columns:1fr 1fr 1fr 1fr;gap:29px;width:100vw;padding-right:156px;padding-left:156px;padding-bottom:78px;max-width:1500px;align-self:center}
 .busqueda .galery-gifs div{max-width:300px;max-height:280px}
 .busqueda .galery-gifs div img{width:100%;height:100%;max-width:350px;max-height:290px}
 .busqueda .galery-gifs div .layout{background:#572ee5;opacity:.7;height:0;transform:translateY(calc(-100% - (5px)));transition:height .5s ease}

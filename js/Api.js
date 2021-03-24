@@ -11,8 +11,6 @@ const stickers = document.getElementById('stickers')
 const artists = document.getElementById('artists')
 const btn_img_fav = document.querySelectorAll("#busqueda > div.galery-gifs > div > div > div.iconos_layout > img:nth-child(1)")
 
-let btn_prueba= document.getElementById('facebook')
-
 
 search.addEventListener('keyup', function () {
     let search = document.getElementById("search")
@@ -48,8 +46,6 @@ function api(busqueda) {
 
  
 }
-
-
 
 let sectionTrendingImg = document.querySelectorAll("#body_inicio > div > div.trending-gif > div > img")
 
