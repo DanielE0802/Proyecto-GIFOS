@@ -100,11 +100,6 @@ btn_comenzar.addEventListener('click', function(){
         console.log(stream)
         let video= document.getElementById("video")
         video.srcObject = stream
-        $video.play();
-        // Comenzar a grabar con el stream
-        mediaRecorder = new MediaRecorder(stream);
-        mediaRecorder.start();
-        comenzarAContar();
 
     }).catch((err)=>console.log(err))
 })
