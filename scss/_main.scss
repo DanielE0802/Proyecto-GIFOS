@@ -470,7 +470,7 @@
             text-decoration: none;
             cursor: pointer;
             padding-top: 27px;
-            
+
 
 
             h1 {
@@ -570,33 +570,34 @@
     }
 
     div {
-        div {
+        .layout {
             color: $color-s-noc;
             font-family: $Rob;
 
             .iconos_layout {
-                transform: translate(150px, 10px);
+                transform: translate(50%, 10px);
                 display: none;
             }
 
             .texto_layout {
-                transform: translate(10px, 150px);
+                transform: translate(10px, 50px);
                 display: none;
             }
         }
 
-        div:hover {
+        .layout:hover {
             .iconos_layout {
-                transform: translate(150px, 10px);
+                transform: translate(50%, 10px);
                 display: block;
             }
 
             .texto_layout {
-                transform: translate(10px, 150px);
+                transform: translate(10px, 50px);
                 display: block;
             }
         }
     }
+
 
 
 }
