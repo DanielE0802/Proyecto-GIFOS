@@ -426,11 +426,13 @@
 
 
                 .numeroDePasos {
-                    border: 1px solid #572EE5;
+                    border: 1px solid $color-p;
                     border-radius: 50%;
                     align-items: center;
-
-
+                    :hover{
+                        background: #572EE5;
+                        border-radius: 50%;
+                    }
                     .paso {
                         font-family: $Rob;
                         font-size: 18px;
@@ -441,7 +443,7 @@
                         padding-bottom: 6px;
                         padding-left: 11px;
                         padding-right: 11px;
-
+                        
                     }
                 }
 
@@ -564,4 +566,6 @@
             }
         }
     }
+    
+
 }

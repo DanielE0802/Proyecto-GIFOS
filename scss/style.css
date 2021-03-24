@@ -413,6 +413,8 @@ footer .line-footer {
   .modo_nocturno .ver-mas span {
     border: 1px solid #FFFFFF;
     color: #FFFFFF; }
+  .modo_nocturno .container-crea-tu-gif .containerCenterCrearGifo .pasosCrearGifo .numeroDePasos .paso {
+    color: #FFFFFF; }
 
 @media screen and (min-width: 1024px) {
   header {
@@ -737,6 +739,9 @@ footer .line-footer {
           border: 1px solid #572EE5;
           border-radius: 50%;
           align-items: center; }
+          .container-crea-tu-gif .containerCenterCrearGifo .pasosCrearGifo .numeroDePasos :hover {
+            background: #572EE5;
+            border-radius: 50%; }
           .container-crea-tu-gif .containerCenterCrearGifo .pasosCrearGifo .numeroDePasos .paso {
             font-family: "Roboto", sans-serif;
             font-size: 18px;

@@ -18,18 +18,20 @@
 
     main {
         section {
-            .favoritos{
-                h4{
+            .favoritos {
+                h4 {
                     color: $color-s-noc;
                 }
             }
-            .busqueda{
-                h4{
+
+            .busqueda {
+                h4 {
                     color: $color-s-noc;
                 }
             }
-            .mis-gifos{
-                h4{
+
+            .mis-gifos {
+                h4 {
                     color: $color-s-noc;
                 }
             }
@@ -94,5 +96,21 @@
             color: $color-s-noc;
         }
 
+    }
+
+    .container-crea-tu-gif {
+        
+        .containerCenterCrearGifo {
+
+            .pasosCrearGifo {
+
+                .numeroDePasos {
+
+                    .paso {
+                        color: $color-s-noc;
+                    }
+                }
+            }
+        }
     }
 }
