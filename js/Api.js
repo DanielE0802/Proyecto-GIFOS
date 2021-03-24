@@ -60,7 +60,7 @@ function trending() {
 
     let info = callApiTrending();
     info.then(response => {
-        for (let u = 0; u <= 6; u++) {
+        for (let u = 1; u <= 6; u++) {
             sectionTrendingImg[u].setAttribute("src", response.data[u].images.fixed_height.url)
         }
 
