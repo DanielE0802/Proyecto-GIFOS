@@ -10,8 +10,7 @@ let cinta2 = call("cinta2")
 
 btn_modo_nocturno.addEventListener('click', function () {
     modo_nocturno.classList.toggle("modo_nocturno");
-    cinta1.classList.toggle("display-none")
-    cinta2.classList.toggle("display-none")
+    
     // cambiar texto de modo nocturno a modo diurno
     if (btn_modo_nocturno.innerHTML == "MODO NOCTURNO") {
         btn_modo_nocturno.innerHTML = "MODO DIURNO";
