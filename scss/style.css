@@ -765,9 +765,6 @@ footer .line-footer {
           border: 1px solid #572EE5;
           border-radius: 50%;
           align-items: center; }
-          .container-crea-tu-gif .containerCenterCrearGifo .pasosCrearGifo .numeroDePasos :hover {
-            background: #572EE5;
-            border-radius: 50%; }
           .container-crea-tu-gif .containerCenterCrearGifo .pasosCrearGifo .numeroDePasos .paso {
             font-family: "Roboto", sans-serif;
             font-size: 18px;
@@ -778,6 +775,10 @@ footer .line-footer {
             padding-bottom: 6px;
             padding-left: 11px;
             padding-right: 11px; }
+          .container-crea-tu-gif .containerCenterCrearGifo .pasosCrearGifo .numeroDePasos :hover {
+            background: #572EE5;
+            border-radius: 50%;
+            color: #FFFFFF; }
       .container-crea-tu-gif .containerCenterCrearGifo .carga {
         width: 55.3%;
         height: 6.9px;

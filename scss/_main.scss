@@ -472,10 +472,7 @@
                     border-radius: 50%;
                     align-items: center;
 
-                    :hover {
-                        background: #572EE5;
-                        border-radius: 50%;
-                    }
+                    
 
                     .paso {
                         font-family: $Rob;
@@ -487,7 +484,11 @@
                         padding-bottom: 6px;
                         padding-left: 11px;
                         padding-right: 11px;
-
+                    }
+                    :hover {
+                        background: #572EE5;
+                        border-radius: 50%;
+                        color: $color-s-noc;
                     }
                 }
 
