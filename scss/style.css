@@ -654,8 +654,14 @@ footer .line-footer {
           .container-trending .trending-gif .div-father-layout .layout img {
             width: 25px;
             margin: 0; }
-        .container-trending .trending-gif .div-father-layout:hover .layout {
+        .container-trending .trending-gif .div-father-layout:hover > .layout {
           height: 30vh; }
+          .container-trending .trending-gif .div-father-layout:hover > .layout .iconos_layout {
+            transform: translate(50%, 10px);
+            display: block; }
+          .container-trending .trending-gif .div-father-layout:hover > .layout .texto_layout {
+            transform: translate(10px, 50px);
+            display: block; }
       .container-trending .trending-gif::-webkit-scrollbar {
         -webkit-appearance: none; }
       .container-trending .trending-gif::-webkit-scrollbar-track {
@@ -862,10 +868,10 @@ footer .line-footer {
       transform: translate(10px, 50px);
       display: none;
       max-width: 90%; }
-  div .layout:hover .iconos_layout {
+  div .iconos_layout {
     transform: translate(50%, 10px);
     display: block; }
-  div .layout:hover .texto_layout {
+  div .texto_layout {
     transform: translate(10px, 50px);
     display: block; } }
 @media screen and (min-width: 1024px) {
