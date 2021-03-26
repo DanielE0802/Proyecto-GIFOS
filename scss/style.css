@@ -575,6 +575,19 @@ footer .line-footer {
         .busqueda .galery-gifs div:hover .layout {
           height: 100%; }
 
+  .favoritos .sin_fav {
+    position: absolute;
+    transform: translate(35vw, -500px); }
+    .favoritos .sin_fav img {
+      display: block;
+      margin: auto; }
+    .favoritos .sin_fav h1 {
+      color: #50E3C2;
+      font-family: "Montserrat", sans-serif;
+      font-size: 22px;
+      text-align: center;
+      line-height: 33px;
+      margin-top: 30px; }
   .favoritos .galery-gifs {
     grid-template-rows: 1fr 1fr 1fr;
     grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -771,9 +784,6 @@ footer .line-footer {
           border: 1px solid #572EE5;
           border-radius: 50%;
           align-items: center; }
-          .container-crea-tu-gif .containerCenterCrearGifo .pasosCrearGifo .numeroDePasos :hover {
-            background: #572EE5;
-            border-radius: 50%; }
           .container-crea-tu-gif .containerCenterCrearGifo .pasosCrearGifo .numeroDePasos .paso {
             font-family: "Roboto", sans-serif;
             font-size: 18px;
@@ -784,6 +794,20 @@ footer .line-footer {
             padding-bottom: 6px;
             padding-left: 11px;
             padding-right: 11px; }
+          .container-crea-tu-gif .containerCenterCrearGifo .pasosCrearGifo .numeroDePasos :hover {
+            background: #572EE5;
+            border-radius: 50%;
+            color: #FFFFFF; }
+      .container-crea-tu-gif .containerCenterCrearGifo .tiempo {
+        transform: translate(48vw, -50px);
+        width: 100px; }
+        .container-crea-tu-gif .containerCenterCrearGifo .tiempo h2 {
+          color: #572EE5;
+          font-family: "Montserrat", sans-serif;
+          font-size: 15px;
+          letter-spacing: 0;
+          text-align: center;
+          line-height: 22px; }
       .container-crea-tu-gif .containerCenterCrearGifo .carga {
         width: 55.3%;
         height: 6.9px;
@@ -821,42 +845,65 @@ footer .line-footer {
       height: 100%;
       max-height: 390px;
       transform: scaleX(-1); }
+    .gifo-container div {
+      position: absolute;
+      text-align: center;
+      padding: 7.5%;
+      margin-top: 20px; }
+      .gifo-container div h1 {
+        color: #572EE5;
+        font-family: "Montserrat", sans-serif; }
+        .gifo-container div h1 span {
+          color: #5ED7C6; }
+      .gifo-container div p {
+        font-family: "Roboto", sans-serif; }
+    .gifo-container .primer_paso {
+      display: none; }
+    .gifo-container .segundo_paso {
+      position: absolute;
+      text-align: center;
+      padding: 10%;
+      padding-left: 10%;
+      margin-top: 20px;
+      margin-left: 40px; }
 
   .modo_nocturno header nav ul {
     background: #37383C; }
 
-  footer .footer-social {
-    flex-direction: row;
-    justify-content: start; }
-    footer .footer-social p {
-      text-align: center;
-      margin-top: 49.5px;
-      margin-bottom: 0px;
-      margin-left: 156px;
-      letter-spacing: 0; }
-    footer .footer-social .social {
+  footer {
+    transform: translate(0, 80px); }
+    footer .footer-social {
+      flex-direction: row;
+      justify-content: start; }
+      footer .footer-social p {
+        text-align: center;
+        margin-top: 149.5px;
+        margin-bottom: 0px;
+        margin-left: 156px;
+        letter-spacing: 0; }
+      footer .footer-social .social {
+        display: flex;
+        justify-content: space-between;
+        width: 100px;
+        align-self: center;
+        margin-top: 49.5px;
+        margin-bottom: 47.8px;
+        margin-left: 17px; }
+    footer .content-footer {
       display: flex;
-      justify-content: space-between;
-      width: 100px;
-      align-self: center;
-      margin-top: 49.5px;
-      margin-bottom: 47.8px;
-      margin-left: 17px; }
-  footer .content-footer {
-    display: flex;
-    justify-content: space-between; }
-  footer .footer-copy {
-    width: 250px;
-    height: 1px;
-    text-align: initial;
-    margin-bottom: 0;
-    transform: translate(0, 50px); }
-    footer .footer-copy p {
-      width: 250px; }
-  footer .line-footer {
-    background: #572EE5;
-    width: 100%;
-    height: 5px; }
+      justify-content: space-between; }
+    footer .footer-copy {
+      width: 250px;
+      height: 1px;
+      text-align: initial;
+      margin-bottom: 0;
+      transform: translate(0, 50px); }
+      footer .footer-copy p {
+        width: 250px; }
+    footer .line-footer {
+      background: #572EE5;
+      width: 100%;
+      height: 5px; }
 
   div .layout {
     color: #FFFFFF;
@@ -866,14 +913,7 @@ footer .line-footer {
       display: none; }
     div .layout .texto_layout {
       transform: translate(10px, 50px);
-      display: none;
-      max-width: 90%; }
-  div .iconos_layout {
-    transform: translate(50%, 10px);
-    display: block; }
-  div .texto_layout {
-    transform: translate(10px, 50px);
-    display: block; } }
+      display: block; } }
 @media screen and (min-width: 1024px) {
   footer .footer-social {
     flex-direction: row;

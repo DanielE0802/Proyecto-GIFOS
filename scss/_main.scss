@@ -167,6 +167,25 @@
     }
 
     .favoritos {
+        .sin_fav {
+            position: absolute;
+            transform: translate(35vw, -500px);
+
+            img {
+                display: block;
+                margin: auto;
+            }
+
+            h1 {
+                color: $color-t;
+                font-family: $Mon;
+                font-size: 22px;
+                text-align: center;
+                line-height: 33px;
+                margin-top: 30px;
+            }
+        }
+
         .galery-gifs {
             grid-template-rows: 1fr 1fr 1fr;
             grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -300,7 +319,7 @@
                         transform: translate(50%, 10px);
                         display: block;
                     }
-            
+
                     .texto_layout {
                         transform: translate(10px, 50px);
                         display: block;
@@ -483,10 +502,7 @@
                     border-radius: 50%;
                     align-items: center;
 
-                    :hover {
-                        background: #572EE5;
-                        border-radius: 50%;
-                    }
+
 
                     .paso {
                         font-family: $Rob;
@@ -498,13 +514,31 @@
                         padding-bottom: 6px;
                         padding-left: 11px;
                         padding-right: 11px;
+                    }
 
+                    :hover {
+                        background: #572EE5;
+                        border-radius: 50%;
+                        color: $color-s-noc;
                     }
                 }
 
 
             }
 
+            .tiempo {
+                transform: translate(48vw, -50px);
+                width: 100px;
+
+                h2 {
+                    color: $color-p;
+                    font-family: $Mon;
+                    font-size: 15px;
+                    letter-spacing: 0;
+                    text-align: center;
+                    line-height: 22px;
+                }
+            }
 
             .carga {
                 width: 55.3%;
@@ -557,7 +591,41 @@
             max-height: 390px;
             transform: scaleX(-1);
         }
+
+        div {
+            position: absolute;
+            text-align: center;
+            padding: 7.5%;
+            margin-top: 20px;
+
+            h1 {
+                color: $color-p;
+                font-family: $Mon;
+
+                span {
+                    color: $color-s;
+                }
+            }
+
+            p {
+                font-family: $Rob;
+            }
+        }
+
+        .primer_paso {
+            display: none;
+        }
+
+        .segundo_paso {
+            position: absolute;
+            text-align: center;
+            padding: 10%;
+            padding-left: 10%;
+            margin-top: 20px;
+            margin-left: 40px;
+        }
     }
+
 
     .modo_nocturno {
         header {
@@ -570,6 +638,7 @@
     }
 
     footer {
+        transform: translate(0, 80px);
 
         .footer-social {
             flex-direction: row;
@@ -577,7 +646,7 @@
 
             p {
                 text-align: center;
-                margin-top: 49.5px;
+                margin-top: 149.5px;
                 margin-bottom: 0px;
                 margin-left: 156px;
                 letter-spacing: 0;
@@ -633,24 +702,13 @@
 
             .texto_layout {
                 transform: translate(10px, 50px);
-                display: none;
-                max-width: 90%;
+                display: block;
             }
+
         }
 
 
-        .iconos_layout {
-            transform: translate(50%, 10px);
-            display: block;
-        }
-
-        .texto_layout {
-            transform: translate(10px, 50px);
-            display: block;
-        }
 
     }
-
-
-
+    
 }
