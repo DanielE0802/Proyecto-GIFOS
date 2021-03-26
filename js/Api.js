@@ -44,7 +44,7 @@ function api(busqueda) {
         console.error(error);
     })
 
- 
+
 }
 
 let sectionTrendingImg = document.querySelectorAll("#body_inicio > div > div.trending-gif > div > img")
@@ -107,33 +107,29 @@ let divContenido = `alt="gif">
         <h1>titulo</h1>
         <h2>subtitulo</h2>
     </div>
-</div>` 
+</div>`
 
 let section_favoritos = document.getElementById('galery-fav')
 
-
 // hay un error!!
 
-for (let i = 0; i <= 25; i++) {
-  
+for (let i = 0; i <= 12; i++) {
+
     btn_img_fav[i].addEventListener('click', function () {
         let crearFav = document.createElement('div');
         section_favoritos.appendChild(crearFav)
         console.log(crearFav)
         let imgSrc = containerImg[i].getAttribute("src")
         crearFav.innerHTML = `<img src="${imgSrc}" ${divContenido}`
-    
-        let rutaImgActual = `assets/icon-fav.svg` 
+
+        let rutaImgActual = `assets/icon-fav.svg`
         let rutaSeleccionFav = `assets/icon-fav-active.svg`
-    
-        if(containerIconFav[i].getAttribute('src')  == rutaImgActual){
+
+        if (containerIconFav[i].getAttribute('src') == rutaImgActual) {
             containerIconFav[i].setAttribute('src', rutaSeleccionFav)
-        }
-        else{
+        } else {
             console.log("no")
         }
     })
 
 }
-
-

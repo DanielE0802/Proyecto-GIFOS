@@ -474,7 +474,7 @@ footer .line-footer {
     border-radius: 20px;
     border: 2px solid #f1f2f3; }
   html::-webkit-scrollbar:vertical {
-    height: px; }
+    height: 5px; }
   html::-webkit-scrollbar-button:increment,
   html .contenedor::-webkit-scrollbar-button {
     display: none; }
@@ -590,7 +590,8 @@ footer .line-footer {
         width: 100%;
         height: 100%;
         max-width: 350px;
-        max-height: 290px; }
+        max-height: 290px;
+        object-fit: cover; }
       .favoritos .galery-gifs div .layout {
         background: #572EE5;
         opacity: 0.7;
@@ -626,23 +627,35 @@ footer .line-footer {
     .container-trending .trending-text p {
       text-align: center; }
     .container-trending .trending-gif {
-      display: flex;
-      overflow: scroll; }
-      .container-trending .trending-gif img {
-        width: 64.5%;
-        margin-left: 22px;
-        margin-top: 32px;
-        margin-bottom: 82px; }
-      .container-trending .trending-gif .izquierda-container .flecha-izquierda {
-        display: block;
-        transform: translate(0, 110px);
-        width: 40px;
-        height: 40px; }
-      .container-trending .trending-gif .derecha-container .flecha-derecha {
-        display: block;
-        transform: translate(0, 110px);
-        width: 40px;
-        height: 40px; }
+      height: 300px;
+      max-width: 2200px;
+      overflow-x: scroll;
+      overflow-y: hidden;
+      margin-left: 94px;
+      margin-right: 94px; }
+      .container-trending .trending-gif .div-father-layout {
+        min-width: 17vw;
+        max-width: 380px;
+        overflow: hidden;
+        margin-right: 20px;
+        margin-bottom: 30px; }
+        .container-trending .trending-gif .div-father-layout .img-layout {
+          width: 100%;
+          height: 30vh;
+          object-fit: cover;
+          margin: 0px; }
+        .container-trending .trending-gif .div-father-layout .layout {
+          width: 100%;
+          background: #572EE5;
+          opacity: 0.7;
+          height: 0px;
+          transform: translateY(calc(-100% - (5px)));
+          transition: height .5s ease; }
+          .container-trending .trending-gif .div-father-layout .layout img {
+            width: 25px;
+            margin: 0; }
+        .container-trending .trending-gif .div-father-layout:hover .layout {
+          height: 30vh; }
       .container-trending .trending-gif::-webkit-scrollbar {
         -webkit-appearance: none; }
       .container-trending .trending-gif::-webkit-scrollbar-track {
@@ -653,6 +666,16 @@ footer .line-footer {
         border: 2px solid #f1f2f3; }
       .container-trending .trending-gif::-webkit-scrollbar:horizontal {
         height: 10px; }
+      .container-trending .trending-gif .izquierda-container .flecha-izquierda {
+        display: block;
+        transform: translate(0, 110px);
+        width: 40px;
+        height: 40px; }
+      .container-trending .trending-gif .derecha-container .flecha-derecha {
+        display: block;
+        transform: translate(0, 110px);
+        width: 40px;
+        height: 40px; }
 
   .gifos-max {
     width: 99%;
@@ -837,7 +860,8 @@ footer .line-footer {
       display: none; }
     div .layout .texto_layout {
       transform: translate(10px, 50px);
-      display: none; }
+      display: none;
+      max-width: 90%; }
   div .layout:hover .iconos_layout {
     transform: translate(50%, 10px);
     display: block; }
