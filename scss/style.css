@@ -779,6 +779,16 @@ footer .line-footer {
             background: #572EE5;
             border-radius: 50%;
             color: #FFFFFF; }
+      .container-crea-tu-gif .containerCenterCrearGifo .tiempo {
+        transform: translate(48vw, -50px);
+        width: 100px; }
+        .container-crea-tu-gif .containerCenterCrearGifo .tiempo h2 {
+          color: #572EE5;
+          font-family: "Montserrat", sans-serif;
+          font-size: 15px;
+          letter-spacing: 0;
+          text-align: center;
+          line-height: 22px; }
       .container-crea-tu-gif .containerCenterCrearGifo .carga {
         width: 55.3%;
         height: 6.9px;
@@ -816,16 +826,38 @@ footer .line-footer {
       height: 100%;
       max-height: 390px;
       transform: scaleX(-1); }
+    .gifo-container div {
+      position: absolute;
+      text-align: center;
+      padding: 7.5%;
+      margin-top: 20px; }
+      .gifo-container div h1 {
+        color: #572EE5;
+        font-family: "Montserrat", sans-serif; }
+        .gifo-container div h1 span {
+          color: #5ED7C6; }
+      .gifo-container div p {
+        font-family: "Roboto", sans-serif; }
+    .gifo-container .primer_paso {
+      display: none; }
+    .gifo-container .segundo_paso {
+      position: absolute;
+      text-align: center;
+      padding: 10%;
+      padding-left: 10%;
+      margin-top: 20px;
+      margin-left: 40px; } }
+.modo_nocturno header nav ul {
+  background: #37383C; }
 
-  .modo_nocturno header nav ul {
-    background: #37383C; }
-
+footer {
+  transform: translate(0, 80px); }
   footer .footer-social {
     flex-direction: row;
     justify-content: start; }
     footer .footer-social p {
       text-align: center;
-      margin-top: 49.5px;
+      margin-top: 149.5px;
       margin-bottom: 0px;
       margin-left: 156px;
       letter-spacing: 0; }
@@ -853,22 +885,23 @@ footer .line-footer {
     width: 100%;
     height: 5px; }
 
-  div .layout {
-    color: #FFFFFF;
-    font-family: "Roboto", sans-serif; }
-    div .layout .iconos_layout {
-      transform: translate(50%, 10px);
-      display: none; }
-    div .layout .texto_layout {
-      transform: translate(10px, 50px);
-      display: none;
-      max-width: 90%; }
-  div .layout:hover .iconos_layout {
+div .layout {
+  color: #FFFFFF;
+  font-family: "Roboto", sans-serif; }
+  div .layout .iconos_layout {
     transform: translate(50%, 10px);
-    display: block; }
-  div .layout:hover .texto_layout {
+    display: none; }
+  div .layout .texto_layout {
     transform: translate(10px, 50px);
-    display: block; } }
+    display: none;
+    max-width: 90%; }
+div .layout:hover .iconos_layout {
+  transform: translate(50%, 10px);
+  display: block; }
+div .layout:hover .texto_layout {
+  transform: translate(10px, 50px);
+  display: block; }
+
 @media screen and (min-width: 1024px) {
   footer .footer-social {
     flex-direction: row;
