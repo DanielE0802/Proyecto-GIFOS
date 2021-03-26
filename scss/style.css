@@ -575,6 +575,19 @@ footer .line-footer {
         .busqueda .galery-gifs div:hover .layout {
           height: 100%; }
 
+  .favoritos .sin_fav {
+    position: absolute;
+    transform: translate(35vw, -500px); }
+    .favoritos .sin_fav img {
+      display: block;
+      margin: auto; }
+    .favoritos .sin_fav h1 {
+      color: #50E3C2;
+      font-family: "Montserrat", sans-serif;
+      font-size: 22px;
+      text-align: center;
+      line-height: 33px;
+      margin-top: 30px; }
   .favoritos .galery-gifs {
     grid-template-rows: 1fr 1fr 1fr;
     grid-template-columns: 1fr 1fr 1fr 1fr;

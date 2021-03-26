@@ -124,6 +124,9 @@ html .contenedor::-webkit-scrollbar-button,html::-webkit-scrollbar-button:increm
 .busqueda .galery-gifs div .layout{background:#572ee5;opacity:.7;height:0;transform:translateY(calc(-100% - (5px)));transition:height .5s ease}
 .busqueda .galery-gifs div .layout img{width:30px}
 .busqueda .galery-gifs div:hover .layout{height:100%}
+.favoritos .sin_fav{position:absolute;transform:translate(35vw,-500px)}
+.favoritos .sin_fav img{display:block;margin:auto}
+.favoritos .sin_fav h1{color:#50e3c2;font-family:Montserrat,sans-serif;font-size:22px;text-align:center;line-height:33px;margin-top:30px}
 .favoritos .galery-gifs{grid-template-rows:1fr 1fr 1fr;grid-template-columns:1fr 1fr 1fr 1fr;gap:29px;width:100vw;padding-right:156px;padding-left:156px;padding-bottom:78px}
 .favoritos .galery-gifs div{max-width:300px;max-height:280px}
 .favoritos .galery-gifs div img{width:100%;height:100%;max-width:350px;max-height:290px;object-fit:cover}

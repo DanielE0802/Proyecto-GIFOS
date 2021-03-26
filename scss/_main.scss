@@ -167,6 +167,23 @@
     }
 
     .favoritos {
+        .sin_fav {
+            position: absolute;
+            transform: translate(35vw, -500px);
+            img{
+                display: block;
+                margin: auto;
+            }
+            h1 {
+                color: $color-t;
+                font-family: $Mon;
+                font-size: 22px;
+                text-align: center;
+                line-height: 33px;
+                margin-top: 30px;
+            }
+        }
+
         .galery-gifs {
             grid-template-rows: 1fr 1fr 1fr;
             grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -500,6 +517,7 @@
             .tiempo {
                 transform: translate(48vw, -50px);
                 width: 100px;
+
                 h2 {
                     color: $color-p;
                     font-family: $Mon;
@@ -608,7 +626,8 @@
 }
 
 footer {
-    transform: translate(0,80px);
+    transform: translate(0, 80px);
+
     .footer-social {
         flex-direction: row;
         justify-content: start;
