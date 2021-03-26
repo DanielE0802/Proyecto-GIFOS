@@ -613,8 +613,14 @@ footer .line-footer {
         transition: height .5s ease; }
         .favoritos .galery-gifs div .layout img {
           width: 30px; }
-      .favoritos .galery-gifs div:hover .layout {
-        height: 100%; }
+      .favoritos .galery-gifs div:hover > .layout {
+        height: 30vh; }
+        .favoritos .galery-gifs div:hover > .layout .iconos_layout {
+          transform: translate(50%, 10px);
+          display: block; }
+        .favoritos .galery-gifs div:hover > .layout .texto_layout {
+          transform: translate(10px, 50px);
+          display: block; }
 
   .mis-gifos .galery-gifs {
     grid-auto-rows: 1fr 1fr 1fr 1fr;
@@ -913,7 +919,37 @@ footer .line-footer {
       display: none; }
     div .layout .texto_layout {
       transform: translate(10px, 50px);
-      display: block; } }
+      display: none; }
+
+  .div-father-layout {
+    min-width: 17vw;
+    max-width: 380px;
+    overflow: hidden;
+    margin-right: 20px;
+    margin-bottom: 30px; }
+    .div-father-layout .img-layout {
+      width: 100%;
+      height: 30vh;
+      object-fit: cover;
+      margin: 0px; }
+    .div-father-layout .layout {
+      width: 100%;
+      background: #572EE5;
+      opacity: 0.7;
+      height: 0px;
+      transform: translateY(calc(-100% - (5px)));
+      transition: height .5s ease; }
+      .div-father-layout .layout img {
+        width: 25px;
+        margin: 0; }
+    .div-father-layout:hover > .layout {
+      height: 30vh; }
+      .div-father-layout:hover > .layout .iconos_layout {
+        transform: translate(50%, 10px);
+        display: block; }
+      .div-father-layout:hover > .layout .texto_layout {
+        transform: translate(10px, 50px);
+        display: block; } }
 @media screen and (min-width: 1024px) {
   footer .footer-social {
     flex-direction: row;
