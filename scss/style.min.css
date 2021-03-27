@@ -132,7 +132,9 @@ html .contenedor::-webkit-scrollbar-button,html::-webkit-scrollbar-button:increm
 .favoritos .galery-gifs div img{width:100%;height:100%;max-width:350px;max-height:290px;object-fit:cover}
 .favoritos .galery-gifs div .layout{background:#572ee5;opacity:.7;height:0;transform:translateY(calc(-100% - (5px)));transition:height .5s ease}
 .favoritos .galery-gifs div .layout img{width:30px}
-.favoritos .galery-gifs div:hover .layout{height:100%}
+.favoritos .galery-gifs div:hover>.layout{height:30vh}
+.favoritos .galery-gifs div:hover>.layout .iconos_layout{transform:translate(50%,10px);display:block}
+.favoritos .galery-gifs div:hover>.layout .texto_layout{transform:translate(10px,50px);display:block}
 .mis-gifos .galery-gifs{grid-auto-rows:1fr 1fr 1fr 1fr;grid-template-columns:1fr 1fr 1fr 1fr;gap:29px;width:100vw;height:100vh;padding-right:156px;padding-left:156px;padding-bottom:78px}
 .mis-gifos .galery-gifs img{width:100%!important;height:100%!important}
 .container-trending{margin-top:45px;display:flex;flex-direction:column;overflow:hidden}
@@ -143,7 +145,9 @@ html .contenedor::-webkit-scrollbar-button,html::-webkit-scrollbar-button:increm
 .container-trending .trending-gif .div-father-layout .img-layout{width:100%;height:30vh;object-fit:cover;margin:0}
 .container-trending .trending-gif .div-father-layout .layout{width:100%;background:#572ee5;opacity:.7;height:0;transform:translateY(calc(-100% - (5px)));transition:height .5s ease}
 .container-trending .trending-gif .div-father-layout .layout img{width:25px;margin:0}
-.container-trending .trending-gif .div-father-layout:hover .layout{height:30vh}
+.container-trending .trending-gif .div-father-layout:hover>.layout{height:30vh}
+.container-trending .trending-gif .div-father-layout:hover>.layout .iconos_layout{transform:translate(50%,10px);display:block}
+.container-trending .trending-gif .div-father-layout:hover>.layout .texto_layout{transform:translate(10px,50px);display:block}
 .container-trending .trending-gif::-webkit-scrollbar{-webkit-appearance:none}
 .container-trending .trending-gif::-webkit-scrollbar-track{border-radius:10px}
 .container-trending .trending-gif::-webkit-scrollbar-thumb{background-color:#797979;border-radius:20px;border:2px solid #f1f2f3}
@@ -183,7 +187,6 @@ html .contenedor::-webkit-scrollbar-button,html::-webkit-scrollbar-button:increm
 .gifo-container div p{font-family:Roboto,sans-serif}
 .gifo-container .primer_paso{display:none}
 .gifo-container .segundo_paso{position:absolute;text-align:center;padding:10%;padding-left:10%;margin-top:20px;margin-left:40px}
-}
 .modo_nocturno header nav ul{background:#37383c}
 footer{transform:translate(0,80px)}
 footer .footer-social{flex-direction:row;justify-content:start}
@@ -193,11 +196,20 @@ footer .content-footer{display:flex;justify-content:space-between}
 footer .footer-copy{width:250px;height:1px;text-align:initial;margin-bottom:0;transform:translate(0,50px)}
 footer .footer-copy p{width:250px}
 footer .line-footer{background:#572ee5;width:100%;height:5px}
-div .layout{color:#fff;font-family:Roboto,sans-serif}
 div .layout .iconos_layout{transform:translate(50%,10px);display:none}
 div .layout .texto_layout{transform:translate(10px,50px);display:none;max-width:90%}
 div .layout:hover .iconos_layout{transform:translate(50%,10px);display:block}
 div .layout:hover .texto_layout{transform:translate(10px,50px);display:block}
+======= div .layout{color:#fff;font-family:Roboto,sans-serif}
+div .layout .iconos_layout{transform:translate(50%,10px);display:none}
+div .layout .texto_layout{transform:translate(10px,50px);display:none}
+.div-father-layout .img-layout{width:100%;height:30vh;object-fit:cover;margin:0}
+.div-father-layout .layout{width:100%;background:#572ee5;opacity:.7;height:0;transform:translateY(calc(-100% - (5px)));transition:height .5s ease}
+.div-father-layout .layout img{width:25px;margin:0}
+.div-father-layout:hover>.layout{height:30vh}
+.div-father-layout:hover>.layout .iconos_layout{transform:translate(50%,10px);display:block}
+.div-father-layout:hover>.layout .texto_layout{transform:translate(10px,50px);display:block}
+}
 @media screen and (min-width:1024px){
 footer .footer-social{flex-direction:row;justify-content:start}
 footer .footer-social p{text-align:center;margin-top:49.5px;margin-bottom:0;margin-left:156px;letter-spacing:0}
