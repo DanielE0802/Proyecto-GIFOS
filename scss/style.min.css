@@ -195,7 +195,7 @@ footer .footer-copy p{width:250px}
 footer .line-footer{background:#572ee5;width:100%;height:5px}
 div .layout{color:#fff;font-family:Roboto,sans-serif}
 div .layout .iconos_layout{transform:translate(50%,10px);display:none}
-div .layout .texto_layout{transform:translate(10px,50px);display:none;max-width:80%}
+div .layout .texto_layout{transform:translate(10px,50px);display:none;max-width:90%}
 div .layout:hover .iconos_layout{transform:translate(50%,10px);display:block}
 div .layout:hover .texto_layout{transform:translate(10px,50px);display:block}
 @media screen and (min-width:1024px){

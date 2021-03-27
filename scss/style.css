@@ -907,7 +907,7 @@ div .layout {
   div .layout .texto_layout {
     transform: translate(10px, 50px);
     display: none;
-    max-width: 80%; }
+    max-width: 90%; }
 div .layout:hover .iconos_layout {
   transform: translate(50%, 10px);
   display: block; }
