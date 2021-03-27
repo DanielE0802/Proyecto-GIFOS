@@ -911,24 +911,6 @@ footer .line-footer {
       width: 100%;
       height: 5px; }
 
-<<<<<<< HEAD
-div .layout {
-  color: #FFFFFF;
-  font-family: "Roboto", sans-serif; }
-  div .layout .iconos_layout {
-    transform: translate(50%, 10px);
-    display: none; }
-  div .layout .texto_layout {
-    transform: translate(10px, 50px);
-    display: none;
-    max-width: 90%; }
-div .layout:hover .iconos_layout {
-  transform: translate(50%, 10px);
-  display: block; }
-div .layout:hover .texto_layout {
-  transform: translate(10px, 50px);
-  display: block; }
-=======
   div .layout {
     color: #FFFFFF;
     font-family: "Roboto", sans-serif; }
@@ -938,7 +920,6 @@ div .layout:hover .texto_layout {
     div .layout .texto_layout {
       transform: translate(10px, 50px);
       display: none; }
->>>>>>> 86101e86aded7ac0a1638f07f2f86f5995206686
 
   .div-father-layout {
     min-width: 17vw;
