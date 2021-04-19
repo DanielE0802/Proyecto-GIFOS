@@ -120,8 +120,7 @@
         }
 
         .galery-gifs {
-            grid-template-rows: 1fr 1fr 1fr;
-            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-template-columns: repeat(4, 200px);
             gap: 29px;
             width: 100vw;
             padding-right: 156px;
