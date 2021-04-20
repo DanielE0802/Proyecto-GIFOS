@@ -388,6 +388,29 @@ footer {
 }
 
 .favoritos {
+
+    .sin_fav {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-self: center;
+        transform: translate(0vw, -800px);
+
+        img {
+            display: inline-block;
+            margin: auto;
+        }
+
+        h1 {
+            color: $color-t;
+            font-family: $Mon;
+            font-size: 22px;
+            text-align: center;
+            line-height: 33px;
+            margin-top: 30px;
+        }
+    }
+
     .fav-icon {
         display: block;
         margin: auto;
@@ -522,4 +545,28 @@ footer {
 
 .padding {
     padding-top: 106px;
+}
+
+.subiendoGifo{
+    display: flex;
+    position: absolute;
+    width: 47.8%;
+    height: 450px;
+    padding: 0;
+    margin: 0;
+
+    .colorr{
+        background-color: $color-p;
+        padding: 0;
+        margin: 0;
+        opacity: 0.6;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+    }
+
+    p{
+        position:absolute ;
+    }
+   
 }

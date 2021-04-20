@@ -1,108 +1,303 @@
-function call (id){
-    return document.getElementById(id)
+function call(id) {
+  return document.getElementById(id)
 }
 
 //Botones
 let bt_fav = call("btn_fav")
-let btn_crear_gifos= call("btn_crear_gifos")
+let btn_crear_gifos = call("btn_crear_gifos")
 let btn_mis_gifos = call("btn_mis_gifos")
 let btn_home = call("logo")
-let btn_comenzar= call("comenzar")
+let btn_comenzar = call("comenzar")
 
 //Secciones
-let section_fav= call("favoritos")
+let section_fav = call("favoritos")
 let section_fav_btn = call("section_fav_btn")
 
-let section_mis_gifos= call("mis-gifos")
+let section_mis_gifos = call("mis-gifos")
 let section_mis_gifos_btn = call("section_mis_gifos_btn")
 
-let body_inicio=call("body_inicio")
+let body_inicio = call("body_inicio")
 let section_home = call("home")
-let section_crear_gifos=call("crearGifos")
-let section_main=call("section_main")
+let section_crear_gifos = call("crearGifos")
+let section_main = call("section_main")
+
+let misGifos = document.querySelectorAll("#mis-gifos > div > img")
 
 
 //Sección crear GIFO
 
-btn_crear_gifos.addEventListener('click', function(){
-    body_inicio.classList.toggle("display-none")
-    section_crear_gifos.classList.toggle("display-none")
-},false)
+btn_crear_gifos.addEventListener('click', function () {
+  body_inicio.classList.toggle("display-none")
+  section_crear_gifos.classList.toggle("display-none")
+}, false)
 
 
 //Sección favoritos
 
-bt_fav.addEventListener('click', function(e){
-    section_fav.classList.remove('display-none'); 
-    section_fav.classList.add('padding'); 
-    section_fav_btn.classList.remove('display-none');
+bt_fav.addEventListener('click', function (e) {
+  section_fav.classList.remove('display-none');
+  section_fav.classList.add('padding');
+  section_fav_btn.classList.remove('display-none');
 
-    
-    sectionBusqueda.classList.add('display-none')
 
-    section_mis_gifos.classList.add("display-none")
-    section_mis_gifos_btn.classList.add('display-none');
-    section_main.classList.add("display-none")
+  sectionBusqueda.classList.add('display-none')
 
-    if(body_inicio.classList.value == "display-none"){
-        section_crear_gifos.classList.add("display-none")
-        body_inicio.classList.remove("display-none")
-    }
+  section_mis_gifos.classList.add("display-none")
+  section_mis_gifos_btn.classList.add('display-none');
+  section_main.classList.add("display-none")
 
-},false)
+  if (body_inicio.classList.value == "display-none") {
+    section_crear_gifos.classList.add("display-none")
+    body_inicio.classList.remove("display-none")
+  }
+
+}, false)
 
 
 //Sección mis GIFOS
 
-btn_mis_gifos.addEventListener('click', function(e){
-    section_mis_gifos.classList.remove('display-none');
-    section_mis_gifos.classList.add("padding")
-    section_mis_gifos_btn.classList.remove('display-none');
+btn_mis_gifos.addEventListener('click', function (e) {
+  section_mis_gifos.classList.remove('display-none');
+  section_mis_gifos.classList.add("padding")
+  section_mis_gifos_btn.classList.remove('display-none');
 
-    section_fav.classList.add("display-none")
-    section_fav_btn.classList.add('display-none');
-    section_main.classList.add("display-none")
+  section_fav.classList.add("display-none")
+  section_fav_btn.classList.add('display-none');
+  section_main.classList.add("display-none")
 
-    sectionBusqueda.classList.add('display-none')
+  sectionBusqueda.classList.add('display-none')
 
-    if(body_inicio.classList.value == "display-none"){
-        section_crear_gifos.classList.add("display-none")
-        body_inicio.classList.remove("display-none")
-    }
+  if (body_inicio.classList.value == "display-none") {
+    section_crear_gifos.classList.add("display-none")
+    body_inicio.classList.remove("display-none")
+  }
 
-},false)
+}, false)
 
-btn_home.addEventListener('click', function(){
-    section_main.classList.remove('display-none')
+btn_home.addEventListener('click', function () {
+  section_main.classList.remove('display-none')
 
-    section_fav.classList.add('display-none')
-    section_fav_btn.classList.add('display-none');
-    
-    section_mis_gifos.classList.add("display-none")
-    section_mis_gifos_btn.classList.add('display-none');
+  section_fav.classList.add('display-none')
+  section_fav_btn.classList.add('display-none');
 
-    if(body_inicio.classList.value == "display-none"){
+  section_mis_gifos.classList.add("display-none")
+  section_mis_gifos_btn.classList.add('display-none');
 
-        section_crear_gifos.classList.add("display-none")
-        body_inicio.classList.remove("display-none")
-    
-    }
+  if (body_inicio.classList.value == "display-none") {
+
+    section_crear_gifos.classList.add("display-none")
+    body_inicio.classList.remove("display-none")
+
+  }
 })
 
-btn_comenzar.addEventListener('click', function(){
-    navigator.mediaDevices.getUserMedia({
+//Crear gifo
+//Variables
 
-        video: {
-            width: { min: 1024, ideal: 1280, max: 1920 },
-            height: { min: 576, ideal: 720, max: 1080 }
-          }
-    }).then((stream)=>{
-        console.log(stream)
-        let video= document.getElementById("video")
-        video.srcObject = stream
+let form = new FormData();
+let gifID;
+const timer = document.getElementById('timer');
+const watch = timer
+let milliseconds = 0;
+let chronometer;
+let primerPaso = document.getElementById('primer_paso')
+let segundoPaso = document.getElementById('segundo_paso')
+let btn_grabar = document.getElementById('grabar');
+let grabacion;
+let paso1 = document.getElementById('paso1')
+let paso2 = document.getElementById('paso2')
+let paso3 = document.getElementById('paso3')
+let video = document.getElementById("video")
+let subiendoGifo = document.getElementById('subiendoGifo')
+let gifo_container = document.getElementById('gifo-container')
 
-    }).catch((err)=>console.log(err))
-})
+//Contador- iniciar
+function comenzarCronometro() {
+  clearInterval(chronometer);
+  chronometer = setInterval(() => {
+    milliseconds += 10;
+
+    const dateTimer = new Date(milliseconds);
+
+    watch.innerHTML = `${`0${dateTimer.getUTCMinutes()}`.slice(-2)}:${`0${dateTimer.getUTCSeconds()}`.slice(
+        -2
+      )}:${`0${dateTimer.getUTCMilliseconds()}`.slice(-3, -1)}`;
+  }, 10);
+}
+
+//Contador- Pausar
+function pausarCronometro() {
+  clearInterval(chronometer);
+}
+
+
+//Funcion para mostrar camara
+function mostrarCamara() {
+  navigator.mediaDevices.getUserMedia({
+    video: {
+      width: {
+        min: 1024,
+        ideal: 1280,
+        max: 1920
+      },
+      height: {
+        min: 576,
+        ideal: 720,
+        max: 1080
+      }
+    }
+  }).then((stream) => {
+    console.log(stream)
+    grabacion = RecordRTC(stream, {
+      type: "gif",
+      frameRate: 1,
+      quality: 10,
+      width: 360,
+      hidden: 240,
+    });
+
+    paso1.classList.add('paso-activo')
+    paso2.classList.remove('paso-activo')
+    paso3.classList.remove('paso-activo')
+    btn_grabar.innerHTML = "<h1>Grabar</h1>"
+    video.srcObject = stream
+
+  }).catch((err) => console.log(err))
+  btn_comenzar.classList.add('display-none')
+  primerPaso.classList.add('display-none')
+  segundoPaso.classList.remove('display-none')
+  btn_grabar.classList.remove('display-none')
+  btn_comenzar.innerHTML = "Grabar"
+  btn_grabar.removeEventListener("click", btn_subir_gifo);
+  timer.textContent="00:00:00"
+
+
+}
+const Btn_Comenzar_a_grabar = () => {
+  mostrarCamara((stream) => {
+    grabacion = RecordRTC(stream, {
+      type: "gif",
+      frameRate: 1,
+      quality: 10,
+      width: 360,
+      hidden: 240,
+      onGifRecordingStarted() {},
+    });
+  });
+
+};
+
+//Comenzar a grabar
+function ComenzarAGrabar() {
+  watch.textContent = "00:00:00";
+  comenzarCronometro();
+  btn_grabar.innerHTML = "<h1>Finalizar</h1>";
+  grabacion.startRecording();
+  btn_grabar.removeEventListener("click", ComenzarAGrabar);
+  btn_grabar.addEventListener("click", btn_finalizar_gifo);
+  paso1.classList.remove('paso-activo')
+  paso2.classList.add('paso-activo')
+}
+
+
+//Finaliza la grabacion
+const btn_finalizar_gifo = () => {
+  btn_grabar.innerHTML = "<h1>Subir gifo</h1>";
+  watch.textContent = "Repetir captura";
+  watch.addEventListener('click',function(){
+    btn_grabar.addEventListener('click', ComenzarAGrabar)
+    milliseconds = 0
+    chronometer = 0
+    form= new FormData();
+    mostrarCamara();
+  })
+  pausarCronometro();
+  // eslint-disable-next-line no-use-before-define
+  btn_grabar.removeEventListener("click", btn_finalizar_gifo);
+  btn_grabar.addEventListener("click", btn_subir_gifo);
+
+  grabacion.stopRecording(() => {
+    form.append("file", grabacion.getBlob(), "myGif.gif");
+    // eslint-disable-next-line no-console
+    console.log(form.get("file"));
+  });
+};
+
+
+//sube el gifo invocando una funcion para subirlo.
+const btn_subir_gifo = async () => {
+  btn_grabar.removeEventListener("click", btn_subir_gifo);
+  paso2.classList.remove('paso-activo')
+  paso3.classList.add('paso-activo')
+  subiendoGifo.classList.remove('display-none')
+  await subirDatos();
+  MiGifo();
+};
+
+let repetir= false
+
+//Hace el post
+async function subirDatos() {
+  const res = await fetch("https://upload.giphy.com/v1/gifs?api_key=LPXFgfOHCkhOAuWn1yNLkvG2UjUVbx3r", {
+    method: "POST",
+    body: form,
+    redirect: "follow"
+  });
+  const json = await res.json();
+  console.log(json)
+  gifID = json.data.id;
+
+  subiendoGifo.lastElementChild.innerText = "GIFO subido con éxito"
+  subiendoGifo.children[1].setAttribute("src", "/assets/check.svg")
+
+
+
+}
+
+
+//trae la url
+function traerMiGifo(myURL) {
+  video.classList.add('display-none')
+  segundoPaso.classList.add('display-none')
+
+  let div = document.createElement('div')
+  let img = document.createElement('img')
+
+  div.appendChild(img)
+  div.classList.add('preview_gifo')
+  section_crear_gifos.appendChild(div)
+  img.setAttribute('src', myURL)
+  btn_grabar.classList.add('display-none')
+}
+
+function mandarAMisGifos(myURL) {
+
+  for (let i = 0; i <= 1; i++) {
+    misGifos[i].setAttribute('src', myURL)
+  }
+
+}
+
+async function MiGifo() {
+  const resp = await fetch(`https://api.giphy.com/v1/gifs/${gifID}?api_key=hHX3bZ1xLpCNgZZtcHmUuvAlBCvDuBtD`);
+  const myJson = await resp.json();
+  console.log(myJson)
+  myURL = myJson.data.images.original.url;
+
+  // eslint-disable-next-line no-console
+  console.log(myURL);
+
+  setTimeout(function () {
+    traerMiGifo(myURL)
+    mandarAMisGifos(myURL)
+    watch.textContent="Grabar nuevo gifo"
+  }, 5000)
+}
+
+
+btn_comenzar.addEventListener('click', Btn_Comenzar_a_grabar)
+
+btn_grabar.addEventListener('click', ComenzarAGrabar)
 
 
 
