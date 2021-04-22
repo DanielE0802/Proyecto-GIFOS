@@ -227,12 +227,12 @@
                     height: 30vh;
 
                     .iconos_layout {
-                        transform: translate(50%, 10px);
+                        transform: translate(50%, -70px);
                         display: block;
                     }
 
                     .texto_layout {
-                        transform: translate(10px, 50px);
+                        transform: translate(10px, -100px);
                         display: block;
                     }
 
@@ -300,23 +300,22 @@
                     height: 30vh;
                     object-fit: cover;
                     margin: 0px;
-
-
                 }
 
                 .layout {
-
+                    display: block;
                     width: 100%;
                     background: $color-p;
                     opacity: 0.7;
                     height: 0px;
                     transform: translateY(calc(-100% - (5px)));
-
                     transition: height .5s ease;
-
                     img {
                         width: 25px;
                         margin: 0;
+                    }
+                    .texto_layout{
+                        transform: translate(0, -100px);
                     }
                 }
 
@@ -325,12 +324,12 @@
                     height: 30vh;
 
                     .iconos_layout {
-                        transform: translate(50%, 10px);
+                        transform: translate(65%, -70px);
                         display: block;
                     }
 
                     .texto_layout {
-                        transform: translate(10px, 50px);
+                        transform: translate(10px, -100px);
                         display: block;
                     }
 
@@ -362,7 +361,7 @@
             .izquierda-container {
                 .flecha-izquierda {
                     display: block;
-                    transform: translate(0, 110px);
+                    transform: translate(-20px, 70px);
                     width: 40px;
                     height: 40px;
                 }
@@ -371,7 +370,7 @@
             .derecha-container {
                 .flecha-derecha {
                     display: block;
-                    transform: translate(0, 110px);
+                    transform: translate(-20px, 70px);
                     width: 40px;
                     height: 40px;
                 }
@@ -756,12 +755,12 @@
 
 
             .iconos_layout {
-                transform: translate(50%, 10px);
+                transform: translate(50%, -70px);
                 display: none;
             }
 
             .texto_layout {
-                transform: translate(10px, 50px);
+                transform: translate(10px, -150px);
                 display: none;
             }
 
@@ -806,12 +805,12 @@
             height: 30vh;
 
             .iconos_layout {
-                transform: translate(50%, 10px);
+                transform: translate(50%, -70px);
                 display: block;
             }
 
             .texto_layout {
-                transform: translate(10px, 50px);
+                transform: translate(10px, -150px);
                 display: block;
             }
 
