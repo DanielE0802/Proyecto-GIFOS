@@ -142,9 +142,11 @@
                 }
 
                 width: 100%;
+                max-width: 300px;
                 height: 250px;
 
                 .layout {
+                    display: block;
                     background: $color-p;
                     opacity: 0.7;
                     height: 0px;
@@ -307,7 +309,7 @@
                 }
 
                 .layout {
-                    display: block;
+                    display: block !important;
                     width: 100%;
                     background: $color-p;
                     opacity: 0.7;

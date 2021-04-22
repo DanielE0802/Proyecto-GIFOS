@@ -233,28 +233,21 @@ footer .line-footer {
     margin-bottom: 38px; }
   .busqueda .galery-gifs {
     display: grid;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-template-columns: 1fr 1fr;
-    gap: 21px;
-    align-self: center; }
+    grid-template-columns: minmax(156px, 200px) minmax(156px, 200px);
+    grid-template-rows: 120px 120px 120px 120px 120px 120px;
+    gap: 25px 21px;
+    align-self: center;
+    margin: 21px;
+    margin-right: 21px; }
     .busqueda .galery-gifs div {
-      max-width: 300px;
-      max-height: 280px; }
+      width: 100%;
+      height: 120px; }
       .busqueda .galery-gifs div img {
         width: 100%;
-        height: 100%;
-        max-width: 250px;
-        max-height: 190px; }
+        height: 120px;
+        max-height: 120px; }
       .busqueda .galery-gifs div .layout {
-        background: #572EE5;
-        opacity: 0.5;
-        height: 0px;
-        transform: translateY(calc(-100% - (5px)));
-        transition: height .5s ease; }
-        .busqueda .galery-gifs div .layout img {
-          width: 30px; }
-      .busqueda .galery-gifs div:hover .layout {
-        height: 100%; }
+        display: none; }
 
 .ver-mas {
   display: flex;
@@ -593,6 +586,7 @@ footer .line-footer {
       grid-template-areas: ". . . ." ". . . ." ". . . ."; }
       .busqueda .galery-gifs div {
         width: 100%;
+        max-width: 300px;
         height: 250px; }
         .busqueda .galery-gifs div img {
           width: 100%;
@@ -600,6 +594,7 @@ footer .line-footer {
           max-width: 300px;
           min-height: 250px; }
         .busqueda .galery-gifs div .layout {
+          display: block;
           background: #572EE5;
           opacity: 0.7;
           height: 0px;
@@ -702,7 +697,7 @@ footer .line-footer {
           object-fit: cover;
           margin: 0px; }
         .container-trending .trending-gif .div-father-layout .layout {
-          display: block;
+          display: block !important;
           width: 100%;
           background: #572EE5;
           opacity: 0.7;
