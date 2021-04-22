@@ -120,25 +120,29 @@
         }
 
         .galery-gifs {
-            grid-template-columns: repeat(4, 200px);
-            gap: 29px;
-            width: 100vw;
-            padding-right: 156px;
-            padding-left: 156px;
-            padding-bottom: 78px;
-            max-width: 1500px;
             align-self: center;
+            justify-self: center;
+            display: grid;
+            grid-template-columns: minmax(260px, 300px) minmax(260px, 300px) minmax(260px, 300px) minmax(260px, 300px);
+            grid-template-rows: 250px 250px 250px;
+            gap: 28px 29px;
+            grid-template-areas:
+                ". . . ."
+                ". . . ."
+                ". . . .";
 
+
+    
             div {
                 img {
                     width: 100%;
                     height: 100%;
-                    max-width: 350px;
-                    max-height: 290px;
+                    max-width: 300px;
+                    min-height: 250px;
                 }
 
-                max-width: 300px;
-                max-height: 280px;
+                width: 100%;
+                height: 250px;
 
                 .layout {
                     background: $color-p;
@@ -310,11 +314,13 @@
                     height: 0px;
                     transform: translateY(calc(-100% - (5px)));
                     transition: height .5s ease;
+
                     img {
                         width: 25px;
                         margin: 0;
                     }
-                    .texto_layout{
+
+                    .texto_layout {
                         transform: translate(0, -100px);
                     }
                 }
@@ -557,7 +563,7 @@
             }
         }
 
-  
+
 
     }
 
@@ -638,7 +644,7 @@
             margin-left: 40px;
         }
 
-        .preview_gifo{
+        .preview_gifo {
             width: 500px;
             height: 500px;
             z-index: 10000000;
@@ -673,7 +679,8 @@
                 color: #FFFFFF;
                 font-weight: 700;
             }
-            img{
+
+            img {
                 width: 22px;
                 height: 22px;
                 align-self: center;
@@ -833,12 +840,13 @@
         }
     }
 
-    .preview_gifo{
-        img{
+    .preview_gifo {
+        img {
             width: 100%;
             height: 396px;
             transform: scaleX(-1);
         }
+
         width: 45vw;
         max-width: 700px;
         height: 400px;

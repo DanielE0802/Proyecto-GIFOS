@@ -332,9 +332,7 @@ footer {
         grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
         grid-template-columns: 1fr 1fr;
         gap: 21px;
-        width: 100vw;
-        padding-right: 21px;
-        padding-left: 21px;
+        align-self: center;
 
           div {
                 img{
