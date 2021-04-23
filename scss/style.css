@@ -140,7 +140,8 @@ header {
       text-align: center;
       color: #572EE5;
       font-weight: 500;
-      font-family: "Montserrat", sans-serif; }
+      font-family: "Montserrat", sans-serif;
+      cursor: pointer; }
 
 .container-trending {
   margin-top: 45px;
@@ -254,7 +255,8 @@ footer .line-footer {
   width: 100%;
   justify-content: center;
   text-decoration: none;
-  padding-top: 27px; }
+  padding-top: 27px;
+  cursor: pointer; }
   .ver-mas span {
     border: 1px solid #572EE5;
     border-radius: 25px;
@@ -271,46 +273,63 @@ footer .line-footer {
     letter-spacing: 0;
     text-align: center; }
 
-.favoritos .sin_fav {
+.favoritos {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-self: center;
-  transform: translate(0vw, -800px); }
-  .favoritos .sin_fav img {
-    display: inline-block;
-    margin: auto; }
-  .favoritos .sin_fav h1 {
-    color: #50E3C2;
-    font-family: "Montserrat", sans-serif;
-    font-size: 22px;
+  flex-direction: column; }
+  .favoritos .sin_fav {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-self: center;
+    transform: translate(0vw, -800px); }
+    .favoritos .sin_fav img {
+      display: inline-block;
+      margin: auto; }
+    .favoritos .sin_fav h1 {
+      color: #50E3C2;
+      font-family: "Montserrat", sans-serif;
+      font-size: 22px;
+      text-align: center;
+      line-height: 33px;
+      margin-top: 30px; }
+  .favoritos .display-none {
+    display: none !important;
+    width: 0px;
+    height: 0px;
+    padding-top: 0; }
+    .favoritos .display-none img {
+      display: none;
+      width: 0px; }
+    .favoritos .display-none h1 {
+      display: none; }
+  .favoritos .fav-icon {
+    display: block;
+    margin: auto;
+    margin-top: 20px; }
+  .favoritos .fav-title {
     text-align: center;
-    line-height: 33px;
-    margin-top: 30px; }
-.favoritos .fav-icon {
-  display: block;
-  margin: auto;
-  margin-top: 20px; }
-.favoritos .fav-title {
-  text-align: center;
-  font-family: "Montserrat", sans-serif;
-  color: #572EE5;
-  font-size: 20px;
-  line-height: 30px;
-  margin-bottom: 46px; }
-.favoritos .galery-gifs {
-  display: grid;
-  grid-auto-rows: 1fr 1fr;
-  grid-template-columns: 1fr 1fr;
-  height: 100vh;
-  width: 100vw;
-  gap: 21px;
-  padding-right: 21px;
-  padding-left: 21px;
-  padding-bottom: 78px; }
-  .favoritos .galery-gifs img {
-    width: 100%;
-    height: 100%; }
+    font-family: "Montserrat", sans-serif;
+    color: #572EE5;
+    font-size: 20px;
+    line-height: 30px;
+    margin-bottom: 46px; }
+  .favoritos .galery-gifs {
+    display: grid;
+    grid-template-columns: minmax(156px, 200px) minmax(156px, 200px);
+    grid-template-rows: 120px 120px 120px 120px 120px 120px;
+    gap: 25px 21px;
+    align-self: center;
+    margin: 21px;
+    margin-right: 21px; }
+    .favoritos .galery-gifs div {
+      width: 100%;
+      height: 120px; }
+      .favoritos .galery-gifs div img {
+        width: 100%;
+        height: 120px;
+        max-height: 120px; }
+      .favoritos .galery-gifs div .layout {
+        display: none; }
 
 .mis-gifos .mis-gifos-icon {
   display: block;
@@ -382,7 +401,8 @@ footer .line-footer {
     padding-right: 7.7vw; }
 
 .display-none {
-  display: none; }
+  display: none;
+  padding: 0; }
 
 .padding {
   padding-top: 106px; }
@@ -605,68 +625,94 @@ footer .line-footer {
         .busqueda .galery-gifs div:hover .layout {
           height: 100%; }
 
-  .favoritos .sin_fav {
+  .favoritos {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-self: center;
-    transform: translate(0vw, -800px); }
-    .favoritos .sin_fav img {
-      display: inline-block;
-      margin: auto; }
-    .favoritos .sin_fav h1 {
-      color: #50E3C2;
-      font-family: "Montserrat", sans-serif;
-      font-size: 22px;
-      text-align: center;
-      line-height: 33px;
-      margin-top: 30px; }
-  .favoritos .galery-gifs {
-    grid-template-rows: 1fr 1fr 1fr;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    gap: 29px;
-    width: 100vw;
-    padding-right: 156px;
-    padding-left: 156px;
-    padding-bottom: 78px; }
-    .favoritos .galery-gifs div {
-      max-width: 300px;
-      max-height: 280px; }
-      .favoritos .galery-gifs div img {
+    flex-direction: column; }
+    .favoritos .sin_fav {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-self: center;
+      transform: translate(0vw, -800px); }
+      .favoritos .sin_fav img {
+        display: inline-block;
+        margin: auto; }
+      .favoritos .sin_fav h1 {
+        color: #50E3C2;
+        font-family: "Montserrat", sans-serif;
+        font-size: 22px;
+        text-align: center;
+        line-height: 33px;
+        margin-top: 30px; }
+    .favoritos .galery-gifs {
+      align-self: center;
+      justify-self: center;
+      display: grid;
+      grid-template-columns: minmax(260px, 300px) minmax(260px, 300px) minmax(260px, 300px) minmax(260px, 300px);
+      grid-template-rows: 250px 250px 250px;
+      gap: 28px 29px;
+      grid-template-areas: ". . . ." ". . . ." ". . . ."; }
+      .favoritos .galery-gifs div {
         width: 100%;
-        height: 100%;
-        max-width: 350px;
-        max-height: 290px;
-        object-fit: cover; }
-      .favoritos .galery-gifs div .layout {
-        background: #572EE5;
-        opacity: 0.7;
-        height: 0px;
-        transform: translateY(calc(-100% - (5px)));
-        transition: height .5s ease; }
-        .favoritos .galery-gifs div .layout img {
-          width: 30px; }
-      .favoritos .galery-gifs div:hover > .layout {
-        height: 30vh; }
-        .favoritos .galery-gifs div:hover > .layout .iconos_layout {
-          transform: translate(50%, -70px);
-          display: block; }
-        .favoritos .galery-gifs div:hover > .layout .texto_layout {
-          transform: translate(10px, -100px);
-          display: block; }
+        max-width: 300px;
+        height: 250px;
+        max-height: 250px; }
+        .favoritos .galery-gifs div img {
+          width: 100%;
+          height: 100%;
+          max-width: 300px;
+          min-height: 250px; }
+        .favoritos .galery-gifs div .layout {
+          display: block;
+          background: #572EE5;
+          opacity: 0.7;
+          height: 0px;
+          transform: translateY(calc(-100% - (5px)));
+          transition: height .5s ease; }
+          .favoritos .galery-gifs div .layout img {
+            width: 30px; }
+        .favoritos .galery-gifs div:hover .layout {
+          height: 100%; }
+        .favoritos .galery-gifs div:hover > .layout {
+          height: 30vh; }
+          .favoritos .galery-gifs div:hover > .layout .iconos_layout {
+            transform: translate(50%, -70px);
+            display: block; }
+          .favoritos .galery-gifs div:hover > .layout .texto_layout {
+            transform: translate(10px, -100px);
+            display: block; }
 
-  .mis-gifos .galery-gifs {
-    grid-auto-rows: 1fr 1fr 1fr 1fr;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    gap: 29px;
-    width: 100vw;
-    height: 100vh;
-    padding-right: 156px;
-    padding-left: 156px;
-    padding-bottom: 78px; }
-    .mis-gifos .galery-gifs img {
-      width: 100% !important;
-      height: 100% !important; }
+  .mis-gifos {
+    display: flex;
+    flex-direction: column; }
+    .mis-gifos .galery-gifs {
+      align-self: center;
+      justify-self: center;
+      display: grid;
+      grid-template-columns: minmax(260px, 300px) minmax(260px, 300px) minmax(260px, 300px) minmax(260px, 300px);
+      grid-template-rows: 250px 250px 250px;
+      gap: 28px 29px;
+      grid-template-areas: ". . . ." ". . . ." ". . . ."; }
+      .mis-gifos .galery-gifs div {
+        width: 100%;
+        max-width: 300px;
+        height: 250px; }
+        .mis-gifos .galery-gifs div img {
+          width: 100%;
+          height: 100%;
+          max-width: 300px;
+          min-height: 250px; }
+        .mis-gifos .galery-gifs div .layout {
+          display: block;
+          background: #572EE5;
+          opacity: 0.7;
+          height: 0px;
+          transform: translateY(calc(-100% - (5px)));
+          transition: height .5s ease; }
+          .mis-gifos .galery-gifs div .layout img {
+            width: 30px; }
+        .mis-gifos .galery-gifs div:hover .layout {
+          height: 100%; }
 
   .container-trending {
     margin-top: 45px;
@@ -1027,7 +1073,8 @@ footer .line-footer {
   .display-none {
     display: none !important;
     width: 0px;
-    height: 0px; }
+    height: 0px;
+    padding-top: 0; }
     .display-none img {
       display: none;
       width: 0px; }

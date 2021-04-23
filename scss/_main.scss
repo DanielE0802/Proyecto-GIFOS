@@ -172,7 +172,8 @@
     }
 
     .favoritos {
-
+        display: flex;
+        flex-direction: column;
         .sin_fav {
             display: flex;
             flex-direction: column;
@@ -196,27 +197,34 @@
         }
 
         .galery-gifs {
-            grid-template-rows: 1fr 1fr 1fr;
-            grid-template-columns: 1fr 1fr 1fr 1fr;
-            gap: 29px;
-            width: 100vw;
-            padding-right: 156px;
-            padding-left: 156px;
-            padding-bottom: 78px;
+            align-self: center;
+            justify-self: center;
+            display: grid;
+            grid-template-columns: minmax(260px, 300px) minmax(260px, 300px) minmax(260px, 300px) minmax(260px, 300px);
+            grid-template-rows: 250px 250px 250px;
+            gap: 28px 29px;
+            grid-template-areas:
+                ". . . ."
+                ". . . ."
+                ". . . .";
 
+
+    
             div {
                 img {
                     width: 100%;
                     height: 100%;
-                    max-width: 350px;
-                    max-height: 290px;
-                    object-fit: cover;
+                    max-width: 300px;
+                    min-height: 250px;
                 }
 
+                width: 100%;
                 max-width: 300px;
-                max-height: 280px;
+                height: 250px;
+                max-height: 250px;
 
                 .layout {
+                    display: block;
                     background: $color-p;
                     opacity: 0.7;
                     height: 0px;
@@ -228,6 +236,17 @@
                     }
 
                 }
+
+                &:hover {
+
+                    .layout {
+                        height: 100%;
+                    }
+
+                }
+            
+
+        
 
                 &:hover>.layout {
                     height: 30vh;
@@ -248,20 +267,57 @@
     }
 
     .mis-gifos {
+        display: flex;
+        flex-direction: column;
         .galery-gifs {
-            grid-auto-rows: 1fr 1fr 1fr 1fr;
-            grid-template-columns: 1fr 1fr 1fr 1fr;
-            gap: 29px;
-            width: 100vw;
-            height: 100vh;
-            padding-right: 156px;
-            padding-left: 156px;
-            padding-bottom: 78px;
+            align-self: center;
+            justify-self: center;
+            display: grid;
+            grid-template-columns: minmax(260px, 300px) minmax(260px, 300px) minmax(260px, 300px) minmax(260px, 300px);
+            grid-template-rows: 250px 250px 250px;
+            gap: 28px 29px;
+            grid-template-areas:
+                ". . . ."
+                ". . . ."
+                ". . . .";
 
-            img {
-                width: 100% !important;
-                height: 100% !important;
+
+    
+            div {
+                img {
+                    width: 100%;
+                    height: 100%;
+                    max-width: 300px;
+                    min-height: 250px;
+                }
+
+                width: 100%;
+                max-width: 300px;
+                height: 250px;
+
+                .layout {
+                    display: block;
+                    background: $color-p;
+                    opacity: 0.7;
+                    height: 0px;
+                    transform: translateY(calc(-100% - (5px)));
+                    transition: height .5s ease;
+
+                    img {
+                        width: 30px;
+                    }
+
+                }
+
+                &:hover {
+
+                    .layout {
+                        height: 100%;
+                    }
+
+                }
             }
+
 
         }
     }
@@ -831,6 +887,7 @@
         display: none !important;
         width: 0px;
         height: 0px;
+        padding-top: 0;
 
         img {
             display: none;

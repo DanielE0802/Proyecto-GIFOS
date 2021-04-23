@@ -44,7 +44,12 @@ function api(busqueda) {
 
     let id = []
 
+
     let info = callApiSearch();
+
+    for (let i = 0; i <= 11; i++) {
+        containerImg[i + 0].setAttribute("src", "./assets/carga.png")
+    }
     info.then(response => {
         for (let i = 0; i <= 12; i++) {
 
@@ -339,6 +344,8 @@ function vermas(busqueda) {
     let search = document.getElementById("search")
     let whatSearch = search.value
 
+    
+
     callApiVermas = async () => {
         const url = `https://api.giphy.com/v1/gifs/search?api_key=LPXFgfOHCkhOAuWn1yNLkvG2UjUVbx3r&q=${whatSearch || busqueda}`
         let response = await fetch(url)
@@ -349,29 +356,37 @@ function vermas(busqueda) {
     createDiv.innerHTML = galeryNew
     createDiv.classList.add("galery-gifs")
     divbusqueda.appendChild(createDiv)
-
     containerImg = document.querySelectorAll("#busqueda > div.galery-gifs >div > img")
     containerh1 = document.querySelectorAll("#busqueda > div.galery-gifs > div > div > div.texto_layout > h1")
     containerh2 = document.querySelectorAll("#busqueda > div.galery-gifs > div > div > div.texto_layout > h2")
     containerIconFav = document.querySelectorAll("#busqueda > div.galery-gifs > div > div > div.iconos_layout > img:nth-child(1)")
+
+
     let info = callApiVermas();
+    for (let i = 12; i <= 23; i++) {
+        containerImg[i ].setAttribute("src", "./assets/carga.png")
+
+    }
+
     info.then(response => {
-        for (let i = 0; i <= 24; i++) {
+        for (let i = 0; i <= 11; i++) {
             console.log(response)
             containerImg[i + 12].setAttribute("src", response.data[i + 12].images.fixed_height.url)
             containerh1[i + 12].innerHTML = response.data[i + 12].username
             containerh2[i + 12].innerHTML = response.data[i + 12].title
-
+            
         }
+
+        btn_VerMas.classList.add('display-none')
     }).catch(error => {
         console.error(error);
     })
 
-    btn_VerMas.classList.add('display-none')
+  
 
 }
 
-let btn_VerMas = document.querySelector("#section-busqueda-btn > span")
+let btn_VerMas = document.querySelector("#section-busqueda-btn")
 
 btn_VerMas.addEventListener('click', function () {
     vermas(whatSearch)

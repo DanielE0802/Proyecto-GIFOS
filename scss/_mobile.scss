@@ -179,6 +179,7 @@ header {
             align-self: center;
             line-height: 25px;
             margin-top: 31px;
+            
         }
 
         p {
@@ -188,6 +189,7 @@ header {
             color: $color-p;
             font-weight: 500;
             font-family: $Mon;
+            cursor: pointer;
 
         }
     }
@@ -208,6 +210,7 @@ header {
             color: $color-p;
             text-align: center;
             line-height: 30px;
+      
             margin-top: 46px;
         }
 
@@ -216,6 +219,7 @@ header {
             font-weight: 500;
             font-size: 16px;
             color: #000000;
+            
             text-align: center;
             line-height: 23px;
         }
@@ -332,12 +336,12 @@ footer {
     .galery-gifs {
 
 
-            display: grid;
-            grid-template-columns: minmax(156px, 200px) minmax(156px, 200px);
-            grid-template-rows: 120px 120px 120px 120px 120px 120px;
-            gap: 25px 21px;
-         
-          
+        display: grid;
+        grid-template-columns: minmax(156px, 200px) minmax(156px, 200px);
+        grid-template-rows: 120px 120px 120px 120px 120px 120px;
+        gap: 25px 21px;
+
+
 
         align-self: center;
         margin: 21px;
@@ -354,10 +358,10 @@ footer {
             height: 120px;
 
             .layout {
-               display: none;
-       
+                display: none;
+
+            }
         }
-    }
     }
 }
 
@@ -367,6 +371,7 @@ footer {
     justify-content: center;
     text-decoration: none;
     padding-top: 27px;
+    cursor: pointer;
 
     span {
         border: 1px solid $color-p;
@@ -388,6 +393,9 @@ footer {
 }
 
 .favoritos {
+
+    display: flex;
+    flex-direction: column;
 
     .sin_fav {
         display: flex;
@@ -411,6 +419,22 @@ footer {
         }
     }
 
+    .display-none {
+        display: none !important;
+        width: 0px;
+        height: 0px;
+        padding-top: 0;
+    
+        img {
+            display: none;
+            width: 0px;
+        }
+    
+        h1 {
+            display: none;
+        }
+    }
+
     .fav-icon {
         display: block;
         margin: auto;
@@ -427,19 +451,33 @@ footer {
     }
 
     .galery-gifs {
-        display: grid;
-        grid-auto-rows: 1fr 1fr;
-        grid-template-columns: 1fr 1fr;
-        height: 100vh;
-        width: 100vw;
-        gap: 21px;
-        padding-right: 21px;
-        padding-left: 21px;
-        padding-bottom: 78px;
 
-        img {
+
+        display: grid;
+        grid-template-columns: minmax(156px, 200px) minmax(156px, 200px);
+        grid-template-rows: 120px 120px 120px 120px 120px 120px;
+        gap: 25px 21px;
+
+
+
+        align-self: center;
+        margin: 21px;
+        margin-right: 21px;
+
+        div {
+            img {
+                width: 100%;
+                height: 120px;
+                max-height: 120px;
+            }
+
             width: 100%;
-            height: 100%;
+            height: 120px;
+
+            .layout {
+                display: none;
+
+            }
         }
     }
 
@@ -541,6 +579,7 @@ footer {
 
 .display-none {
     display: none;
+    padding: 0;
 }
 
 .padding {
@@ -569,4 +608,7 @@ footer {
         position: absolute;
     }
 
+
+
 }
+
