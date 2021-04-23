@@ -20,20 +20,20 @@ let divbusqueda = document.getElementById('busqueda')
 search.addEventListener('keyup', function () {
     let search = document.getElementById("search")
     let whatSearch = search.value
-
-    
-
     api(whatSearch)
 
-    let containerImg = document.querySelectorAll("#busqueda > div.galery-gifs >div > img")
-    if(containerImg.length>13){
-        vermas(whatSearch)
-    }
+    divbusqueda.removeChild(createDiv)
+    btn_VerMas.classList.remove('display-none')
+
+    // let containerImg = document.querySelectorAll("#busqueda > div.galery-gifs >div > img")
+    // if (containerImg.length > 13) {
+    //     vermas(whatSearch)
+    // }
 })
 
 function api(busqueda) {
     callApiSearch = async () => {
-        const url = `https://api.giphy.com/v1/gifs/search?api_key=LPXFgfOHCkhOAuWn1yNLkvG2UjUVbx3r&q=${busqueda}`
+        const url = `https://api.giphy.com/v1/gifs/search?api_key=LPXFgfOHCkhOAuWn1yNLkvG2UjUVbx3r&q=${busqueda}?`
         let response = await fetch(url)
         let data = await response.json()
         return data
@@ -46,7 +46,7 @@ function api(busqueda) {
 
     let info = callApiSearch();
     info.then(response => {
-        for (let i=0; i <= 12; i++) {
+        for (let i = 0; i <= 12; i++) {
 
             containerImg[i].setAttribute("src", response.data[i].images.fixed_height.url)
             console.log(response.data[i])
@@ -95,22 +95,39 @@ trending()
 reaction.addEventListener('click', function () {
 
     api("Reactions")
+    whatSearch = "Reactions"
+    divbusqueda.removeChild(createDiv)
+    btn_VerMas.classList.remove('display-none')
+
 })
 
 entertainment.addEventListener('click', function () {
     api("Entertainment")
+    whatSearch = "Entertainment"
+    divbusqueda.removeChild(createDiv)
+    btn_VerMas.classList.remove('display-none')
 }, false)
 
 sports.addEventListener('click', function () {
     api("Sports")
+    whatSearch = "Sports"
+    divbusqueda.removeChild(createDiv)
+    btn_VerMas.classList.remove('display-none')
+
 })
 
 stickers.addEventListener('click', function () {
     api("Stickers")
+    whatSearch = "Stickers"
+    divbusqueda.removeChild(createDiv)
+    btn_VerMas.classList.remove('display-none')
 })
 
 artists.addEventListener('click', function () {
     api("Artists")
+    whatSearch = "Artists"
+    divbusqueda.removeChild(createDiv)
+    btn_VerMas.classList.remove('display-none')
 })
 
 //fav section
@@ -318,8 +335,12 @@ const galeryNew = `
  `
 
 function vermas(busqueda) {
+
+    let search = document.getElementById("search")
+    let whatSearch = search.value
+
     callApiVermas = async () => {
-        const url = `https://api.giphy.com/v1/gifs/search?api_key=LPXFgfOHCkhOAuWn1yNLkvG2UjUVbx3r&q=${busqueda}`
+        const url = `https://api.giphy.com/v1/gifs/search?api_key=LPXFgfOHCkhOAuWn1yNLkvG2UjUVbx3r&q=${whatSearch || busqueda}`
         let response = await fetch(url)
         let data = await response.json()
         return data
@@ -335,11 +356,11 @@ function vermas(busqueda) {
     containerIconFav = document.querySelectorAll("#busqueda > div.galery-gifs > div > div > div.iconos_layout > img:nth-child(1)")
     let info = callApiVermas();
     info.then(response => {
-        for (let i=0 ;i <= 24; i++) {
+        for (let i = 0; i <= 24; i++) {
             console.log(response)
-            containerImg[i+12].setAttribute("src", response.data[i].images.fixed_height.url)
-            containerh1[i+12].innerHTML = response.data[i].username
-            containerh2[i+12].innerHTML = response.data[i].title
+            containerImg[i + 12].setAttribute("src", response.data[i + 12].images.fixed_height.url)
+            containerh1[i + 12].innerHTML = response.data[i + 12].username
+            containerh2[i + 12].innerHTML = response.data[i + 12].title
 
         }
     }).catch(error => {
@@ -350,6 +371,8 @@ function vermas(busqueda) {
 
 }
 
-let btn_VerMas= document.querySelector("#section-busqueda-btn > span")
+let btn_VerMas = document.querySelector("#section-busqueda-btn > span")
 
-btn_VerMas.addEventListener('click' , function(){vermas(whatSearch)})
+btn_VerMas.addEventListener('click', function () {
+    vermas(whatSearch)
+})
