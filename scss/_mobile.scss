@@ -57,11 +57,21 @@ header {
                 font-size: 15px;
                 padding: 22px;
                 width: 100%;
+                transition: border .4s ease, transform .4s ease ;
+                &:hover{
+                    transform: translateY(2px);
+                    border-bottom: 2px solid #5ED7C6;
+                }
+                &:active{
+                    color: #9CAFC3;
+                }
+               
             }
 
             a {
                 text-decoration: none;
                 color: #FFFFFF;
+              
             }
 
             li::after {
@@ -387,8 +397,16 @@ footer {
         font-size: 13px;
         color: $color-p;
         letter-spacing: 0;
+        transition: background .3s ease, color .3s ease;
+
         text-align: center;
+        &:hover{
+            background: $color-p;
+            color: #fff;
+        }
     }
+
+    
 
 }
 
