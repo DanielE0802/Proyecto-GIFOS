@@ -13,9 +13,11 @@ const btn_img_fav = document.querySelectorAll("#busqueda > div.galery-gifs > div
 const section_trending_h2 = document.querySelectorAll("#body_inicio > div > div.trending-gif > div > div > div.texto_layout > h2")
 const section_trending_h1 = document.querySelectorAll("#body_inicio > div > div.trending-gif > div > div > div.texto_layout > h1")
 const sin_fav = document.getElementById('sin_fav')
+let btn_hacer_grande= document.querySelectorAll("#busqueda > div.galery-gifs > div > div > div.iconos_layout > img:nth-child(2)")
 let whatSearch;
 let divbusqueda = document.getElementById('busqueda')
-
+let gifos_max= document.getElementById('gifos-max')
+let ultimoFech;
 
 search.addEventListener('keyup', function () {
     let search = document.getElementById("search")
@@ -38,27 +40,20 @@ function api(busqueda) {
         let data = await response.json()
         return data
     }
-
     sectionBusqueda.classList.remove('display-none')
     titleBusqueda.innerHTML = busqueda
-
     let id = []
-
-
     let info = callApiSearch();
-
     for (let i = 0; i <= 11; i++) {
         containerImg[i + 0].setAttribute("src", "./assets/carga.png")
     }
     info.then(response => {
+        ultimoFech= response
         for (let i = 0; i <= 12; i++) {
-
             containerImg[i].setAttribute("src", response.data[i].images.fixed_height.url)
-            console.log(response.data[i])
             containerh1[i].innerHTML = response.data[i].username
             containerh2[i].innerHTML = response.data[i].title
             id.push(response.data[i].id)
-            console.log(id)
         }
     }).catch(error => {
         console.error(error);
@@ -91,7 +86,6 @@ function trending() {
     })
 
 }
-
 trending()
 
 //Busquedas predeterminadas
@@ -150,7 +144,6 @@ let divContenido = `alt="gif">
 </div>`
 
 let section_favoritos = document.getElementById('galery-fav')
-
 let idFav = []
 
 // hay un error!!
@@ -162,7 +155,6 @@ for (let i = 0; i <= 11; i++) {
 
         let crearFav = document.createElement('div');
         section_favoritos.appendChild(crearFav)
-        console.log(crearFav)
         let imgSrc = containerImg[i].getAttribute("src")
         crearFav.innerHTML = `<img src="${imgSrc}" ${divContenido}`
 
@@ -175,6 +167,28 @@ for (let i = 0; i <= 11; i++) {
     })
 }
 
+let btn_close_gifos_max=  document.getElementById("close")
+let img_gifos_max= document.querySelector("#gifos-max > section > img.gifo")
+
+
+for (let i=0; i<=11; i++){
+    btn_hacer_grande[i].addEventListener('click',  function(){
+    gifos_max.classList.remove('display-none')
+    img_gifos_max.setAttribute("src", ultimoFech.data[i].images.original.url)
+    // containerh1[i].innerHTML = response.data[i].username
+    // containerh2[i].innerHTML = response.data[i].title
+    console.log(ultimoFech)
+    btn_close_gifos_max = document.getElementById("close")
+
+
+})}
+
+
+
+
+btn_close_gifos_max.addEventListener('click', function(){
+    gifos_max.classList.add('display-none')
+})
 
 
 //Galery Vermas
@@ -344,8 +358,6 @@ function vermas(busqueda) {
     let search = document.getElementById("search")
     let whatSearch = search.value
 
-    
-
     callApiVermas = async () => {
         const url = `https://api.giphy.com/v1/gifs/search?api_key=LPXFgfOHCkhOAuWn1yNLkvG2UjUVbx3r&q=${whatSearch || busqueda}`
         let response = await fetch(url)
@@ -361,7 +373,6 @@ function vermas(busqueda) {
     containerh2 = document.querySelectorAll("#busqueda > div.galery-gifs > div > div > div.texto_layout > h2")
     containerIconFav = document.querySelectorAll("#busqueda > div.galery-gifs > div > div > div.iconos_layout > img:nth-child(1)")
 
-
     let info = callApiVermas();
     for (let i = 12; i <= 23; i++) {
         containerImg[i ].setAttribute("src", "./assets/carga.png")
@@ -370,19 +381,14 @@ function vermas(busqueda) {
 
     info.then(response => {
         for (let i = 0; i <= 11; i++) {
-            console.log(response)
             containerImg[i + 12].setAttribute("src", response.data[i + 12].images.fixed_height.url)
             containerh1[i + 12].innerHTML = response.data[i + 12].username
             containerh2[i + 12].innerHTML = response.data[i + 12].title
-            
         }
-
         btn_VerMas.classList.add('display-none')
     }).catch(error => {
         console.error(error);
     })
-
-  
 
 }
 

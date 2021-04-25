@@ -444,67 +444,86 @@
 
     }
 
-
-    .gifos-max {
-        width: 99%;
-        background: #FFFFFF;
-        opacity: 90%;
-
-        .close {
-            display: block;
-            margin-top: 64px;
-            margin-left: 85.8%;
-            margin-bottom: 78px;
-        }
-
-        .gifo {
-            margin-left: 7.9vw;
-            margin-right: 7.7vw;
-            width: 84.8%;
-            height: 42%;
-        }
-
-        .user-gifos-max {
-            font-family: $Rob;
-            font-size: 15px;
-            color: #000000;
-
-            margin-top: 14px;
-            font-weight: 400;
-        }
-
-        .titulo-gifos-max {
-            margin-top: 5px;
-            font-size: 16px;
-            color: #000000;
-            font-family: $Mon;
-            width: 100px;
-        }
-
-        .icono-descarga {
-            opacity: 0.5;
-            border: 1px solid #9CAFC3;
-            border-radius: 6px;
-            width: 36px;
-            height: 36px;
-        }
-
-        .iconos {
+    .container-gifos-max{
+        position: fixed;
+        z-index: 100;
+        top: 90px;
+        background-color: #fff;
+        justify-content: center;
+        
+        display: flex;
+        width: 100vw;
+        height: 100vh;
+        .gifos-max {
+            z-index: 101;
+            width: 45%;
+            transform: translateX(-90px);
             display: flex;
-            justify-content: space-between;
-            align-items: center;
-            width: 85px;
+            
+            flex-direction: column;
+            position: fixed;
+            background: #FFFFFF;
+            img{
+                max-height: 50vh;
+            }
+    
+            .close {
+                display: block;
+                align-self: flex-end;
 
-        }
-
-        .container-max {
-            width: 100%;
-            display: flex;
-            justify-content: space-between;
-            padding-left: 7.9vw;
-            padding-right: 7.7vw;
+                width: 16px;
+            }
+    
+            .gifo {
+                margin-left: 7.9vw;
+                margin-right: 7.7vw;
+                width: 84.8%;
+                height: 42%;
+            }
+    
+            .user-gifos-max {
+                font-family: $Rob;
+                font-size: 15px;
+                color: #000000;
+    
+                margin-top: 14px;
+                font-weight: 400;
+            }
+    
+            .titulo-gifos-max {
+                margin-top: 5px;
+                font-size: 16px;
+                color: #000000;
+                font-family: $Mon;
+                width: 100px;
+            }
+    
+            .icono-descarga {
+                opacity: 0.5;
+                border: 1px solid #9CAFC3;
+                border-radius: 6px;
+                width: 36px;
+                height: 36px;
+            }
+    
+            .iconos {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                width: 85px;
+    
+            }
+    
+            .container-max {
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                padding-left: 7.9vw;
+            }
         }
     }
+
+    
 
 
     //Sección camara

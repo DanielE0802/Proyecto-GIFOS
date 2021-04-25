@@ -356,49 +356,64 @@ footer .line-footer {
     width: 100%;
     height: 100%; }
 
-.gifos-max {
-  width: 99%;
-  background: #FFFFFF;
-  opacity: 90%; }
-  .gifos-max .close {
-    display: block;
-    margin-top: 64px;
-    margin-left: 85.8%;
-    margin-bottom: 78px; }
-  .gifos-max .gifo {
-    margin-left: 7.9vw;
-    margin-right: 7.7vw;
-    width: 84.8%;
-    height: 42%; }
-  .gifos-max .user-gifos-max {
-    font-family: "Roboto", sans-serif;
-    font-size: 15px;
-    color: #000000;
-    margin-top: 14px;
-    font-weight: 400; }
-  .gifos-max .titulo-gifos-max {
-    margin-top: 5px;
-    font-size: 16px;
-    color: #000000;
-    font-family: "Montserrat", sans-serif;
-    width: 100px; }
-  .gifos-max .icono-descarga {
-    opacity: 0.5;
-    border: 1px solid #9CAFC3;
-    border-radius: 6px;
-    width: 36px;
-    height: 36px; }
-  .gifos-max .iconos {
+.container-gifos-max {
+  position: fixed;
+  z-index: 100;
+  top: 90px;
+  background-color: #fff;
+  justify-content: center;
+  display: flex;
+  width: 100vw;
+  height: 100vh; }
+  .container-gifos-max .gifos-max {
+    z-index: 101;
+    width: 55%;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 85px; }
-  .gifos-max .container-max {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    padding-left: 7.9vw;
-    padding-right: 7.7vw; }
+    top: 100px;
+    transform: translateX(-90px);
+    position: fixed;
+    background: #FFFFFF;
+    flex-direction: column; }
+    .container-gifos-max .gifos-max .close {
+      display: block;
+      align-self: flex-end;
+      width: 16px;
+      transform: translateX(96px);
+      padding-bottom: 78px;
+      padding-top: 20px; }
+    .container-gifos-max .gifos-max .gifo {
+      margin-left: 7.9vw;
+      margin-right: 7.7vw;
+      width: 84.8%;
+      height: 42%; }
+    .container-gifos-max .gifos-max .user-gifos-max {
+      font-family: "Roboto", sans-serif;
+      font-size: 15px;
+      color: #000000;
+      margin-top: 14px;
+      font-weight: 400; }
+    .container-gifos-max .gifos-max .titulo-gifos-max {
+      margin-top: 5px;
+      font-size: 16px;
+      color: #000000;
+      font-family: "Montserrat", sans-serif;
+      width: 100px; }
+    .container-gifos-max .gifos-max .icono-descarga {
+      opacity: 0.5;
+      border: 1px solid #9CAFC3;
+      border-radius: 6px;
+      width: 36px;
+      height: 36px; }
+    .container-gifos-max .gifos-max .iconos {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 85px; }
+    .container-gifos-max .gifos-max .container-max {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      padding-left: 7.9vw; }
 
 .display-none {
   display: none;
@@ -784,49 +799,62 @@ footer .line-footer {
         width: 40px;
         height: 40px; }
 
-  .gifos-max {
-    width: 99%;
-    background: #FFFFFF;
-    opacity: 90%; }
-    .gifos-max .close {
-      display: block;
-      margin-top: 64px;
-      margin-left: 85.8%;
-      margin-bottom: 78px; }
-    .gifos-max .gifo {
-      margin-left: 7.9vw;
-      margin-right: 7.7vw;
-      width: 84.8%;
-      height: 42%; }
-    .gifos-max .user-gifos-max {
-      font-family: "Roboto", sans-serif;
-      font-size: 15px;
-      color: #000000;
-      margin-top: 14px;
-      font-weight: 400; }
-    .gifos-max .titulo-gifos-max {
-      margin-top: 5px;
-      font-size: 16px;
-      color: #000000;
-      font-family: "Montserrat", sans-serif;
-      width: 100px; }
-    .gifos-max .icono-descarga {
-      opacity: 0.5;
-      border: 1px solid #9CAFC3;
-      border-radius: 6px;
-      width: 36px;
-      height: 36px; }
-    .gifos-max .iconos {
+  .container-gifos-max {
+    position: fixed;
+    z-index: 100;
+    top: 90px;
+    background-color: #fff;
+    justify-content: center;
+    display: flex;
+    width: 100vw;
+    height: 100vh; }
+    .container-gifos-max .gifos-max {
+      z-index: 101;
+      width: 45%;
+      transform: translateX(-90px);
       display: flex;
-      justify-content: space-between;
-      align-items: center;
-      width: 85px; }
-    .gifos-max .container-max {
-      width: 100%;
-      display: flex;
-      justify-content: space-between;
-      padding-left: 7.9vw;
-      padding-right: 7.7vw; }
+      flex-direction: column;
+      position: fixed;
+      background: #FFFFFF; }
+      .container-gifos-max .gifos-max img {
+        max-height: 50vh; }
+      .container-gifos-max .gifos-max .close {
+        display: block;
+        align-self: flex-end;
+        width: 16px; }
+      .container-gifos-max .gifos-max .gifo {
+        margin-left: 7.9vw;
+        margin-right: 7.7vw;
+        width: 84.8%;
+        height: 42%; }
+      .container-gifos-max .gifos-max .user-gifos-max {
+        font-family: "Roboto", sans-serif;
+        font-size: 15px;
+        color: #000000;
+        margin-top: 14px;
+        font-weight: 400; }
+      .container-gifos-max .gifos-max .titulo-gifos-max {
+        margin-top: 5px;
+        font-size: 16px;
+        color: #000000;
+        font-family: "Montserrat", sans-serif;
+        width: 100px; }
+      .container-gifos-max .gifos-max .icono-descarga {
+        opacity: 0.5;
+        border: 1px solid #9CAFC3;
+        border-radius: 6px;
+        width: 36px;
+        height: 36px; }
+      .container-gifos-max .gifos-max .iconos {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 85px; }
+      .container-gifos-max .gifos-max .container-max {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        padding-left: 7.9vw; }
 
   .container-crea-tu-gif {
     height: 85vh; }

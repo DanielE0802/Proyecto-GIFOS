@@ -2,6 +2,7 @@ function call(id) {
   return document.getElementById(id)
 }
 
+
 //Botones
 let bt_fav = call("btn_fav")
 let btn_crear_gifos = call("btn_crear_gifos")
@@ -34,14 +35,11 @@ btn_crear_gifos.addEventListener('click', function () {
 
 //Sección favoritos
 
-bt_fav.addEventListener('click', function (e) {
+bt_fav.addEventListener('click', function () {
   section_fav.classList.remove('display-none');
   section_fav.classList.add('padding');
   section_fav_btn.classList.remove('display-none');
-
-
   sectionBusqueda.classList.add('display-none')
-
   section_mis_gifos.classList.add("display-none")
   section_mis_gifos_btn.classList.add('display-none');
   section_main.classList.add("display-none")
@@ -56,7 +54,7 @@ bt_fav.addEventListener('click', function (e) {
 
 //Sección mis GIFOS
 
-btn_mis_gifos.addEventListener('click', function (e) {
+btn_mis_gifos.addEventListener('click', function () {
   section_mis_gifos.classList.remove('display-none');
   section_mis_gifos.classList.add("padding")
   section_mis_gifos_btn.classList.remove('display-none');
@@ -169,7 +167,7 @@ function mostrarCamara() {
   btn_grabar.classList.remove('display-none')
   btn_comenzar.innerHTML = "Grabar"
   btn_grabar.removeEventListener("click", btn_subir_gifo);
-  timer.textContent="00:00:00"
+  timer.textContent = "00:00:00"
 
 
 }
@@ -204,11 +202,11 @@ function ComenzarAGrabar() {
 const btn_finalizar_gifo = () => {
   btn_grabar.innerHTML = "<h1>Subir gifo</h1>";
   watch.textContent = "Repetir captura";
-  watch.addEventListener('click',function(){
+  watch.addEventListener('click', function () {
     btn_grabar.addEventListener('click', ComenzarAGrabar)
     milliseconds = 0
     chronometer = 0
-    form= new FormData();
+    form = new FormData();
     mostrarCamara();
   })
   pausarCronometro();
@@ -234,7 +232,7 @@ const btn_subir_gifo = async () => {
   MiGifo();
 };
 
-let repetir= false
+let repetir = false
 
 //Hace el post
 async function subirDatos() {
@@ -278,6 +276,7 @@ function mandarAMisGifos(myURL) {
 
 }
 
+
 async function MiGifo() {
   const resp = await fetch(`https://api.giphy.com/v1/gifs/${gifID}?api_key=hHX3bZ1xLpCNgZZtcHmUuvAlBCvDuBtD`);
   const myJson = await resp.json();
@@ -290,7 +289,7 @@ async function MiGifo() {
   setTimeout(function () {
     traerMiGifo(myURL)
     mandarAMisGifos(myURL)
-    watch.textContent="Grabar nuevo gifo"
+    watch.textContent = "Grabar nuevo gifo"
   }, 5000)
 }
 
@@ -298,6 +297,3 @@ async function MiGifo() {
 btn_comenzar.addEventListener('click', Btn_Comenzar_a_grabar)
 
 btn_grabar.addEventListener('click', ComenzarAGrabar)
-
-
-
