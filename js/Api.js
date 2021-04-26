@@ -19,8 +19,10 @@ let divbusqueda = document.getElementById('busqueda')
 let gifos_max = document.getElementById('gifos-max')
 let ultimoFech;
 let sectionTrendingImg = document.querySelectorAll("#body_inicio > div > div.trending-gif > div > img")
-let btn_close_gifos_max = document.getElementById("close")
-let img_gifos_max = document.querySelector("#gifos-max > section > img.gifo")
+let btn_close_gifos_max = document.getElementById("close");
+let img_gifos_max = document.querySelector("#gifos-max > section > img.gifo");
+let gifos_max_user= document.querySelector("#gifos-max > section > div > div.container-texto > h5");
+let gifos_max_title= document.querySelector("#gifos-max > section > div > div.container-texto > h4");
 let p = 0;
 max=11
 cantidadDeGalerias=0
@@ -161,8 +163,8 @@ function max_gif(p) {
     console.log(p)
     gifos_max.classList.remove('display-none')
     img_gifos_max.setAttribute("src", ultimoFech.data[p].images.original.url)
-    // containerh1[i].innerHTML = response.data[i].username
-    // containerh2[i].innerHTML = response.data[i].title
+    gifos_max_user.textContent = ultimoFech.data[p].username
+    gifos_max_title.textContent = ultimoFech.data[p].title
     console.log(ultimoFech)
     btn_close_gifos_max = document.getElementById("close")
 }
@@ -174,10 +176,6 @@ setInterval(() => {
         })
     }
 }, 500);
-
-
-
-
 
 btn_close_gifos_max.addEventListener('click', function () {
     gifos_max.classList.add('display-none')

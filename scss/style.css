@@ -390,7 +390,8 @@ footer .line-footer {
       width: 16px;
       transform: translateX(96px);
       padding-bottom: 78px;
-      padding-top: 20px; }
+      padding-top: 20px;
+      cursor: pointer; }
     .container-gifos-max .gifos-max .gifo {
       margin-left: 7.9vw;
       margin-right: 7.7vw;
@@ -413,7 +414,8 @@ footer .line-footer {
       border: 1px solid #9CAFC3;
       border-radius: 6px;
       width: 36px;
-      height: 36px; }
+      height: 36px;
+      cursor: pointer; }
     .container-gifos-max .gifos-max .iconos {
       display: flex;
       justify-content: space-between;
@@ -831,6 +833,7 @@ footer .line-footer {
       .container-gifos-max .gifos-max .close {
         display: block;
         align-self: flex-end;
+        cursor: pointer;
         width: 16px; }
       .container-gifos-max .gifos-max .gifo {
         margin-left: 7.9vw;
@@ -854,7 +857,10 @@ footer .line-footer {
         border: 1px solid #9CAFC3;
         border-radius: 6px;
         width: 36px;
-        height: 36px; }
+        height: 36px;
+        cursor: pointer; }
+      .container-gifos-max .gifos-max .icon-fav {
+        cursor: pointer; }
       .container-gifos-max .gifos-max .iconos {
         display: flex;
         justify-content: space-between;
@@ -1074,6 +1080,12 @@ footer .line-footer {
     div .layout .iconos_layout {
       transform: translate(50%, -70px);
       display: none; }
+      div .layout .iconos_layout img:nth-child(1) {
+        cursor: pointer; }
+      div .layout .iconos_layout img:nth-child(2) {
+        cursor: pointer; }
+      div .layout .iconos_layout img:nth-child(3) {
+        cursor: pointer; }
     div .layout .texto_layout {
       transform: translate(10px, -150px);
       display: none; }

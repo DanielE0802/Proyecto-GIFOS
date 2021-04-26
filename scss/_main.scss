@@ -470,7 +470,7 @@
             .close {
                 display: block;
                 align-self: flex-end;
-
+                cursor: pointer;
                 width: 16px;
             }
     
@@ -504,6 +504,11 @@
                 border-radius: 6px;
                 width: 36px;
                 height: 36px;
+                cursor: pointer;
+            }
+
+            .icon-fav{
+                cursor: pointer;
             }
     
             .iconos {
@@ -841,6 +846,17 @@
             .iconos_layout {
                 transform: translate(50%, -70px);
                 display: none;
+
+                img:nth-child(1){
+                    cursor: pointer;
+                }
+                img:nth-child(2){
+                    cursor: pointer;
+                }
+                img:nth-child(3){
+                    cursor: pointer;
+                }
+                
             }
 
             .texto_layout {
