@@ -15,6 +15,8 @@ let section_fav = call("favoritos")
 let section_fav_btn = call("section_fav_btn")
 
 let section_mis_gifos = call("mis-gifos")
+let section_galery_mis_gifos = document.querySelector("#mis-gifos > div")
+console.log(section_galery_mis_gifos)
 let section_mis_gifos_btn = call("section_mis_gifos_btn")
 
 let body_inicio = call("body_inicio")
@@ -23,6 +25,7 @@ let section_crear_gifos = call("crearGifos")
 let section_main = call("section_main")
 
 let misGifos = document.querySelectorAll("#mis-gifos > div > img")
+let idMyGifos = []
 
 
 //Sección crear GIFO
@@ -88,6 +91,27 @@ btn_home.addEventListener('click', function () {
 
   }
 })
+
+if (localStorage.getItem('My_gifos') !== null) {
+  idMyGifLocal = localStorage.getItem('My_gifos')
+  idMyGifLocal = idMyGifLocal.split(',')
+  idMyGifLocal.map(Element => idMyGifos.push(Element))
+  console.log(idFav)
+}
+
+idMyGifos.map(Element => searchMyGif(Element))
+function searchMyGif(id){
+    let info= searchId(id)
+    info.then(response => {
+        console.log(response)
+        sin_fav.classList.add('display-none')
+        let crearFav = document.createElement('div');
+        section_galery_mis_gifos.appendChild(crearFav)
+        crearFav.innerHTML= `${divContenido(response.data.images.fixed_height.url,response.data.username,"My GIF")}`
+        
+    })
+    info.catch(error => console.error(error))
+}
 
 //Crear gifo
 //Variables
@@ -230,6 +254,8 @@ const btn_subir_gifo = async () => {
   subiendoGifo.classList.remove('display-none')
   await subirDatos();
   MiGifo();
+  //Mandar a la seccion mis gifos 
+
 };
 
 let repetir = false
@@ -277,13 +303,16 @@ function mandarAMisGifos(myURL) {
 }
 
 
+
 async function MiGifo() {
   const resp = await fetch(`https://api.giphy.com/v1/gifs/${gifID}?api_key=hHX3bZ1xLpCNgZZtcHmUuvAlBCvDuBtD`);
   const myJson = await resp.json();
   console.log(myJson)
   myURL = myJson.data.images.original.url;
-
-  // eslint-disable-next-line no-console
+  saveGif(myJson.data.images.fixed_height.url,myJson.data.username, "My GIF" )
+  idMyGifos.push(myJson.data.id)
+  var fav_local = localStorage.setItem('My_gifos', idMyGifos)
+  console.log(idMyGifos)
   console.log(myURL);
 
   setTimeout(function () {
@@ -297,3 +326,10 @@ async function MiGifo() {
 btn_comenzar.addEventListener('click', Btn_Comenzar_a_grabar)
 
 btn_grabar.addEventListener('click', ComenzarAGrabar)
+
+function saveGif(src, title, subtitle) {
+  let crearFav = document.createElement('div');
+  section_favoritos.appendChild(crearFav)
+  crearFav.innerHTML = divContenido(src, title, subtitle)
+  section_galery_mis_gifos.appendChild(crearFav)
+}

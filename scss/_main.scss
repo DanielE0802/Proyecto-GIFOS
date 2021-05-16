@@ -311,15 +311,27 @@
 
                 &:hover {
 
-                    .layout {
+                    &:hover>.layout {
+
                         height: 100%;
+    
+                        .iconos_layout {
+                            transform: translate(65%, -70px);
+                            display: block;
+                        }
+    
+                        .texto_layout {
+                            transform: translate(10px, -100px);
+                            display: block;
+                        }
+    
                     }
 
                 }
             }
 
-
         }
+        
     }
 
     // Trending gifos
