@@ -345,36 +345,6 @@ footer {
 
     }
 
-    .galery-gifs {
-
-
-        display: grid;
-        grid-template-columns: minmax(156px, 200px) minmax(156px, 200px);
-        grid-template-rows: 120px 120px 120px 120px 120px 120px;
-        gap: 25px 21px;
-
-
-
-        align-self: center;
-        margin: 21px;
-        margin-right: 21px;
-
-        div {
-            img {
-                width: 100%;
-                height: 120px;
-                max-height: 120px;
-            }
-
-            width: 100%;
-            height: 120px;
-
-            .layout {
-                display: none;
-
-            }
-        }
-    }
 }
 
 .ver-mas {
@@ -471,36 +441,7 @@ footer {
         margin-bottom: 46px;
     }
 
-    .galery-gifs {
-
-
-        display: grid;
-        grid-template-columns: minmax(156px, 200px) minmax(156px, 200px);
-        grid-template-rows: 120px 120px 120px 120px 120px 120px;
-        gap: 25px 21px;
-
-
-
-        align-self: center;
-        margin: 21px;
-        margin-right: 21px;
-
-        div {
-            img {
-                width: 100%;
-                height: 120px;
-                max-height: 120px;
-            }
-
-            width: 100%;
-            height: 120px;
-
-            .layout {
-                display: none;
-
-            }
-        }
-    }
+    
 
 }
 
@@ -520,37 +461,7 @@ footer {
         margin-bottom: 46px;
     }
 
-    .galery-gifs {
-
-
-        display: grid;
-        grid-template-columns: minmax(156px, 200px) minmax(156px, 200px);
-        grid-template-rows: 120px 120px 120px 120px 120px 120px;
-        gap: 25px 21px;
-
-
-
-        align-self: center;
-        margin: 21px;
-        margin-right: 21px;
-
-        div {
-            img {
-                width: 100%;
-                height: 120px;
-                max-height: 120px;
-            }
-
-            width: 100%;
-            height: 120px;
-
-            .layout {
-                display: none;
-
-            }
-        }
     
-    }
 }
 
 .container-gifos-max {
@@ -668,4 +579,35 @@ footer {
 
 
 
+}
+
+.galery-gifs {
+
+
+    display: grid;
+    grid-template-columns: minmax(156px, 200px) minmax(156px, 200px);
+    grid-template-rows: 120px 120px 120px 120px 120px 120px;
+    gap: 25px 21px;
+
+
+
+    align-self: center;
+    margin: 21px;
+    margin-right: 21px;
+
+    div {
+        img {
+            width: 100%;
+            height: 120px;
+            max-height: 120px;
+        }
+
+        width: 100%;
+        height: 120px;
+
+        .layout {
+            display: none;
+
+        }
+    }
 }

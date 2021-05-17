@@ -119,56 +119,7 @@
             margin-bottom: 60px;
         }
 
-        .galery-gifs {
-            align-self: center;
-            justify-self: center;
-            display: grid;
-            grid-template-columns: minmax(260px, 300px) minmax(260px, 300px) minmax(260px, 300px) minmax(260px, 300px);
-            grid-template-rows: 250px 250px 250px;
-            gap: 28px 29px;
-            grid-template-areas:
-                ". . . ."
-                ". . . ."
-                ". . . .";
-
-
-    
-            div {
-                img {
-                    width: 100%;
-                    height: 100%;
-                    max-width: 300px;
-                    min-height: 250px;
-                }
-
-                width: 100%;
-                max-width: 300px;
-                height: 250px;
-
-                .layout {
-                    display: block;
-                    background: $color-p;
-                    opacity: 0.7;
-                    height: 0px;
-                    transform: translateY(calc(-100% - (5px)));
-                    transition: height .5s ease;
-
-                    img {
-                        width: 30px;
-                    }
-
-                }
-
-                &:hover {
-
-                    .layout {
-                        height: 100%;
-                    }
-
-                }
-            }
-
-        }
+        
     }
 
     .favoritos {
@@ -196,141 +147,12 @@
             }
         }
 
-        .galery-gifs {
-            align-self: center;
-            justify-self: center;
-            display: grid;
-            grid-template-columns: minmax(260px, 300px) minmax(260px, 300px) minmax(260px, 300px) minmax(260px, 300px);
-            grid-template-rows: 250px 250px 250px;
-            gap: 28px 29px;
-            grid-template-areas:
-                ". . . ."
-                ". . . ."
-                ". . . .";
-
-
-    
-            div {
-                img {
-                    width: 100%;
-                    height: 100%;
-                    max-width: 300px;
-                    min-height: 250px;
-                }
-
-                width: 100%;
-                max-width: 300px;
-                height: 250px;
-                max-height: 250px;
-
-                .layout {
-                    display: block;
-                    background: $color-p;
-                    opacity: 0.7;
-                    height: 0px;
-                    transform: translateY(calc(-100% - (5px)));
-                    transition: height .5s ease;
-
-                    img {
-                        width: 30px;
-                    }
-
-                }
-
-                &:hover {
-
-                    .layout {
-                        height: 100%;
-                    }
-
-                }
-            
-
-        
-
-                &:hover>.layout {
-                    height: 30vh;
-
-                    .iconos_layout {
-                        transform: translate(50%, -70px);
-                        display: block;
-                    }
-
-                    .texto_layout {
-                        transform: translate(10px, -100px);
-                        display: block;
-                    }
-
-                }
-            }
-        }
     }
 
     .mis-gifos {
         display: flex;
         flex-direction: column;
-        .galery-gifs {
-            align-self: center;
-            justify-self: center;
-            display: grid;
-            grid-template-columns: minmax(260px, 300px) minmax(260px, 300px) minmax(260px, 300px) minmax(260px, 300px);
-            grid-template-rows: 250px 250px 250px;
-            gap: 28px 29px;
-            grid-template-areas:
-                ". . . ."
-                ". . . ."
-                ". . . .";
-
-
-    
-            div {
-                img {
-                    width: 100%;
-                    height: 100%;
-                    max-width: 300px;
-                    min-height: 250px;
-                }
-
-                width: 100%;
-                max-width: 300px;
-                height: 250px;
-
-                .layout {
-                    display: block;
-                    background: $color-p;
-                    opacity: 0.7;
-                    height: 0px;
-                    transform: translateY(calc(-100% - (5px)));
-                    transition: height .5s ease;
-
-                    img {
-                        width: 30px;
-                    }
-
-                }
-
-                &:hover {
-
-                    &:hover>.layout {
-
-                        height: 100%;
-    
-                        .iconos_layout {
-                            transform: translate(65%, -70px);
-                            display: block;
-                        }
-    
-                        .texto_layout {
-                            transform: translate(10px, -100px);
-                            display: block;
-                        }
-    
-                    }
-
-                }
-            }
-
-        }
+        
         
     }
 
@@ -847,6 +669,57 @@
             width: 100%;
             height: 5px;
         }
+    }
+
+    .galery-gifs {
+        align-self: center;
+        justify-self: center;
+        display: grid;
+        grid-template-columns: minmax(260px, 300px) minmax(260px, 300px) minmax(260px, 300px) minmax(260px, 300px);
+        grid-template-rows: 250px 250px 250px;
+        gap: 28px 29px;
+        grid-template-areas:
+            ". . . ."
+            ". . . ."
+            ". . . .";
+
+
+
+        div {
+            img {
+                width: 100%;
+                height: 100%;
+                max-width: 300px;
+                min-height: 250px;
+            }
+
+            width: 100%;
+            max-width: 300px;
+            height: 250px;
+
+            .layout {
+                display: block;
+                background: $color-p;
+                opacity: 0.7;
+                height: 0px;
+                transform: translateY(calc(-100% - (5px)));
+                transition: height .5s ease;
+
+                img {
+                    width: 30px;
+                }
+
+            }
+
+            &:hover {
+
+                .layout {
+                    height: 100%;
+                }
+
+            }
+        }
+
     }
 
     div {

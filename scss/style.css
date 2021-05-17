@@ -238,23 +238,6 @@ footer .line-footer {
     text-align: center;
     line-height: 40px;
     margin-bottom: 38px; }
-  .busqueda .galery-gifs {
-    display: grid;
-    grid-template-columns: minmax(156px, 200px) minmax(156px, 200px);
-    grid-template-rows: 120px 120px 120px 120px 120px 120px;
-    gap: 25px 21px;
-    align-self: center;
-    margin: 21px;
-    margin-right: 21px; }
-    .busqueda .galery-gifs div {
-      width: 100%;
-      height: 120px; }
-      .busqueda .galery-gifs div img {
-        width: 100%;
-        height: 120px;
-        max-height: 120px; }
-      .busqueda .galery-gifs div .layout {
-        display: none; }
 
 .ver-mas {
   display: flex;
@@ -323,23 +306,6 @@ footer .line-footer {
     font-size: 20px;
     line-height: 30px;
     margin-bottom: 46px; }
-  .favoritos .galery-gifs {
-    display: grid;
-    grid-template-columns: minmax(156px, 200px) minmax(156px, 200px);
-    grid-template-rows: 120px 120px 120px 120px 120px 120px;
-    gap: 25px 21px;
-    align-self: center;
-    margin: 21px;
-    margin-right: 21px; }
-    .favoritos .galery-gifs div {
-      width: 100%;
-      height: 120px; }
-      .favoritos .galery-gifs div img {
-        width: 100%;
-        height: 120px;
-        max-height: 120px; }
-      .favoritos .galery-gifs div .layout {
-        display: none; }
 
 .mis-gifos .mis-gifos-icon {
   display: block;
@@ -352,23 +318,6 @@ footer .line-footer {
   font-size: 20px;
   line-height: 30px;
   margin-bottom: 46px; }
-.mis-gifos .galery-gifs {
-  display: grid;
-  grid-template-columns: minmax(156px, 200px) minmax(156px, 200px);
-  grid-template-rows: 120px 120px 120px 120px 120px 120px;
-  gap: 25px 21px;
-  align-self: center;
-  margin: 21px;
-  margin-right: 21px; }
-  .mis-gifos .galery-gifs div {
-    width: 100%;
-    height: 120px; }
-    .mis-gifos .galery-gifs div img {
-      width: 100%;
-      height: 120px;
-      max-height: 120px; }
-    .mis-gifos .galery-gifs div .layout {
-      display: none; }
 
 .container-gifos-max {
   position: fixed;
@@ -455,6 +404,24 @@ footer .line-footer {
     height: 100%; }
   .subiendoGifo p {
     position: absolute; }
+
+.galery-gifs {
+  display: grid;
+  grid-template-columns: minmax(156px, 200px) minmax(156px, 200px);
+  grid-template-rows: 120px 120px 120px 120px 120px 120px;
+  gap: 25px 21px;
+  align-self: center;
+  margin: 21px;
+  margin-right: 21px; }
+  .galery-gifs div {
+    width: 100%;
+    height: 120px; }
+    .galery-gifs div img {
+      width: 100%;
+      height: 120px;
+      max-height: 120px; }
+    .galery-gifs div .layout {
+      display: none; }
 
 .modo_nocturno {
   background: #37383C; }
@@ -627,34 +594,6 @@ footer .line-footer {
       font-size: 35px;
       line-height: 30px;
       margin-bottom: 60px; }
-    .busqueda .galery-gifs {
-      align-self: center;
-      justify-self: center;
-      display: grid;
-      grid-template-columns: minmax(260px, 300px) minmax(260px, 300px) minmax(260px, 300px) minmax(260px, 300px);
-      grid-template-rows: 250px 250px 250px;
-      gap: 28px 29px;
-      grid-template-areas: ". . . ." ". . . ." ". . . ."; }
-      .busqueda .galery-gifs div {
-        width: 100%;
-        max-width: 300px;
-        height: 250px; }
-        .busqueda .galery-gifs div img {
-          width: 100%;
-          height: 100%;
-          max-width: 300px;
-          min-height: 250px; }
-        .busqueda .galery-gifs div .layout {
-          display: block;
-          background: #572EE5;
-          opacity: 0.7;
-          height: 0px;
-          transform: translateY(calc(-100% - (5px)));
-          transition: height .5s ease; }
-          .busqueda .galery-gifs div .layout img {
-            width: 30px; }
-        .busqueda .galery-gifs div:hover .layout {
-          height: 100%; }
 
   .favoritos {
     display: flex;
@@ -675,81 +614,10 @@ footer .line-footer {
         text-align: center;
         line-height: 33px;
         margin-top: 30px; }
-    .favoritos .galery-gifs {
-      align-self: center;
-      justify-self: center;
-      display: grid;
-      grid-template-columns: minmax(260px, 300px) minmax(260px, 300px) minmax(260px, 300px) minmax(260px, 300px);
-      grid-template-rows: 250px 250px 250px;
-      gap: 28px 29px;
-      grid-template-areas: ". . . ." ". . . ." ". . . ."; }
-      .favoritos .galery-gifs div {
-        width: 100%;
-        max-width: 300px;
-        height: 250px;
-        max-height: 250px; }
-        .favoritos .galery-gifs div img {
-          width: 100%;
-          height: 100%;
-          max-width: 300px;
-          min-height: 250px; }
-        .favoritos .galery-gifs div .layout {
-          display: block;
-          background: #572EE5;
-          opacity: 0.7;
-          height: 0px;
-          transform: translateY(calc(-100% - (5px)));
-          transition: height .5s ease; }
-          .favoritos .galery-gifs div .layout img {
-            width: 30px; }
-        .favoritos .galery-gifs div:hover .layout {
-          height: 100%; }
-        .favoritos .galery-gifs div:hover > .layout {
-          height: 30vh; }
-          .favoritos .galery-gifs div:hover > .layout .iconos_layout {
-            transform: translate(50%, -70px);
-            display: block; }
-          .favoritos .galery-gifs div:hover > .layout .texto_layout {
-            transform: translate(10px, -100px);
-            display: block; }
 
   .mis-gifos {
     display: flex;
     flex-direction: column; }
-    .mis-gifos .galery-gifs {
-      align-self: center;
-      justify-self: center;
-      display: grid;
-      grid-template-columns: minmax(260px, 300px) minmax(260px, 300px) minmax(260px, 300px) minmax(260px, 300px);
-      grid-template-rows: 250px 250px 250px;
-      gap: 28px 29px;
-      grid-template-areas: ". . . ." ". . . ." ". . . ."; }
-      .mis-gifos .galery-gifs div {
-        width: 100%;
-        max-width: 300px;
-        height: 250px; }
-        .mis-gifos .galery-gifs div img {
-          width: 100%;
-          height: 100%;
-          max-width: 300px;
-          min-height: 250px; }
-        .mis-gifos .galery-gifs div .layout {
-          display: block;
-          background: #572EE5;
-          opacity: 0.7;
-          height: 0px;
-          transform: translateY(calc(-100% - (5px)));
-          transition: height .5s ease; }
-          .mis-gifos .galery-gifs div .layout img {
-            width: 30px; }
-        .mis-gifos .galery-gifs div:hover:hover > .layout {
-          height: 100%; }
-          .mis-gifos .galery-gifs div:hover:hover > .layout .iconos_layout {
-            transform: translate(65%, -70px);
-            display: block; }
-          .mis-gifos .galery-gifs div:hover:hover > .layout .texto_layout {
-            transform: translate(10px, -100px);
-            display: block; }
 
   .container-trending {
     margin-top: 45px;
@@ -1083,6 +951,35 @@ footer .line-footer {
       background: #572EE5;
       width: 100%;
       height: 5px; }
+
+  .galery-gifs {
+    align-self: center;
+    justify-self: center;
+    display: grid;
+    grid-template-columns: minmax(260px, 300px) minmax(260px, 300px) minmax(260px, 300px) minmax(260px, 300px);
+    grid-template-rows: 250px 250px 250px;
+    gap: 28px 29px;
+    grid-template-areas: ". . . ." ". . . ." ". . . ."; }
+    .galery-gifs div {
+      width: 100%;
+      max-width: 300px;
+      height: 250px; }
+      .galery-gifs div img {
+        width: 100%;
+        height: 100%;
+        max-width: 300px;
+        min-height: 250px; }
+      .galery-gifs div .layout {
+        display: block;
+        background: #572EE5;
+        opacity: 0.7;
+        height: 0px;
+        transform: translateY(calc(-100% - (5px)));
+        transition: height .5s ease; }
+        .galery-gifs div .layout img {
+          width: 30px; }
+      .galery-gifs div:hover .layout {
+        height: 100%; }
 
   div .layout {
     color: #FFFFFF;

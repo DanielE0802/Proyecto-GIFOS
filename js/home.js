@@ -46,6 +46,12 @@ bt_fav.addEventListener('click', function () {
   section_mis_gifos.classList.add("display-none")
   section_mis_gifos_btn.classList.add('display-none');
   section_main.classList.add("display-none")
+  icon_delete_gif = document.querySelectorAll("#galery-fav > div> div > div.iconos_layout > img:nth-child(1)")
+  deleteGif()
+  
+  if(idFav.length == 0){
+    sin_fav.classList.remove('display-none')
+  }
 
   if (body_inicio.classList.value == "display-none") {
     section_crear_gifos.classList.add("display-none")
@@ -106,6 +112,7 @@ function searchMyGif(id){
         console.log(response)
         sin_fav.classList.add('display-none')
         let crearFav = document.createElement('div');
+        crearFav.classList.add('div-father-layout')
         section_galery_mis_gifos.appendChild(crearFav)
         crearFav.innerHTML= `${divContenido(response.data.images.fixed_height.url,response.data.username,"My GIF")}`
         
