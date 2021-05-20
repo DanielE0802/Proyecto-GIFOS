@@ -29,7 +29,10 @@ let gifos_max_title = document.querySelector("#gifos-max > section > div > div.c
 let downloadGif = document.querySelectorAll("#busqueda > div.galery-gifs > div> div > div.iconos_layout > img.btn_descarga");
 let p = 0;
 let trendingFetch;
+let inputSearchClass = document.querySelector("#section_main > div.inputSearch")
 let idFav = []
+let downloadGifMax = document.querySelectorAll("#gifos-max > section > div > div.iconos > div > img")
+let idMyGifos = []
 max = 11
 cantidadDeGalerias = 0
 let icon_delete_gif = document.querySelectorAll("#galery-fav > div> div > div.iconos_layout > img:nth-child(1)")
@@ -52,7 +55,6 @@ if (localStorage.getItem('Section_Fav') !== null) {
   idFavLocal = localStorage.getItem('Section_Fav')
   idFavLocal = idFavLocal.split(',')
   idFavLocal.map(Element => idFav.push(Element))
-  console.log(idFav)
 }
 
 idFav.map(Element => sectionSearchId(Element))
@@ -60,7 +62,6 @@ idFav.map(Element => sectionSearchId(Element))
 function sectionSearchId(id) {
   let info = searchId(id)
   info.then(response => {
-    console.log(response)
     sin_fav.classList.add('display-none')
     let crearFav = document.createElement('div');
     crearFav.classList.add('div-father-layout')
@@ -92,9 +93,17 @@ search.addEventListener('keyup', function () {
   let search = document.getElementById("search")
   let whatSearch = search.value
   api(whatSearch)
+ 
   divbusqueda.removeChild(createDiv)
   btn_VerMas.classList.remove('display-none')
 })
+
+async function autoComplete(letra){
+  const url = `https://api.giphy.com/v1/gifs/search/tags?api_key=LPXFgfOHCkhOAuWn1yNLkvG2UjUVbx3r&q=${letra}`
+  let response = await fetch (url)
+  let data = await response.json()
+  return data
+}
 
 function api(busqueda) {
   callApiSearch = async () => {
@@ -185,7 +194,7 @@ artists.addEventListener('click', function () {
 })
 
 let section_favoritos = document.getElementById('galery-fav')
-
+let container_Icon_Fav_trending = document.querySelectorAll("#body_inicio > div.container-trending > div.trending-gif > div > div > div.iconos_layout > img:nth-child(1)")
 //fav trending
 
 for (let i = 0; i <= 5; i++) {
@@ -204,8 +213,8 @@ for (let i = 0; i <= 5; i++) {
       let rutaImgActual = `assets/icon-fav.svg`
       let rutaSeleccionFav = `assets/icon-fav-active.svg`
 
-      if (containerIconFav[i].getAttribute('src') == rutaImgActual) {
-        containerIconFav[i].setAttribute('src', rutaSeleccionFav)
+      if (container_Icon_Fav_trending[i].getAttribute('src') == rutaImgActual) {
+        container_Icon_Fav_trending[i].setAttribute('src', rutaSeleccionFav)
       }
       var fav_local = localStorage.setItem('Section_Fav', idFav)
 
@@ -479,7 +488,6 @@ function vermas(p) {
   containerIconFav = document.querySelectorAll("#busqueda > div.galery-gifs > div > div > div.iconos_layout > img:nth-child(1)")
   downloadGif = document.querySelectorAll("#busqueda > div.galery-gifs > div> div > div.iconos_layout > img.btn_descarga");
   for (; p <= max; p++) {
-    console.log(p)
     containerImg[p].setAttribute("src", ultimoFech.data[p].images.fixed_height.url)
     containerh1[p].textContent = ultimoFech.data[p].username
     containerh2[p].textContent = ultimoFech.data[p].title
@@ -495,3 +503,13 @@ btn_VerMas.addEventListener('click', function () {
   eliminarEvents()
   agregarEventos()
 })
+
+function downloadFromGifMax (){
+  downloadGifMax = document.querySelectorAll("#gifos-max > section > div > div.iconos > div > img")
+  downloadGifMax[0].addEventListener('click', function(e){
+    info = searchId(e.path[4].childNodes[3].id)
+    info.then(Response => {
+      descargarGif(Response.data.images.original.url)
+    })
+  })
+}

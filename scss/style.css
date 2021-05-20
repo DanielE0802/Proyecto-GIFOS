@@ -423,6 +423,11 @@ footer .line-footer {
     .galery-gifs div .layout {
       display: none; }
 
+.container-trending {
+  display: flex; }
+  .container-trending .izquierda-container {
+    width: 50px; }
+
 .modo_nocturno {
   background: #37383C; }
   .modo_nocturno header {
@@ -678,11 +683,13 @@ footer .line-footer {
         border: 2px solid #f1f2f3; }
       .container-trending .trending-gif::-webkit-scrollbar:horizontal {
         height: 10px; }
-      .container-trending .trending-gif .izquierda-container .flecha-izquierda {
-        display: block;
-        transform: translate(-20px, 70px);
-        width: 40px;
-        height: 40px; }
+      .container-trending .trending-gif .izquierda-container {
+        width: 60px; }
+        .container-trending .trending-gif .izquierda-container .flecha-izquierda {
+          display: block;
+          transform: translate(-20px, 70px);
+          width: 40px;
+          height: 40px; }
       .container-trending .trending-gif .derecha-container .flecha-derecha {
         display: block;
         transform: translate(-20px, 70px);
@@ -1050,6 +1057,11 @@ footer .line-footer {
       width: 100%;
       height: 396px;
       transform: scaleX(-1); } }
+.container-trending {
+  display: flex; }
+  .container-trending .izquierda-container {
+    width: 50px; }
+
 @media screen and (min-width: 1024px) {
   footer .footer-social {
     flex-direction: row;

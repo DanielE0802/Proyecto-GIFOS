@@ -16,7 +16,6 @@ let section_fav_btn = call("section_fav_btn")
 
 let section_mis_gifos = call("mis-gifos")
 let section_galery_mis_gifos = document.querySelector("#mis-gifos > div")
-console.log(section_galery_mis_gifos)
 let section_mis_gifos_btn = call("section_mis_gifos_btn")
 
 let body_inicio = call("body_inicio")
@@ -25,14 +24,16 @@ let section_crear_gifos = call("crearGifos")
 let section_main = call("section_main")
 
 let misGifos = document.querySelectorAll("#mis-gifos > div > img")
-let idMyGifos = []
-
-
+let icon_max_gif_fav = document.querySelectorAll("#galery-fav > div> div > div.iconos_layout > img:nth-child(2)")
+let icon_max_gif_my_gif=  document.querySelectorAll("#mis-gifos > div > div> div > div.iconos_layout > img:nth-child(2)")
+let download_my_fav_gif = document.querySelectorAll("#galery-fav > div > div > div.iconos_layout > img.btn_descarga")
+let download_my_gif_section = document.querySelectorAll("#mis-gifos > div > div > div > div.iconos_layout > img.btn_descarga")
 //Sección crear GIFO
 
 btn_crear_gifos.addEventListener('click', function () {
   body_inicio.classList.toggle("display-none")
   section_crear_gifos.classList.toggle("display-none")
+  icon_delte_my_gif = document.querySelectorAll("#mis-gifos > div > div > div > div.iconos_layout > img:nth-child(1)")
 }, false)
 
 
@@ -47,9 +48,15 @@ bt_fav.addEventListener('click', function () {
   section_mis_gifos_btn.classList.add('display-none');
   section_main.classList.add("display-none")
   icon_delete_gif = document.querySelectorAll("#galery-fav > div> div > div.iconos_layout > img:nth-child(1)")
+  icon_delte_my_gif = document.querySelectorAll("#mis-gifos > div > div > div > div.iconos_layout > img:nth-child(1)")
+  icon_max_gif_fav = document.querySelectorAll("#galery-fav > div> div > div.iconos_layout > img:nth-child(2)")
+  download_my_fav_gif = document.querySelectorAll("#galery-fav > div > div > div.iconos_layout > img.btn_descarga")
   deleteGif()
-  
-  if(idFav.length == 0){
+  downloadMyFavGif()
+  maxGifFav()
+  downloadFromGifMax ()
+
+  if (idFav.length == 0) {
     sin_fav.classList.remove('display-none')
   }
 
@@ -64,6 +71,7 @@ bt_fav.addEventListener('click', function () {
 //Sección mis GIFOS
 
 btn_mis_gifos.addEventListener('click', function () {
+  
   section_mis_gifos.classList.remove('display-none');
   section_mis_gifos.classList.add("padding")
   section_mis_gifos_btn.classList.remove('display-none');
@@ -71,7 +79,12 @@ btn_mis_gifos.addEventListener('click', function () {
   section_fav.classList.add("display-none")
   section_fav_btn.classList.add('display-none');
   section_main.classList.add("display-none")
-
+  icon_delte_my_gif = document.querySelectorAll("#mis-gifos > div > div > div > div.iconos_layout > img:nth-child(1)")
+  icon_max_gif_my_gif=  document.querySelectorAll("#mis-gifos > div > div> div > div.iconos_layout > img:nth-child(2)")
+  download_my_gif_section = document.querySelectorAll("#mis-gifos > div > div > div > div.iconos_layout > img.btn_descarga")
+  deleteMyGif()
+  maxGifMyGif()
+  downloadMyGifSection()
   sectionBusqueda.classList.add('display-none')
 
   if (body_inicio.classList.value == "display-none") {
@@ -102,22 +115,21 @@ if (localStorage.getItem('My_gifos') !== null) {
   idMyGifLocal = localStorage.getItem('My_gifos')
   idMyGifLocal = idMyGifLocal.split(',')
   idMyGifLocal.map(Element => idMyGifos.push(Element))
-  console.log(idFav)
 }
 
 idMyGifos.map(Element => searchMyGif(Element))
-function searchMyGif(id){
-    let info= searchId(id)
-    info.then(response => {
-        console.log(response)
-        sin_fav.classList.add('display-none')
-        let crearFav = document.createElement('div');
-        crearFav.classList.add('div-father-layout')
-        section_galery_mis_gifos.appendChild(crearFav)
-        crearFav.innerHTML= `${divContenido(response.data.images.fixed_height.url,response.data.username,"My GIF")}`
-        
-    })
-    info.catch(error => console.error(error))
+
+function searchMyGif(id) {
+  let info = searchId(id)
+  info.then(response => {
+    sin_fav.classList.add('display-none')
+    let crearFav = document.createElement('div');
+    crearFav.classList.add('div-father-layout')
+    section_galery_mis_gifos.appendChild(crearFav)
+    crearFav.innerHTML = `${divContenido(response.data.images.fixed_height.url, response.data.id ,response.data.username,"My GIF")}`
+
+  })
+  info.catch(error => console.error(error))
 }
 
 //Crear gifo
@@ -176,7 +188,6 @@ function mostrarCamara() {
       }
     }
   }).then((stream) => {
-    console.log(stream)
     grabacion = RecordRTC(stream, {
       type: "gif",
       frameRate: 1,
@@ -191,7 +202,7 @@ function mostrarCamara() {
     btn_grabar.innerHTML = "<h1>Grabar</h1>"
     video.srcObject = stream
 
-  }).catch((err) => console.log(err))
+  }).catch((err) => console.error(err))
   btn_comenzar.classList.add('display-none')
   primerPaso.classList.add('display-none')
   segundoPaso.classList.remove('display-none')
@@ -247,8 +258,7 @@ const btn_finalizar_gifo = () => {
 
   grabacion.stopRecording(() => {
     form.append("file", grabacion.getBlob(), "myGif.gif");
-    // eslint-disable-next-line no-console
-    console.log(form.get("file"));
+
   });
 };
 
@@ -275,13 +285,10 @@ async function subirDatos() {
     redirect: "follow"
   });
   const json = await res.json();
-  console.log(json)
   gifID = json.data.id;
 
   subiendoGifo.lastElementChild.innerText = "GIFO subido con éxito"
   subiendoGifo.children[1].setAttribute("src", "/assets/check.svg")
-
-
 
 }
 
@@ -314,13 +321,14 @@ function mandarAMisGifos(myURL) {
 async function MiGifo() {
   const resp = await fetch(`https://api.giphy.com/v1/gifs/${gifID}?api_key=hHX3bZ1xLpCNgZZtcHmUuvAlBCvDuBtD`);
   const myJson = await resp.json();
-  console.log(myJson)
   myURL = myJson.data.images.original.url;
-  saveGif(myJson.data.images.fixed_height.url,myJson.data.username, "My GIF" )
+
   idMyGifos.push(myJson.data.id)
   var fav_local = localStorage.setItem('My_gifos', idMyGifos)
-  console.log(idMyGifos)
-  console.log(myURL);
+  let crearFav = document.createElement('div');
+  crearFav.classList.add('div-father-layout')
+  section_galery_mis_gifos.appendChild(crearFav)
+  crearFav.innerHTML = `${divContenido(myJson.data.images.fixed_height.url, myJson.data.id ,myJson.data.username,"My GIF")}`
 
   setTimeout(function () {
     traerMiGifo(myURL)
@@ -333,10 +341,3 @@ async function MiGifo() {
 btn_comenzar.addEventListener('click', Btn_Comenzar_a_grabar)
 
 btn_grabar.addEventListener('click', ComenzarAGrabar)
-
-function saveGif(src, title, subtitle) {
-  let crearFav = document.createElement('div');
-  section_favoritos.appendChild(crearFav)
-  crearFav.innerHTML = divContenido(src, title, subtitle)
-  section_galery_mis_gifos.appendChild(crearFav)
-}
