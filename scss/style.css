@@ -423,11 +423,6 @@ footer .line-footer {
     .galery-gifs div .layout {
       display: none; }
 
-.container-trending {
-  display: flex; }
-  .container-trending .izquierda-container {
-    width: 50px; }
-
 .modo_nocturno {
   background: #37383C; }
   .modo_nocturno header {
