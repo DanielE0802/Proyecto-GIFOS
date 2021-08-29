@@ -102,6 +102,7 @@
       }
     }
 
+
   }
 
   .busqueda {
@@ -153,8 +154,23 @@
   .mis-gifos {
     display: flex;
     flex-direction: column;
+    
+  .sin_gif{
+    img{
+      
+      display: block;
+      margin: auto;
+    }
 
-
+    h1{
+      color: $color-t;
+        font-family: $Mon;
+        font-size: 22px;
+        text-align: center;
+        line-height: 33px;
+        margin-top: 30px;
+    }
+  }
   }
 
   // Trending gifos
@@ -848,5 +864,40 @@
 
   .izquierda-container {
     width: 50px;
+  }
+}
+
+.trasladarSugerencia{
+  transform: translate(0,-56px);
+}
+
+.ocultarBorde{
+  
+}
+
+.sugerencia{
+  border: 1px solid $color-p;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-self: center;
+  width: 55.3vh;
+  border-radius: 27px;
+  max-width: 462.29px;
+
+  ul{
+    padding-top: 30px;
+    li{
+      display: flex;
+      list-style: none;
+      padding: 10px;
+      img{
+        padding-right: 15px;
+      }
+      p{
+        color: #9BA6B6;
+        font-family: $Mon;
+      }
+    }
   }
 }
