@@ -93,17 +93,89 @@ search.addEventListener('keyup', function () {
   let search = document.getElementById("search")
   let whatSearch = search.value
   api(whatSearch)
- 
+
+  if (whatSearch.length > 0) {
+    let hidden = document.getElementById("searchIMG")
+    hidden.setAttribute("class", "display-none")
+    console.log(hidden)
+  } else {
+    let hidden = document.getElementById("searchIMG")
+    hidden.removeAttribute("class")
+
+  }
+
   divbusqueda.removeChild(createDiv)
   btn_VerMas.classList.remove('display-none')
 })
 
-async function autoComplete(letra){
+
+setInterval(() => {
+
+  let search = document.getElementById("search")
+  let whatSearch = search.value
+  console.log(whatSearch.length)
+  let hidden = document.getElementById("searchIMG")
+  let sugerencias = document.querySelector("#section_main > div.sugerencia.trasladarSugerencia")
+
+  if (whatSearch.length > 0) {
+    hidden.setAttribute("class", "display-none")
+    sugerencias.classList.remove("display-none")
+
+
+  } else {
+    hidden.removeAttribute("class")
+    sugerencias.classList.add("display-none")
+
+  }
+}, 300)
+
+async function autoComplete(letra) {
   const url = `https://api.giphy.com/v1/gifs/search/tags?api_key=LPXFgfOHCkhOAuWn1yNLkvG2UjUVbx3r&q=${letra}`
-  let response = await fetch (url)
+  let response = await fetch(url)
   let data = await response.json()
   return data
 }
+
+
+search.addEventListener('keyup', function () {
+  let search = document.getElementById("search")
+  let whatSearch = search.value
+  autoComplete(whatSearch).then((Element) => {
+    let parrafo = document.querySelectorAll("#section_main > div.sugerencia.trasladarSugerencia > ul > li > p")
+    console.log(Element.data[1])
+
+    for (let i = 0; i < parrafo.length; i++) {
+      console.log(parrafo[i])
+      parrafo[i].textContent = Element.data[i].name
+      // parrafo[i].addEventListener("click", function(){
+      //   alert("click")
+
+      // })
+    }
+
+    console.log(parrafo)
+  })
+
+
+})
+
+
+
+var liEvent = document.querySelectorAll("#section_main > div.sugerencia.trasladarSugerencia > ul > li")
+console.log(liEvent)
+
+liEvent.forEach((Element) => {
+  Element.addEventListener("click", () => {
+    let text = Element.innerText
+    let search = document.getElementById("search")
+    search.value = text
+    api(text)
+    let sugerencias = document.querySelector("#section_main > div.sugerencia.trasladarSugerencia")
+
+    sugerencias.classList.add("display-none")
+
+  })
+})
 
 function api(busqueda) {
   callApiSearch = async () => {
@@ -119,13 +191,43 @@ function api(busqueda) {
 
   info.then(response => {
     ultimoFech = response
-    for (let i = 0; i <= 12; i++) {
-      containerImg[i].setAttribute("src", response.data[i].images.fixed_height.url)
-      containerImg[i].setAttribute('id', response.data[i].id )
-      containerh1[i].innerHTML = response.data[i].username
-      containerh2[i].innerHTML = response.data[i].title
-      id.push(response.data[i].id)
+    console.log(ultimoFech)
+    let notFound = document.getElementById("notFound")
+
+    if(ultimoFech.data.length < 1){
+      let busquedaSinResultados = document.getElementById("busqueda")
+      busquedaSinResultados.classList.add("display-none")
+
+      let buscadorrr = document.getElementById("search")
+      console.log(buscadorrr.value.length)
+      if(buscadorrr.value.length > 0){
+        notFound.classList.remove("display-none")
+      }
+      // setTimeout(()=>{
+      // notFound.classList.add("display-none")
+      // },10000)
+    }else{
+      
+      let buscadorrr = document.getElementById("search")
+      console.log(buscadorrr.value.length)
+
+      if(buscadorrr.value.length === 0){
+      }else{
+        notFound.classList.add("display-none")
+      }
+
+      for (let i = 0; i <= 12; i++) {
+
+
+        containerImg[i].setAttribute("src", response.data[i].images.fixed_height.url)
+        containerImg[i].setAttribute('id', response.data[i].id)
+        containerh1[i].innerHTML = response.data[i].username
+        containerh2[i].innerHTML = response.data[i].title
+        id.push(response.data[i].id)
+      }
     }
+
+
   }).catch(error => {
     console.error(error);
   })
@@ -141,13 +243,13 @@ function trending() {
   }
   let info = callApiTrending();
   info.then(response => {
-   
+
     trendingFetch = response
     for (let u = 1; u <= 6; u++) {
       sectionTrendingImg[u].setAttribute("src", response.data[u].images.fixed_height.url)
       section_trending_h2[u - 1].innerHTML = response.data[u].username
       section_trending_h1[u - 1].innerHTML = response.data[u].title
-      sectionTrendingImg[u].setAttribute("alt",response.data[u].id)
+      sectionTrendingImg[u].setAttribute("alt", response.data[u].id)
     }
   }).catch(error => {
     console.error(error);
@@ -283,16 +385,17 @@ function agregarEventos() {
   icon_delete_gif = document.querySelectorAll("#galery-fav > div> div > div.iconos_layout > img:nth-child(1)")
   downloadGif.forEach(Element => Element.addEventListener("click", function (e) {
     descargarGif(e.path[3].childNodes[1].currentSrc);
-    
+
   }))
-  
+
 }
 agregarEventos()
 
 let downloadTrending = document.querySelectorAll("#body_inicio > div.container-trending > div.trending-gif > div > div > div.iconos_layout > img.btn_descarga")
-function downloadEventTrending(){
+
+function downloadEventTrending() {
   icon_delete_gif = document.querySelectorAll("#galery-fav > div> div > div.iconos_layout > img:nth-child(1)")
-  downloadTrending.forEach(Element => Element.addEventListener('click', function(e){
+  downloadTrending.forEach(Element => Element.addEventListener('click', function (e) {
     descargarGif(e.path[3].childNodes[1].currentSrc)
   }))
 }
@@ -300,7 +403,7 @@ function downloadEventTrending(){
 downloadEventTrending()
 
 function eliminarEvents() {
-  downloadGif.forEach(Element => Element.removeEventListener("click", function(){}))
+  downloadGif.forEach(Element => Element.removeEventListener("click", function () {}))
 }
 
 btn_close_gifos_max.addEventListener('click', function () {
@@ -471,7 +574,7 @@ const galeryNew = `
  `
 
 function vermas(p) {
-  
+
   cantidadDeGalerias += 1
   p = p + 11;
   max += 12
@@ -504,9 +607,9 @@ btn_VerMas.addEventListener('click', function () {
   agregarEventos()
 })
 
-function downloadFromGifMax (){
+function downloadFromGifMax() {
   downloadGifMax = document.querySelectorAll("#gifos-max > section > div > div.iconos > div > img")
-  downloadGifMax[0].addEventListener('click', function(e){
+  downloadGifMax[0].addEventListener('click', function (e) {
     info = searchId(e.path[4].childNodes[3].id)
     info.then(Response => {
       descargarGif(Response.data.images.original.url)
