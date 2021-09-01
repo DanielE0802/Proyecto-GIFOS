@@ -618,6 +618,16 @@ footer .line-footer {
   .mis-gifos {
     display: flex;
     flex-direction: column; }
+    .mis-gifos .sin_gif img {
+      display: block;
+      margin: auto; }
+    .mis-gifos .sin_gif h1 {
+      color: #50E3C2;
+      font-family: "Montserrat", sans-serif;
+      font-size: 22px;
+      text-align: center;
+      line-height: 33px;
+      margin-top: 30px; }
 
   .container-trending {
     margin-top: 45px;
@@ -1056,6 +1066,30 @@ footer .line-footer {
   display: flex; }
   .container-trending .izquierda-container {
     width: 50px; }
+
+.trasladarSugerencia {
+  transform: translate(0, -56px); }
+
+.sugerencia {
+  border: 1px solid #572EE5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-self: center;
+  width: 55.3vh;
+  border-radius: 27px;
+  max-width: 462.29px; }
+  .sugerencia ul {
+    padding-top: 30px; }
+    .sugerencia ul li {
+      display: flex;
+      list-style: none;
+      padding: 10px; }
+      .sugerencia ul li img {
+        padding-right: 15px; }
+      .sugerencia ul li p {
+        color: #9BA6B6;
+        font-family: "Montserrat", sans-serif; }
 
 @media screen and (min-width: 1024px) {
   footer .footer-social {

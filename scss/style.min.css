@@ -133,6 +133,8 @@ html .contenedor::-webkit-scrollbar-button,html::-webkit-scrollbar-button:increm
 .favoritos .sin_fav img{display:inline-block;margin:auto}
 .favoritos .sin_fav h1{color:#50e3c2;font-family:Montserrat,sans-serif;font-size:22px;text-align:center;line-height:33px;margin-top:30px}
 .mis-gifos{display:flex;flex-direction:column}
+.mis-gifos .sin_gif img{display:block;margin:auto}
+.mis-gifos .sin_gif h1{color:#50e3c2;font-family:Montserrat,sans-serif;font-size:22px;text-align:center;line-height:33px;margin-top:30px}
 .container-trending{margin-top:45px;display:flex;flex-direction:column;overflow:hidden}
 .container-trending .trending-text h2{text-align:center;margin-top:46px}
 .container-trending .trending-text p{text-align:center}
@@ -229,6 +231,12 @@ div .layout .texto_layout{transform:translate(10px,-150px);display:none}
 }
 .container-trending{display:flex}
 .container-trending .izquierda-container{width:50px}
+.trasladarSugerencia{transform:translate(0,-56px)}
+.sugerencia{border:1px solid #572ee5;display:flex;align-items:center;justify-content:center;align-self:center;width:55.3vh;border-radius:27px;max-width:462.29px}
+.sugerencia ul{padding-top:30px}
+.sugerencia ul li{display:flex;list-style:none;padding:10px}
+.sugerencia ul li img{padding-right:15px}
+.sugerencia ul li p{color:#9ba6b6;font-family:Montserrat,sans-serif}
 @media screen and (min-width:1024px){
 footer .footer-social{flex-direction:row;justify-content:start}
 footer .footer-social p{text-align:center;margin-top:49.5px;margin-bottom:0;margin-left:156px;letter-spacing:0}
