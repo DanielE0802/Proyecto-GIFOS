@@ -50,6 +50,7 @@
     .inputSearch {
       width: 89.1%;
       max-width: 460px;
+      z-index: 100;
 
       border-radius: 27px;
       transform: translateY(-5px);
@@ -872,14 +873,18 @@
 }
 
 .ocultarBorde{
-  
+  border: none !important;
+}
+
+.raya::before{
+  border-bottom: 5px solid black;
 }
 
 .sugerencia{
   border: 1px solid $color-p;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: left;
   align-self: center;
   width: 55.3vh;
   border-radius: 27px;
@@ -893,6 +898,7 @@
       padding: 10px;
       img{
         padding-right: 15px;
+        padding-left: 15px;
       }
       p{
         color: #9BA6B6;

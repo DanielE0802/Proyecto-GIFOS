@@ -119,7 +119,7 @@ html .contenedor::-webkit-scrollbar-button,html::-webkit-scrollbar-button:increm
 .main-title{padding-top:171px}
 .main-title h1{font-size:35px;line-height:50px;font-family:Montserrat,sans-serif;color:#572ee5;text-align:center;width:64%;font-weight:700;max-width:600px;margin-bottom:24px}
 .main-title img{width:40%;align-self:center;max-width:400px}
-.main-title .inputSearch{width:89.1%;max-width:460px;border-radius:27px;transform:translateY(-5px);background:#fff;border:1px solid #572ee5;display:flex;justify-content:center;align-items:center;align-self:center;height:50px}
+.main-title .inputSearch{width:89.1%;max-width:460px;z-index:100;border-radius:27px;transform:translateY(-5px);background:#fff;border:1px solid #572ee5;display:flex;justify-content:center;align-items:center;align-self:center;height:50px}
 .main-title .inputSearch input{border:none;outline:0;align-self:center;width:57.3vh;max-width:400px;height:40px}
 .main-title input::placeholder{font-family:Roboto,sans-serif;font-size:16px;text-align:left;padding-left:55px}
 .main-title .main-treanding{display:flex;flex-direction:column}
@@ -232,10 +232,12 @@ div .layout .texto_layout{transform:translate(10px,-150px);display:none}
 .container-trending{display:flex}
 .container-trending .izquierda-container{width:50px}
 .trasladarSugerencia{transform:translate(0,-56px)}
-.sugerencia{border:1px solid #572ee5;display:flex;align-items:center;justify-content:center;align-self:center;width:55.3vh;border-radius:27px;max-width:462.29px}
+.ocultarBorde{border:none!important}
+.raya::after{border-bottom:5px solid gray}
+.sugerencia{border:1px solid #572ee5;display:flex;align-items:center;justify-content:left;align-self:center;width:55.3vh;border-radius:27px;max-width:462.29px}
 .sugerencia ul{padding-top:30px}
 .sugerencia ul li{display:flex;list-style:none;padding:10px}
-.sugerencia ul li img{padding-right:15px}
+.sugerencia ul li img{padding-right:15px;padding-left:15px}
 .sugerencia ul li p{color:#9ba6b6;font-family:Montserrat,sans-serif}
 @media screen and (min-width:1024px){
 footer .footer-social{flex-direction:row;justify-content:start}
