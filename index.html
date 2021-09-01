@@ -39,18 +39,23 @@
           </h1>
 
           <img src="assets/ilustra_header.svg" alt="">
-          <div class="inputSearch ocultarBorde">
-            <input type="search" placeholder="Busca GIFOS y más" id="search" >
-            <img src="assets/icon-search.svg" alt="">
-            
+          <div class="inputSearch">
+            <input type="search" placeholder="Busca GIFOS y más" id="search">
+            <img src="assets/icon-search.svg" id="searchIMG" alt="">
+
           </div>
           <div class="sugerencia trasladarSugerencia">
             <ul>
-              <li ></li>
-              <li class="raya"><img src="assets/icon-search.svg" alt=""><p>Sugerencia1</p></li>
-              <li><img src="assets/icon-search.svg" alt=""><p>Sugerencia2</p></li>
-              <li><img src="assets/icon-search.svg" alt=""><p>Sugerencia3</p></li>
-              <li><img src="assets/icon-search.svg" alt=""><p>Sugerencia4</p></li>
+              <li></li>
+              <li><img src="assets/icon-search.svg" alt="">
+                <p>Sugerencia1</p>
+              </li>
+              <li><img src="assets/icon-search.svg" alt="">
+                <p>Sugerencia2</p>
+              </li>
+              <li><img src="assets/icon-search.svg" alt="">
+                <p>Sugerencia3</p>
+              </li>
             </ul>
           </div>
 
@@ -63,12 +68,14 @@
           </div>
 
         </div>
-
-
+          <div class="display-none" id="notFound">
+            Sin resultados!!
+          </div>
         <section class="busqueda display-none" id="busqueda">
           <div class="separator"></div>
 
           <h4 class="busqueda-title" id="title-busqueda">Mascotas</h4>
+
 
 
           <div class="galery-gifs">
@@ -271,7 +278,7 @@
             ¡Anímate a crear tu primer GIFO!
           </h1>
         </div>
-        
+
         <div class="galery-gifs">
 
         </div>
