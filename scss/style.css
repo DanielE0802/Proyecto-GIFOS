@@ -1074,8 +1074,8 @@ footer .line-footer {
 .ocultarBorde {
   border: none !important; }
 
-.raya::after {
-  border-bottom: 5px solid gray; }
+.raya::before {
+  border-bottom: 5px solid black; }
 
 .sugerencia {
   border: 1px solid #572EE5;
@@ -1087,17 +1087,38 @@ footer .line-footer {
   border-radius: 27px;
   max-width: 462.29px; }
   .sugerencia ul {
-    padding-top: 30px; }
+    padding-top: 30px;
+    width: 100%; }
     .sugerencia ul li {
       display: flex;
       list-style: none;
-      padding: 10px; }
+      padding: 10px;
+      width: 100%;
+      cursor: pointer; }
       .sugerencia ul li img {
         padding-right: 15px;
-        padding-left: 15px; }
+        padding-left: 15px;
+        width: 14% !important; }
       .sugerencia ul li p {
         color: #9BA6B6;
         font-family: "Montserrat", sans-serif; }
+
+header {
+  z-index: 99999 !important; }
+
+.sin-resultado img {
+  display: flex;
+  margin: auto;
+  padding-top: 100px;
+  width: 13%; }
+.sin-resultado p {
+  font-size: 22px;
+  font-family: "Montserrat", sans-serif;
+  color: #50E3C2;
+  text-align: center;
+  margin-top: 29px;
+  font-weight: 700;
+  padding-bottom: 100px; }
 
 .display-none {
   display: none !important; }

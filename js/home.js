@@ -40,6 +40,8 @@ btn_crear_gifos.addEventListener('click', function () {
 //Sección favoritos
 
 bt_fav.addEventListener('click', function () {
+  let notFound = document.getElementById("notFound")
+  notFound.classList.add("display-none")
   section_fav.classList.remove('display-none');
   section_fav.classList.add('padding');
   section_fav_btn.classList.remove('display-none');
@@ -71,7 +73,9 @@ bt_fav.addEventListener('click', function () {
 //Sección mis GIFOS
 
 btn_mis_gifos.addEventListener('click', function () {
-  
+
+  let notFound = document.getElementById("notFound")
+  notFound.classList.add("display-none")
   section_mis_gifos.classList.remove('display-none');
   section_mis_gifos.classList.add("padding")
   section_mis_gifos_btn.classList.remove('display-none');

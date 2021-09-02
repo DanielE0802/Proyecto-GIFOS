@@ -860,6 +860,7 @@
   }
 }
 
+
 .container-trending {
   display: flex;
 
@@ -892,19 +893,46 @@
 
   ul{
     padding-top: 30px;
+    width: 100%;
     li{
       display: flex;
       list-style: none;
       padding: 10px;
+      width: 100%;
+      cursor: pointer;
       img{
         padding-right: 15px;
         padding-left: 15px;
+        width: 14% !important;
       }
       p{
         color: #9BA6B6;
         font-family: $Mon;
       }
     }
+  }
+}
+
+header{
+  z-index: 99999 !important;
+}
+
+.sin-resultado{
+  img{
+    display: flex;
+    margin: auto;
+    padding-top: 100px;
+    width: 13%;
+  }
+
+  p{
+    font-size: 22px;
+    font-family: $Mon;
+    color: #50E3C2;
+    text-align: center;
+    margin-top: 29px;
+    font-weight: 700;
+    padding-bottom: 100px;
   }
 }
 
