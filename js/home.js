@@ -25,7 +25,7 @@ let section_main = call("section_main")
 
 let misGifos = document.querySelectorAll("#mis-gifos > div > img")
 let icon_max_gif_fav = document.querySelectorAll("#galery-fav > div> div > div.iconos_layout > img:nth-child(2)")
-let icon_max_gif_my_gif=  document.querySelectorAll("#mis-gifos > div > div> div > div.iconos_layout > img:nth-child(2)")
+let icon_max_gif_my_gif = document.querySelectorAll("#mis-gifos > div > div> div > div.iconos_layout > img:nth-child(2)")
 let download_my_fav_gif = document.querySelectorAll("#galery-fav > div > div > div.iconos_layout > img.btn_descarga")
 let download_my_gif_section = document.querySelectorAll("#mis-gifos > div > div > div > div.iconos_layout > img.btn_descarga")
 //Sección crear GIFO
@@ -56,7 +56,7 @@ bt_fav.addEventListener('click', function () {
   deleteGif()
   downloadMyFavGif()
   maxGifFav()
-  downloadFromGifMax ()
+  downloadFromGifMax()
 
   if (idFav.length == 0) {
     sin_fav.classList.remove('display-none')
@@ -74,6 +74,19 @@ bt_fav.addEventListener('click', function () {
 
 btn_mis_gifos.addEventListener('click', function () {
 
+  let galeryGifMygif = document.querySelector("#mis-gifos > div.galery-gifs")
+  console.log( galeryGifMygif.childElementCount ) 
+  let sin_gif = document.getElementById("sin_gif")
+
+  if(galeryGifMygif.childElementCount > 0){
+    sin_gif.classList.add("display-none")
+  }else{
+    sin_gif.classList.remove("display-none")
+  }
+
+  let cambiarUrl = document.querySelector("#sin_gif > img")
+  cambiarUrl.setAttribute("src", "assets/icon-mis-gifos-sin-contenido.svg")
+  
   let notFound = document.getElementById("notFound")
   notFound.classList.add("display-none")
   section_mis_gifos.classList.remove('display-none');
@@ -84,7 +97,7 @@ btn_mis_gifos.addEventListener('click', function () {
   section_fav_btn.classList.add('display-none');
   section_main.classList.add("display-none")
   icon_delte_my_gif = document.querySelectorAll("#mis-gifos > div > div > div > div.iconos_layout > img:nth-child(1)")
-  icon_max_gif_my_gif=  document.querySelectorAll("#mis-gifos > div > div> div > div.iconos_layout > img:nth-child(2)")
+  icon_max_gif_my_gif = document.querySelectorAll("#mis-gifos > div > div> div > div.iconos_layout > img:nth-child(2)")
   download_my_gif_section = document.querySelectorAll("#mis-gifos > div > div > div > div.iconos_layout > img.btn_descarga")
   deleteMyGif()
   maxGifMyGif()
@@ -129,7 +142,8 @@ function searchMyGif(id) {
     sin_fav.classList.add('display-none')
     let crearFav = document.createElement('div');
     crearFav.classList.add('div-father-layout')
-    section_galery_mis_gifos.appendChild(crearFav)
+    let galeryGifMygif = document.querySelector("#mis-gifos > div.galery-gifs")
+    galeryGifMygif.appendChild(crearFav)
     crearFav.innerHTML = `${divContenido(response.data.images.fixed_height.url, response.data.id ,response.data.username,"My GIF")}`
 
   })
@@ -327,18 +341,26 @@ async function MiGifo() {
   const myJson = await resp.json();
   myURL = myJson.data.images.original.url;
 
+  let galeryGifMygif = document.querySelector("#mis-gifos > div.galery-gifs")
+
   idMyGifos.push(myJson.data.id)
   var fav_local = localStorage.setItem('My_gifos', idMyGifos)
   let crearFav = document.createElement('div');
   crearFav.classList.add('div-father-layout')
-  section_galery_mis_gifos.appendChild(crearFav)
+  galeryGifMygif.appendChild(crearFav)
   crearFav.innerHTML = `${divContenido(myJson.data.images.fixed_height.url, myJson.data.id ,myJson.data.username,"My GIF")}`
+  let sin_gif = document.getElementById("sin_gif")
 
-  setTimeout(function () {
-    traerMiGifo(myURL)
-    mandarAMisGifos(myURL)
-    watch.textContent = "Grabar nuevo gifo"
-  }, 5000)
+  if (sin_gif.classList.contains === "display-none"){
+  }else{
+    sin_gif.classList.add("display-none")
+  }
+
+    setTimeout(function () {
+      traerMiGifo(myURL)
+      mandarAMisGifos(myURL)
+      watch.textContent = "Grabar nuevo gifo"
+    }, 5000)
 }
 
 
