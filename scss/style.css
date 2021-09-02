@@ -1091,6 +1091,16 @@ footer .line-footer {
         color: #9BA6B6;
         font-family: "Montserrat", sans-serif; }
 
+.display-none {
+  display: none !important; }
+
+#search::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+  content: url(/assets/x.png); }
+
+#section_main > div.inputSearch {
+  z-index: 999; }
+
 @media screen and (min-width: 1024px) {
   footer .footer-social {
     flex-direction: row;
