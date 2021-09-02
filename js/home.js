@@ -220,7 +220,10 @@ function mostrarCamara() {
     btn_grabar.innerHTML = "<h1>Grabar</h1>"
     video.srcObject = stream
 
-  }).catch((err) => console.error(err))
+  }).catch((err) =>{
+    console.error(err)
+    alert("No hemos podido acceder a tu camara, recuerda aceptar los permisos que deben aparecer en la parte superior izquierda para poder grabar tu gifo ;)")
+  } )
   btn_comenzar.classList.add('display-none')
   primerPaso.classList.add('display-none')
   segundoPaso.classList.remove('display-none')
