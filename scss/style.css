@@ -546,6 +546,7 @@ footer .line-footer {
     .main-title .inputSearch {
       width: 89.1%;
       max-width: 460px;
+      z-index: 100;
       border-radius: 27px;
       transform: translateY(-5px);
       background: #FFFFFF;
@@ -1070,11 +1071,17 @@ footer .line-footer {
 .trasladarSugerencia {
   transform: translate(0, -56px); }
 
+.ocultarBorde {
+  border: none !important; }
+
+.raya::after {
+  border-bottom: 5px solid gray; }
+
 .sugerencia {
   border: 1px solid #572EE5;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: left;
   align-self: center;
   width: 55.3vh;
   border-radius: 27px;
@@ -1086,7 +1093,8 @@ footer .line-footer {
       list-style: none;
       padding: 10px; }
       .sugerencia ul li img {
-        padding-right: 15px; }
+        padding-right: 15px;
+        padding-left: 15px; }
       .sugerencia ul li p {
         color: #9BA6B6;
         font-family: "Montserrat", sans-serif; }
