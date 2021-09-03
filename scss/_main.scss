@@ -969,3 +969,38 @@ header{
     }
   }
 }
+
+#gifo-container{
+  width: 50vw !important;
+  margin: auto;
+
+  #primer_paso{
+    position: absolute;
+    text-align: center;
+    left: calc(50% - 200px);
+    top: 220px;
+    padding: 0px;
+  }
+
+  #segundo_paso{
+    position: absolute;
+    text-align: center;
+    left: calc(50% - 140px);
+    top: 242px;
+    margin: 0;
+    padding: 0px;
+  }
+
+}
+
+#subiendoGifo > div.colorr{
+  width: 50vw !important;
+}
+
+#video{
+  width: 50vw !important;
+}
+
+#crearGifos > div.container-camara > div.camara{
+  position: absolute;
+}

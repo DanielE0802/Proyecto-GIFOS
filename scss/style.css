@@ -1143,6 +1143,32 @@ header {
 @media (max-width: 400px) {
   .sugerencia img {
     width: 18% !important; } }
+#gifo-container {
+  width: 50vw !important;
+  margin: auto; }
+  #gifo-container #primer_paso {
+    position: absolute;
+    text-align: center;
+    left: calc(50% - 200px);
+    top: 220px;
+    padding: 0px; }
+  #gifo-container #segundo_paso {
+    position: absolute;
+    text-align: center;
+    left: calc(50% - 140px);
+    top: 242px;
+    margin: 0;
+    padding: 0px; }
+
+#subiendoGifo > div.colorr {
+  width: 50vw !important; }
+
+#video {
+  width: 50vw !important; }
+
+#crearGifos > div.container-camara > div.camara {
+  position: absolute; }
+
 @media screen and (min-width: 1024px) {
   footer .footer-social {
     flex-direction: row;
