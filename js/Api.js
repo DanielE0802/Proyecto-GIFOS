@@ -188,32 +188,40 @@ function api(busqueda) {
   titleBusqueda.innerHTML = busqueda
   let id = []
   let info = callApiSearch();
+  let search = document.getElementById("search")
+
 
   info.then(response => {
     ultimoFech = response
     console.log(ultimoFech)
     let notFound = document.getElementById("notFound")
 
-    if(ultimoFech.data.length < 1){
+    if (ultimoFech.data.length < 1) {
       let busquedaSinResultados = document.getElementById("busqueda")
       busquedaSinResultados.classList.add("display-none")
+      search.classList.remove("border-none")
+      let buscadorrrrrr = document.querySelector("#section_main > div.inputSearch")
+      buscadorrrrrr.classList.remove("border-none")
+
 
       let buscadorrr = document.getElementById("search")
       console.log(buscadorrr.value.length)
-      if(buscadorrr.value.length > 0){
+      if (buscadorrr.value.length > 0) {
         notFound.classList.remove("display-none")
+        
       }
       // setTimeout(()=>{
       // notFound.classList.add("display-none")
       // },10000)
-    }else{
-      
+    } else {
+      let buscadorrrrrr = document.querySelector("#section_main > div.inputSearch")
+      buscadorrrrrr.classList.add("border-none")
       let buscadorrr = document.getElementById("search")
       console.log(buscadorrr.value.length)
 
-      if(buscadorrr.value.length === 0){
-      }else{
+      if (buscadorrr.value.length === 0) {} else {
         notFound.classList.add("display-none")
+        
       }
 
       for (let i = 0; i <= 12; i++) {

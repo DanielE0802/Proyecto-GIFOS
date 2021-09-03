@@ -1083,7 +1083,7 @@ footer .line-footer {
   align-items: center;
   justify-content: left;
   align-self: center;
-  width: 55.3vh;
+  width: 89.1%;
   border-radius: 27px;
   max-width: 462.29px; }
   .sugerencia ul {
@@ -1098,7 +1098,7 @@ footer .line-footer {
       .sugerencia ul li img {
         padding-right: 15px;
         padding-left: 15px;
-        width: 14% !important; }
+        width: 14%; }
       .sugerencia ul li p {
         color: #9BA6B6;
         font-family: "Montserrat", sans-serif; }
@@ -1120,6 +1120,16 @@ header {
   font-weight: 700;
   padding-bottom: 100px; }
 
+.border-none {
+  border: none !important; }
+  .border-none::before {
+    content: "";
+    position: absolute;
+    width: 90%;
+    height: 1px;
+    background: #9CAFC3;
+    bottom: 0; }
+
 .display-none {
   display: none !important; }
 
@@ -1130,6 +1140,9 @@ header {
 #section_main > div.inputSearch {
   z-index: 999; }
 
+@media (max-width: 400px) {
+  .sugerencia img {
+    width: 18% !important; } }
 @media screen and (min-width: 1024px) {
   footer .footer-social {
     flex-direction: row;
