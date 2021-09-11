@@ -1160,6 +1160,9 @@ header {
     margin: 0;
     padding: 0px; }
 
+.inputSearch {
+  z-index: 10 !important; }
+
 #subiendoGifo > div.colorr {
   width: 50vw !important; }
 
@@ -1168,6 +1171,20 @@ header {
 
 #crearGifos > div.container-camara > div.camara {
   position: absolute; }
+
+.content-footer {
+  z-index: -1; }
+
+.comenzar {
+  z-index: 9999; }
+  .comenzar h1 {
+    z-index: 9999; }
+
+.content-footer {
+  z-index: -1; }
+
+.container-crea-tu-gif {
+  height: 100%; }
 
 @media screen and (min-width: 1024px) {
   footer .footer-social {

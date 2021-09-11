@@ -1011,3 +1011,19 @@ header{
 .content-footer{
   z-index: -1;
 }
+
+.comenzar{
+  z-index: 9999;
+
+  h1{
+    z-index: 9999;
+  }
+}
+
+.content-footer{
+  z-index: -1;
+}
+
+.container-crea-tu-gif{
+  height: 100%;
+}
