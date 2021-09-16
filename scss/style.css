@@ -1135,7 +1135,7 @@ header {
 
 #search::-webkit-search-cancel-button {
   -webkit-appearance: none;
-  content: url(/assets/equis.png); }
+  content: url(/assets/x.svg); }
 
 #section_main > div.inputSearch {
   z-index: 999; }
