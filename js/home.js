@@ -75,7 +75,6 @@ bt_fav.addEventListener('click', function () {
 btn_mis_gifos.addEventListener('click', function () {
 
   let galeryGifMygif = document.querySelector("#mis-gifos > div.galery-gifs")
-  console.log( galeryGifMygif.childElementCount ) 
   let sin_gif = document.getElementById("sin_gif")
 
   if(galeryGifMygif.childElementCount > 0){
@@ -220,17 +219,19 @@ function mostrarCamara() {
     btn_grabar.innerHTML = "<h1>Grabar</h1>"
     video.srcObject = stream
 
+    btn_comenzar.classList.add('display-none')
+    primerPaso.classList.add('display-none')
+    segundoPaso.classList.remove('display-none')
+    btn_grabar.classList.remove('display-none')
+    btn_comenzar.innerHTML = "Grabar"
+    btn_grabar.removeEventListener("click", btn_subir_gifo);
+    timer.textContent = "00:00:00"
+  
+
   }).catch((err) =>{
     console.error(err)
     alert("No hemos podido acceder a tu camara, recuerda aceptar los permisos que deben aparecer en la parte superior izquierda para poder grabar tu gifo ;)")
   } )
-  btn_comenzar.classList.add('display-none')
-  primerPaso.classList.add('display-none')
-  segundoPaso.classList.remove('display-none')
-  btn_grabar.classList.remove('display-none')
-  btn_comenzar.innerHTML = "Grabar"
-  btn_grabar.removeEventListener("click", btn_subir_gifo);
-  timer.textContent = "00:00:00"
 
 
 }
@@ -309,7 +310,7 @@ async function subirDatos() {
   gifID = json.data.id;
 
   subiendoGifo.lastElementChild.innerText = "GIFO subido con éxito"
-  subiendoGifo.children[1].setAttribute("src", "/assets/check.svg")
+  subiendoGifo.children[1].setAttribute("src", "assets/check.svg")
 
 }
 
@@ -329,13 +330,12 @@ function traerMiGifo(myURL) {
   btn_grabar.classList.add('display-none')
 }
 
-function mandarAMisGifos(myURL) {
+// function mandarAMisGifos(myURL) {
+//   for (let i = 0; i <= 1; i++) {
+//     misGifos[i].setAttribute('src', myURL)
+//   }
 
-  for (let i = 0; i <= 1; i++) {
-    misGifos[i].setAttribute('src', myURL)
-  }
-
-}
+// }
 
 
 
@@ -361,7 +361,7 @@ async function MiGifo() {
 
     setTimeout(function () {
       traerMiGifo(myURL)
-      mandarAMisGifos(myURL)
+      // mandarAMisGifos(myURL)
       watch.textContent = "Grabar nuevo gifo"
     }, 5000)
 }

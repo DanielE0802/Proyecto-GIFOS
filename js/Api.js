@@ -97,7 +97,6 @@ search.addEventListener('keyup', function () {
   if (whatSearch.length > 0) {
     let hidden = document.getElementById("searchIMG")
     hidden.setAttribute("class", "display-none")
-    console.log(hidden)
   } else {
     let hidden = document.getElementById("searchIMG")
     hidden.removeAttribute("class")
@@ -113,7 +112,6 @@ setInterval(() => {
 
   let search = document.getElementById("search")
   let whatSearch = search.value
-  console.log(whatSearch.length)
   let hidden = document.getElementById("searchIMG")
   let sugerencias = document.querySelector("#section_main > div.sugerencia.trasladarSugerencia")
 
@@ -142,18 +140,14 @@ search.addEventListener('keyup', function () {
   let whatSearch = search.value
   autoComplete(whatSearch).then((Element) => {
     let parrafo = document.querySelectorAll("#section_main > div.sugerencia.trasladarSugerencia > ul > li > p")
-    console.log(Element.data[1])
 
     for (let i = 0; i < parrafo.length; i++) {
-      console.log(parrafo[i])
       parrafo[i].textContent = Element.data[i].name
       // parrafo[i].addEventListener("click", function(){
       //   alert("click")
 
       // })
     }
-
-    console.log(parrafo)
   })
 
 
@@ -162,7 +156,6 @@ search.addEventListener('keyup', function () {
 
 
 var liEvent = document.querySelectorAll("#section_main > div.sugerencia.trasladarSugerencia > ul > li")
-console.log(liEvent)
 
 liEvent.forEach((Element) => {
   Element.addEventListener("click", () => {
@@ -193,7 +186,6 @@ function api(busqueda) {
 
   info.then(response => {
     ultimoFech = response
-    console.log(ultimoFech)
     let notFound = document.getElementById("notFound")
 
     if (ultimoFech.data.length < 1) {
@@ -205,7 +197,6 @@ function api(busqueda) {
 
 
       let buscadorrr = document.getElementById("search")
-      console.log(buscadorrr.value.length)
       if (buscadorrr.value.length > 0) {
         notFound.classList.remove("display-none")
         
@@ -217,7 +208,6 @@ function api(busqueda) {
       let buscadorrrrrr = document.querySelector("#section_main > div.inputSearch")
       buscadorrrrrr.classList.add("border-none")
       let buscadorrr = document.getElementById("search")
-      console.log(buscadorrr.value.length)
 
       if (buscadorrr.value.length === 0) {} else {
         notFound.classList.add("display-none")
